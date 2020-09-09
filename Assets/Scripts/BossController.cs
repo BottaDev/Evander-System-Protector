@@ -7,6 +7,7 @@ public class BossController : MonoBehaviour
     public BossPatron[] configurations;
     public float patronRate = 10f;
     
+    //awoduijawoduiwhadiouawhuiowahduiowahiud
     private int currentPatron = 0;
     private float currentRate = 0;
     private float currentPatronRate;
