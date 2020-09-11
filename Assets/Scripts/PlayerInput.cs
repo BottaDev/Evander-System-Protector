@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
@@ -13,23 +12,23 @@ public class PlayerInput : MonoBehaviour
     public GameObject shotPrefab;
     public Transform shotSpawn;
 
-
+    private Rigidbody rb;
     private Vector3 moveInput;
     private Camera mainCamera;
     private float currentFireRate = 0;
     private float currentBlinkRate = 0;
+    [SerializeField]
+    private bool debuggedMovement = false;
 
 
     private void Start()
     {
         mainCamera = Camera.main;
+        rb = GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene(0);
-
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
 
         if (Input.GetMouseButton(0) && currentFireRate <= 0)
@@ -41,6 +40,12 @@ public class PlayerInput : MonoBehaviour
             Blink();
         else
             currentBlinkRate -= Time.deltaTime;
+    }
+
+    private void FixedUpdate()
+    {
+        RotatePlayer();
+        MovePlayer();
     }
 
     private void Blink()
@@ -85,12 +90,18 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void MovePlayer()
     {
-        RotatePlayer();
-
-        transform.Translate(moveInput * Time.fixedDeltaTime * speed, Space.World);
-        //transform.position += moveInput * speed * Time.fixedDeltaTime;
+        if (moveInput != Vector3.zero)
+        {
+            debuggedMovement = false;
+            transform.Translate(moveInput * Time.fixedDeltaTime * speed, Space.World);
+        }
+        else if (moveInput == Vector3.zero && !debuggedMovement)
+        {
+            debuggedMovement = true;
+            rb.velocity = Vector3.zero;
+        }
     }
 
     private void Shoot()
