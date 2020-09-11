@@ -6,6 +6,7 @@ public class ShotController : MonoBehaviour
 {
     public Type shotType;
     public float speed = 15f;
+    public float damage = 1;
 
     void Update()
     {
@@ -19,14 +20,16 @@ public class ShotController : MonoBehaviour
             case Type.PlayerShot:
                 if (other.gameObject.layer == 9)
                 {
-                    // Hacer daño al boss
+                    BossEntity boss = other.gameObject.GetComponent<BossEntity>();
+                    boss.TakeDamage(damage);
                 }
                 break;
 
             case Type.EnemyShot:
                 if (other.gameObject.layer == 8)
                 {
-                    // Hacer daño al player
+                    PlayerEntity player = other.gameObject.GetComponent<PlayerEntity>();
+                    player.TakeDamage(damage);
                 }
                 break;
         }
