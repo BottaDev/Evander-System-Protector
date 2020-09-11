@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4459537073249658544}
   - component: {fileID: 4459537073249658547}
   - component: {fileID: 4459537073249658546}
-  - component: {fileID: 3564398285666105533}
-  m_Layer: 0
+  - component: {fileID: 9199005340734338418}
+  m_Layer: 11
   m_Name: BossShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3564398285666105533
+--- !u!114 &9199005340734338418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,7 +103,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4459537073249658549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22bd482d069d6b945b02ce7fbb9bfb04, type: 3}
+  m_Script: {fileID: 11500000, guid: bdd54122004d80f4e9b23407b6c1a4d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotType: 1
   speed: 15
