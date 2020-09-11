@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShotController : MonoBehaviour
 {
+    public Type shotType;
     public float speed = 15f;
 
     void Update()
@@ -13,7 +14,29 @@ public class ShotController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer != 8)
-            Destroy(gameObject);
+        switch (shotType)
+        {
+            case Type.PlayerShot:
+                if (other.gameObject.layer == 9)
+                {
+                    // Hacer daño al boss
+                }
+                break;
+
+            case Type.EnemyShot:
+                if (other.gameObject.layer == 8)
+                {
+                    // Hacer daño al player
+                }
+                break;
+        }
+
+        Destroy(gameObject);
+    }
+
+    public enum Type
+    {
+        PlayerShot,
+        EnemyShot,
     }
 }
