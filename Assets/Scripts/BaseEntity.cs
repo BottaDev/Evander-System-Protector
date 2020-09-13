@@ -4,15 +4,12 @@ using UnityEngine;
 
 public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
 {
-    [Header("Life")]
+    public float baseHP;
     [SerializeField]
     protected float currentHP;
-    [SerializeField]
-    protected float baseHP;
-    [Header("Speed")]
     protected float movementSpeed; 
 
-    virtual protected void Awake()
+    public virtual void Awake()
     {
         currentHP = baseHP;
     }

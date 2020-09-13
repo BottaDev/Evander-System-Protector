@@ -905,6 +905,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1074286251}
+  - component: {fileID: 1074286250}
   - component: {fileID: 1074286252}
   - component: {fileID: 1074286248}
   - component: {fileID: 1074286249}
@@ -924,7 +925,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1074286247}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -945,6 +946,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &1074286250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074286247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470634fff41ab174bbdc31eff9e1c723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseHP: 0
+  currentHP: 0
 --- !u!4 &1074286251
 Transform:
   m_ObjectHideFlags: 0
@@ -1378,6 +1393,7 @@ GameObject:
   - component: {fileID: 1314856271}
   - component: {fileID: 1314856270}
   - component: {fileID: 1314856274}
+  - component: {fileID: 1314856276}
   - component: {fileID: 1314856275}
   m_Layer: 9
   m_Name: Boss
@@ -1489,22 +1505,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   configurations:
-  - projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+  - hpToChange: 20
+    projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
       type: 3}
     numberOfProjectiles: 5
+    fireRate: 0.5
+    radius: 1
+    rotationPerSecond: 0
+    changeDirection: 0
+  - hpToChange: 10
+    projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+      type: 3}
+    numberOfProjectiles: 15
     fireRate: 0.3
     radius: 1
-  - projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+    rotationPerSecond: 25
+    changeDirection: 0
+  - hpToChange: 0
+    projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
       type: 3}
-    numberOfProjectiles: 22
-    fireRate: 0.2
-    radius: 2
-  - projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
-      type: 3}
-    numberOfProjectiles: 100
-    fireRate: 0.5
-    radius: 5
-  patronRate: 10
+    numberOfProjectiles: 25
+    fireRate: 0.1
+    radius: 1
+    rotationPerSecond: 45
+    changeDirection: 1
+--- !u!114 &1314856276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314856269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db4c93f25a245048aad6a594ca73c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseHP: 30
+  currentHP: 0
 --- !u!1 &1422834514
 GameObject:
   m_ObjectHideFlags: 0
