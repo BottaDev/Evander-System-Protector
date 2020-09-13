@@ -4,12 +4,11 @@ using UnityEngine;
 
 public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
 {
-    [Header("Life")]
+    public float baseHP;
     [SerializeField]
     protected float currentHP;
     [SerializeField]
     protected float baseHP;
-    [Header("Speed")]
     protected float movementSpeed;
 
     protected Color defaultColor;
@@ -18,7 +17,7 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
     public AudioClip[] sounds;
     public AudioSource audioSource;
 
-    virtual protected void Awake()
+    public virtual void Awake()
     {
         currentHP = baseHP;
         audioSource = GetComponent<AudioSource>();
@@ -33,6 +32,7 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
             Destroy(this.gameObject);
     }
 
+    // Change the color to RED when damaged
     virtual protected IEnumerator DamageBlink()
     {
         audioSource.PlayOneShot(sounds[1]); //sounds[1] is the hurt sound
