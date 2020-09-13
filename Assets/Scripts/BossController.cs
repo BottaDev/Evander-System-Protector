@@ -5,6 +5,7 @@ using UnityEngine;
 public class BossController : MonoBehaviour
 {
     public BossPatron[] configurations;
+    public BossEntity boss;
     public float patronRate = 10f;
     
     private int currentPatron = 0;
@@ -14,6 +15,7 @@ public class BossController : MonoBehaviour
     private void Start()
     {
         currentPatronRate = patronRate;
+        boss = GetComponent<BossEntity>();
     }
 
     [System.Serializable]
@@ -64,6 +66,7 @@ public class BossController : MonoBehaviour
             Instantiate(configurations[currentPatron].projectile, position, rotation);
         }
 
+        boss.audioSource.PlayOneShot(boss.sounds[0]); //boss[0] ---> bullet sound
         currentRate = configurations[currentPatron].fireRate;
     }
 }
