@@ -7,8 +7,6 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
     public float baseHP;
     [SerializeField]
     protected float currentHP;
-    [SerializeField]
-    protected float baseHP;
     protected float movementSpeed;
 
     protected Color defaultColor;

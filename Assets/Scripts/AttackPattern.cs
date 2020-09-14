@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackPattern : MonoBehaviour
 {
     public BossPattern[] configurations;
+    public BossEntity boss;
 
     private float accumulatedRotation;
     private int currentPatron = 0;
@@ -12,7 +13,8 @@ public class AttackPattern : MonoBehaviour
 
     private void Start()
     {
-        float baseHP = GetComponent<BossEntity>().baseHP;
+        boss = GetComponent<BossEntity>();
+        float baseHP = boss.baseHP;
 
         for (int i = 0; i < configurations.Length; i++)
         {
@@ -68,6 +70,9 @@ public class AttackPattern : MonoBehaviour
             Instantiate(configurations[currentPatron].projectile, position, rotation);
         }
 
+        // ToDo for Botta: Check if sounds should be played here instead in BossEntity
+
+        boss.audioSource.PlayOneShot(boss.sounds[0]);               // sounds[0] ---> bullet sound
         currentRate = configurations[currentPatron].fireRate;
     }
 
