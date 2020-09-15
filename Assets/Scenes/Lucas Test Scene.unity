@@ -972,7 +972,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   speed: 12
   fireRate: 0.3
-  blinkRate: 1
+  blinkRate: 0.7
   blinkDistance: 2
   shotSpeed: 15
   shotDamage: 1
@@ -6440,7 +6440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   configurations:
-  - hpToChange: 0
+  - hpToChange: 60
     projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
       type: 3}
     numberOfProjectiles: 5
@@ -6448,13 +6448,29 @@ MonoBehaviour:
     radius: 1
     rotationPerSecond: 90
     changeDirection: 0
-  - hpToChange: 0
+  - hpToChange: 50
     projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
       type: 3}
     numberOfProjectiles: 22
     fireRate: 0.2
     radius: 2
     rotationPerSecond: 90
+    changeDirection: 0
+  - hpToChange: 40
+    projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+      type: 3}
+    numberOfProjectiles: 22
+    fireRate: 0.2
+    radius: 2
+    rotationPerSecond: 90
+    changeDirection: 1
+  - hpToChange: 20
+    projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+      type: 3}
+    numberOfProjectiles: 8
+    fireRate: 0.1
+    radius: 0
+    rotationPerSecond: 30
     changeDirection: 0
   - hpToChange: 0
     projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
@@ -6477,7 +6493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db4c93f25a245048aad6a594ca73c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHP: 50
+  baseHP: 70
   currentHP: 0
   sounds:
   - {fileID: 8300000, guid: 993fcf1ecb5b086449819e76068a0d07, type: 3}
