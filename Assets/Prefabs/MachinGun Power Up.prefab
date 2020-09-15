@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  bulletFireRate: 0.2
+  bulletFireRate: 0.15
   bulletDamage: 1
   bulletSpeed: 20
-  bullets: 10
+  bullets: 30

@@ -12,7 +12,7 @@ public class PowerUp : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, 5);
+        Destroy(gameObject, 10);
     }
 
     private void OnTriggerEnter(Collider other)
