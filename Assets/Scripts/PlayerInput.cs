@@ -4,29 +4,25 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public float speed;
-    public float fireRate = 0.3f;
-    public float blinkRate = 1f;
-    public float blinkDistance = 2;
-
-    public GameObject shotPrefab;
-    public Transform shotSpawn;
-
+    [SerializeField]
+    private bool debuggedMovement = false;
     private Rigidbody rb;
     private Vector3 moveInput;
     private Camera mainCamera;
-    private PlayerEntity player;
     private ParticleSystem particles;
     private float currentFireRate = 0;
     private float currentBlinkRate = 0;
-    [SerializeField]
-    private bool debuggedMovement = false;
+    private PlayerEntity player;
+
+    private void Awake()
+    {
+        player = GetComponent<PlayerEntity>();
+        rb = GetComponent<Rigidbody>();
+    }
 
     private void Start()
     {
         mainCamera = Camera.main;
-        rb = GetComponent<Rigidbody>();
-        player = GetComponent<PlayerEntity>();
         particles = GetComponent<ParticleSystem>();
     }
 
@@ -69,20 +65,20 @@ public class PlayerInput : MonoBehaviour
 
         player.audioSource.PlayOneShot(player.sounds[2]); //Player.sounds[2] is the blink sound
 
-        if (Physics.Raycast(transform.position, direction, out hit, blinkDistance, layerMask))
+        if (Physics.Raycast(transform.position, direction, out hit, player.blinkDistance, layerMask))
         {
             Debug.Log("Blink interference");
             Vector3 nextPosition = CalculateBlinkDirection(hit.distance);
-            transform.position = Vector3.Lerp(transform.position, nextPosition, speed);
+            transform.position = Vector3.Lerp(transform.position, nextPosition, player.speed);
         }
         else
         {
             Debug.Log("No blink interference");
             Vector3 nextPosition = CalculateBlinkDirection();
-            transform.position = Vector3.Lerp(transform.position, nextPosition, speed);
+            transform.position = Vector3.Lerp(transform.position, nextPosition, player.speed);
         }
 
-        currentBlinkRate = blinkRate;
+        currentBlinkRate = player.blinkRate;
     }
 
     private void RotatePlayer()
@@ -105,7 +101,7 @@ public class PlayerInput : MonoBehaviour
         if (moveInput != Vector3.zero)
         {
             debuggedMovement = false;
-            transform.Translate(moveInput * Time.fixedDeltaTime * speed, Space.World);
+            transform.Translate(moveInput * Time.fixedDeltaTime * player.speed, Space.World);
         }
         else if (moveInput == Vector3.zero && !debuggedMovement)
         {
@@ -116,16 +112,24 @@ public class PlayerInput : MonoBehaviour
 
     private void Shoot()
     {
-        Instantiate(shotPrefab, shotSpawn.position, shotSpawn.rotation);
+        GameObject bullet = Instantiate(player.shotPrefab, player.shotSpawn.position, player.shotSpawn.rotation);
+        ShotController controller = bullet.GetComponent<ShotController>();
+        controller.SetStats(player.shotSpeed, player.shotDamage);
+
+        currentFireRate = player.fireRate;
+
+
+        player.CheckGunAmmo();
 
         player.audioSource.PlayOneShot(player.sounds[0]); //player[0]--->bullet sound
 
-      currentFireRate = fireRate;
+        currentFireRate = player.fireRate;
+
     }
 
     private Vector3 CalculateBlinkDirection(float hitDistance = 1f)
     {
-        float auxBlinkDistance = blinkDistance;
+        float auxBlinkDistance = player.blinkDistance;
 
         if (hitDistance != 1f)
             auxBlinkDistance = hitDistance;

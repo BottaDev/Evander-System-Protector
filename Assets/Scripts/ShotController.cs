@@ -37,6 +37,12 @@ public class ShotController : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void SetStats(float targetSpeed,float targetDamage)
+    {
+        speed = targetSpeed;
+        damage = targetDamage;
+    }
+
     public enum Type
     {
         PlayerShot,
