@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerEntity : BaseEntity
 {
@@ -17,6 +18,8 @@ public class PlayerEntity : BaseEntity
 
     public GameObject shotPrefab;
     public Transform shotSpawn;
+    public UIManager manager;
+
 
     private void Start()
     {
@@ -50,8 +53,12 @@ public class PlayerEntity : BaseEntity
     public void CheckGunAmmo()
     {
         pellets--;
+        manager.ShowAmmo(pellets);
 
         if (pellets <= 0 && hasPowerUp)
+        {
+            manager.CheckPowerUpActive(false);
             SetToBaseFireRate();
+        }
     }
 }

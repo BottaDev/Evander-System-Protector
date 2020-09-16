@@ -11,6 +11,8 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
 
     protected Color defaultColor;
 
+    public LevelManager level;
+
     [SerializeField]
     public AudioClip[] sounds;
     public AudioSource audioSource;
@@ -27,7 +29,10 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
         currentHP -= damage;
         StartCoroutine(DamageBlink());
         if (currentHP <= 0)
-            Destroy(this.gameObject);
+        {
+            level.WinLoseGame(gameObject);
+            Destroy(gameObject);
+        }
     }
 
     // Change the color to RED when damaged
