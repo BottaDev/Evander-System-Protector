@@ -5,8 +5,8 @@ using UnityEngine;
 public class AttackPattern : MonoBehaviour
 {
     public BossPattern[] configurations;
-    public BossEntity boss;
-
+    
+    private BossEntity boss;
     private float accumulatedRotation;
     private int currentPatron = 0;
     private float currentRate = 0;

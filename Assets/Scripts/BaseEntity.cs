@@ -4,13 +4,17 @@ using UnityEngine;
 
 public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
 {
+    [Header("Entity Stats")]
     public float baseHP;
     [SerializeField]
     protected float currentHP;
-    protected float movementSpeed;
+    public float movementSpeed;
 
     protected Color defaultColor;
 
+    public LevelManager levelManager;
+
+    [Header("Audio Options")]
     [SerializeField]
     public AudioClip[] sounds;
     public AudioSource audioSource;
@@ -27,7 +31,10 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
         currentHP -= damage;
         StartCoroutine(DamageBlink());
         if (currentHP <= 0)
-            Destroy(this.gameObject);
+        {
+            levelManager.WinLoseGame(gameObject);
+            Destroy(gameObject);
+        }
     }
 
     // Change the color to RED when damaged

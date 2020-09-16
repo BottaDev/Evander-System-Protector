@@ -47,6 +47,9 @@ public class CameraController : MonoBehaviour
 
     private float GetGreatestDistance()
     {
+        if (targets[0] == null || targets[1] == null)
+            return 0;
+
         var bounds = new Bounds(targets[0].position, Vector3.zero);
         for (int i = 0; i < targets.Count; i++)
         {
@@ -58,6 +61,9 @@ public class CameraController : MonoBehaviour
 
     private Vector3 GetCenterPoint()
     {
+        if (targets[0] == null || targets[1] == null)
+            return Vector3.zero;
+
         if (targets.Count == 1)
         {
             return targets[0].position;

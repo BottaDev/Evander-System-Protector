@@ -11,4 +11,3 @@ public class GameManager : MonoBehaviour
 
 
 }
-//cuando spawn return true; 

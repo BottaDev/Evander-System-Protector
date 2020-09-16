@@ -2,21 +2,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerEntity : BaseEntity
 {
-    public float speed;
+    [Header("Player Stats")]
     public float fireRate = 0.3f;
     public float blinkRate = 1f;
     public float blinkDistance = 2;
     public float shotSpeed;
     public float shotDamage;
     public int pellets;
-    private bool hasPowerUp = false;
-    private float baseFireRate;
 
+    [Header("Objects")]
     public GameObject shotPrefab;
     public Transform shotSpawn;
+    public UIManager manager;
+
+    private bool hasPowerUp = false;
+    private float baseFireRate;
 
     private void Start()
     {
@@ -50,8 +54,12 @@ public class PlayerEntity : BaseEntity
     public void CheckGunAmmo()
     {
         pellets--;
+        manager.ShowAmmo(pellets);
 
         if (pellets <= 0 && hasPowerUp)
+        {
+            manager.CheckPowerUpActive(false);
             SetToBaseFireRate();
+        }
     }
 }
