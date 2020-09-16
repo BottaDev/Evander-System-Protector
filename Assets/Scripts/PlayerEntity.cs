@@ -6,20 +6,21 @@ using UnityEngine.UI;
 
 public class PlayerEntity : BaseEntity
 {
-    public float speed;
+    [Header("Player Stats")]
     public float fireRate = 0.3f;
     public float blinkRate = 1f;
     public float blinkDistance = 2;
     public float shotSpeed;
     public float shotDamage;
     public int pellets;
-    private bool hasPowerUp = false;
-    private float baseFireRate;
 
+    [Header("Objects")]
     public GameObject shotPrefab;
     public Transform shotSpawn;
     public UIManager manager;
 
+    private bool hasPowerUp = false;
+    private float baseFireRate;
 
     private void Start()
     {

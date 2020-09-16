@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    [Header("Screen")]
     public GameObject youLoseScreen;
     public GameObject youWinScreen;
+    [Header("Bullet Count")]
     public GameObject imgBullets;
     public GameObject countBullets;
     public TMPro.TextMeshProUGUI bulletsCountText;
-
-    public PlayerEntity player;
 
     public void ShowFinalGui(bool win)
     {
         if (win)
             youWinScreen.SetActive(true);
         else
-            youLoseScreen.SetActive(false);
+            youLoseScreen.SetActive(true);
     }
 
     public void CheckPowerUpActive(bool activePowerUp)

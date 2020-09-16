@@ -4,15 +4,17 @@ using UnityEngine;
 
 public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
 {
+    [Header("Entity Stats")]
     public float baseHP;
     [SerializeField]
     protected float currentHP;
-    protected float movementSpeed;
+    public float movementSpeed;
 
     protected Color defaultColor;
 
-    public LevelManager level;
+    public LevelManager levelManager;
 
+    [Header("Audio Options")]
     [SerializeField]
     public AudioClip[] sounds;
     public AudioSource audioSource;
@@ -30,7 +32,7 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
         StartCoroutine(DamageBlink());
         if (currentHP <= 0)
         {
-            level.WinLoseGame(gameObject);
+            levelManager.WinLoseGame(gameObject);
             Destroy(gameObject);
         }
     }

@@ -69,13 +69,13 @@ public class PlayerInput : MonoBehaviour
         {
             Debug.Log("Blink interference");
             Vector3 nextPosition = CalculateBlinkDirection(hit.distance);
-            transform.position = Vector3.Lerp(transform.position, nextPosition, player.speed);
+            transform.position = Vector3.Lerp(transform.position, nextPosition, player.movementSpeed);
         }
         else
         {
             Debug.Log("No blink interference");
             Vector3 nextPosition = CalculateBlinkDirection();
-            transform.position = Vector3.Lerp(transform.position, nextPosition, player.speed);
+            transform.position = Vector3.Lerp(transform.position, nextPosition, player.movementSpeed);
         }
 
         currentBlinkRate = player.blinkRate;
@@ -101,7 +101,7 @@ public class PlayerInput : MonoBehaviour
         if (moveInput != Vector3.zero)
         {
             debuggedMovement = false;
-            transform.Translate(moveInput * Time.fixedDeltaTime * player.speed, Space.World);
+            transform.Translate(moveInput * Time.fixedDeltaTime * player.movementSpeed, Space.World);
         }
         else if (moveInput == Vector3.zero && !debuggedMovement)
         {
