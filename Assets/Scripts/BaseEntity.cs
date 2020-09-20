@@ -11,19 +11,21 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
     public float movementSpeed;
 
     protected Color defaultColor;
+    protected MeshRenderer meshRenderer; 
 
     public LevelManager levelManager;
 
     [Header("Audio Options")]
-    [SerializeField]
     public AudioClip[] sounds;
+    [HideInInspector]
     public AudioSource audioSource;
 
     public virtual void Awake()
     {
         currentHP = baseHP;
         audioSource = GetComponent<AudioSource>();
-        defaultColor = GetComponent<MeshRenderer>().material.color;
+        meshRenderer = GetComponent<MeshRenderer>();
+        defaultColor = meshRenderer.material.color;
     }
 
     virtual public void TakeDamage(float damage)
@@ -42,9 +44,9 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
     {
         audioSource.PlayOneShot(sounds[1]); //sounds[1] is the hurt sound
 
-        gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+        meshRenderer.material.color = Color.red;
         yield return new WaitForSeconds(0.2f);
-        gameObject.GetComponent<MeshRenderer>().material.color = defaultColor;
+        meshRenderer.material.color = defaultColor;
 
         yield return null;
     }
