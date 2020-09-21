@@ -24,7 +24,7 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
     {
         currentHP = baseHP;
         audioSource = GetComponent<AudioSource>();
-        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer = transform.GetChild(0).GetComponent<MeshRenderer>();
         defaultColor = meshRenderer.material.color;
     }
 
