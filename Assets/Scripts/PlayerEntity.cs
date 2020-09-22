@@ -19,16 +19,15 @@ public class PlayerEntity : BaseEntity
     public Transform shotSpawn;
     public UIManager manager;
 
+    [HideInInspector]
+    public bool canBeDamaged = true;
+
     private bool hasPowerUp = false;
     private float baseFireRate;
 
     private void Start()
     {
         baseFireRate = fireRate;
-    }
-
-    private void OnTriggerEnter(Collider collision)
-    {
     }
 
     public void SetToBaseFireRate()
@@ -47,8 +46,19 @@ public class PlayerEntity : BaseEntity
         hasPowerUp = true;
     }
 
+    public void SetInvulnerability(bool isVulnerable)
+    {
+        canBeDamaged = isVulnerable;
+    }
+
     void ChangedSkill() 
     {
+    }
+
+    public override void TakeDamage(float damage)
+    {
+        if (canBeDamaged)
+            base.TakeDamage(damage);
     }
 
     public void CheckGunAmmo()
