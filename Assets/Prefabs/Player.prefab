@@ -132,7 +132,6 @@ MonoBehaviour:
   baseHP: 10
   currentHP: 0
   movementSpeed: 12
-  levelManager: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: d00608a7430e1534796c51cb6ec8db37, type: 3}
   - {fileID: 8300000, guid: 7e2c5bbaeb7e5a84f9d7db8f672d4407, type: 3}
@@ -140,14 +139,13 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   fireRate: 0.3
   blinkRate: 1
-  blinkDistance: 2
-  shotSpeed: 15
+  blinkDistance: 3
+  shotSpeed: 20
   shotDamage: 1
   pellets: 0
   shotPrefab: {fileID: 4459537073249658549, guid: ee7d7a4c7e2fdb74f90a6584044567b5,
     type: 3}
   shotSpawn: {fileID: 3728621156347324888}
-  manager: {fileID: 0}
   canBeDamaged: 1
 --- !u!114 &3728621155346993349
 MonoBehaviour:

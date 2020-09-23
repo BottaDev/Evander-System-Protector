@@ -48,10 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db4c93f25a245048aad6a594ca73c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHP: 50
+  baseHP: 300
   currentHP: 0
-  movementSpeed: 0
-  levelManager: {fileID: 0}
+  movementSpeed: 2
   sounds:
   - {fileID: 8300000, guid: 993fcf1ecb5b086449819e76068a0d07, type: 3}
   - {fileID: 8300000, guid: 7e2c5bbaeb7e5a84f9d7db8f672d4407, type: 3}
@@ -68,36 +67,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aa8ba0e418928d479a4750c370f686f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossConfig:
+  bossPhases:
   - patterns:
     - duration: 10
-      waitTime: 0
-      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
-        type: 3}
-      numberOfProjectiles: 5
-      fireRate: 0.8
-      radius: 1.5
-      rotationPerSecond: 90
-      changeDirection: 1
-    - duration: 5
-      waitTime: 1
-      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
-        type: 3}
-      numberOfProjectiles: 15
-      fireRate: 0.4
-      radius: 1
-      rotationPerSecond: 270
-      changeDirection: 0
-    hpToChange: 25
-  - patterns:
-    - duration: 0
-      waitTime: 0
+      waitTime: 0.5
       projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
         type: 3}
       numberOfProjectiles: 2
-      fireRate: 0.3
-      radius: 5
-      rotationPerSecond: 360
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 50
+      changeDirection: 0
+    - duration: 10
+      waitTime: 0.5
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 2
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 50
+      changeDirection: 1
+    hpToChange: 200
+  - patterns:
+    - duration: 7
+      waitTime: 0.5
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 6
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 40
+      changeDirection: 0
+    - duration: 7
+      waitTime: 0.5
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 6
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 40
+      changeDirection: 1
+    hpToChange: 100
+  - patterns:
+    - duration: 5
+      waitTime: 0.5
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 10
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 50
+      changeDirection: 0
+    - duration: 5
+      waitTime: 0.5
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 10
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 50
       changeDirection: 1
     hpToChange: 0
 --- !u!65 &7011864085021829564
@@ -111,8 +139,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.5, y: 4.5, z: 1.5}
-  m_Center: {x: 0, y: 2.23, z: -0.6}
+  m_Size: {x: 5, y: 4.5, z: 2}
+  m_Center: {x: 0, y: 1.5, z: -0.6}
 --- !u!54 &4772033840898332726
 Rigidbody:
   m_ObjectHideFlags: 0
