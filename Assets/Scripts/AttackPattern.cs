@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackPattern : MonoBehaviour
 {
-    public BossPhase[] bossConfig;
+    public BossPhase[] bossPhases;
 
     private BossEntity boss;
     private float accumulatedRotation;
@@ -44,19 +44,19 @@ public class AttackPattern : MonoBehaviour
         boss = GetComponent<BossEntity>();
         float baseHP = boss.baseHP;
 
-        for (int i = 0; i < bossConfig.Length; i++)
+        for (int i = 0; i < bossPhases.Length; i++)
         {
-            if (bossConfig[i].hpToChange >= baseHP || bossConfig[i].hpToChange < 0)
+            if (bossPhases[i].hpToChange >= baseHP || bossPhases[i].hpToChange < 0)
                 Debug.LogError("Error with HP logic in the Boss's pattern. Phase index: " + i);
 
-            for (int j = bossConfig[i].patterns.Length - 1; j >= 0; j--)
+            for (int j = bossPhases[i].patterns.Length - 1; j >= 0; j--)
             {
-                if (bossConfig[i].patterns[j].duration < 0)
+                if (bossPhases[i].patterns[j].duration < 0)
                     Debug.LogError("Error with Duration logic in the Boss's pattern. Phase index: " + i + ", Pattern:" + j);
             }
         }
 
-        currentPatternDuration = bossConfig[currentPhase].patterns[currentPattern].duration;
+        currentPatternDuration = bossPhases[currentPhase].patterns[currentPattern].duration;
     }
     
     private void Update()
@@ -74,34 +74,34 @@ public class AttackPattern : MonoBehaviour
                 currentRate -= Time.deltaTime;
         }
 
-        accumulatedRotation += Time.deltaTime * bossConfig[currentPhase].patterns[currentPattern].rotationPerSecond;
+        accumulatedRotation += Time.deltaTime * bossPhases[currentPhase].patterns[currentPattern].rotationPerSecond;
         if (accumulatedRotation >= 360f)
             accumulatedRotation -= 360f;
     } 
 
     private void SpawnProjectiles()
     {
-        float angle = 360f / bossConfig[currentPhase].patterns[currentPattern].numberOfProjectiles;
+        float angle = 360f / bossPhases[currentPhase].patterns[currentPattern].numberOfProjectiles;
 
-        for (int i = 0; i < bossConfig[currentPhase].patterns[currentPattern].numberOfProjectiles; i++)
+        for (int i = 0; i < bossPhases[currentPhase].patterns[currentPattern].numberOfProjectiles; i++)
         {
             Quaternion rotation;
 
-            if (!bossConfig[currentPhase].patterns[currentPattern].changeDirection)
+            if (!bossPhases[currentPhase].patterns[currentPattern].changeDirection)
                 rotation = Quaternion.AngleAxis(i * angle + accumulatedRotation, Vector3.up);
             else
                 rotation = Quaternion.AngleAxis(i * angle - accumulatedRotation, Vector3.up);
 
             Vector3 direction = rotation * Vector3.forward;
 
-            Vector3 position = transform.position + (direction * bossConfig[currentPhase].patterns[currentPattern].radius);
-            Instantiate(bossConfig[currentPhase].patterns[currentPattern].projectile, position, rotation);
+            Vector3 position = transform.position + (direction * bossPhases[currentPhase].patterns[currentPattern].radius);
+            Instantiate(bossPhases[currentPhase].patterns[currentPattern].projectile, position, rotation);
         }
 
         // ToDo for Botta: Check if sounds should be played here instead in BossEntity
 
         boss.audioSource.PlayOneShot(boss.sounds[0]);               // sounds[0] ---> bullet sound
-        currentRate = bossConfig[currentPhase].patterns[currentPattern].fireRate;
+        currentRate = bossPhases[currentPhase].patterns[currentPattern].fireRate;
     }
 
     // Checks the current HP of the boss
@@ -110,31 +110,31 @@ public class AttackPattern : MonoBehaviour
         if (currentHp == 0)
             return;
 
-        if (currentHp <= bossConfig[currentPhase].hpToChange)
+        if (currentHp <= bossPhases[currentPhase].hpToChange)
         {
             currentPhase++;
             currentPattern = 0;
-            currentPatternDuration = bossConfig[currentPhase].patterns[currentPattern].duration;
+            currentPatternDuration = bossPhases[currentPhase].patterns[currentPattern].duration;
         }
     }
 
     private void ChangePattern()
     {
-        if (currentPattern == bossConfig[currentPhase].patterns.Length - 1)
+        if (currentPattern == bossPhases[currentPhase].patterns.Length - 1)
             currentPattern = 0;
         else
             currentPattern++;
 
-        currentPatternDuration = bossConfig[currentPhase].patterns[currentPattern].duration;
+        currentPatternDuration = bossPhases[currentPhase].patterns[currentPattern].duration;
 
-        if(bossConfig[currentPhase].patterns[currentPattern].waitTime > 0)
+        if(bossPhases[currentPhase].patterns[currentPattern].waitTime > 0)
             StartCoroutine(Stop());
     }
 
     private IEnumerator Stop()
     {
         isChangingPattron = true;
-        yield return new WaitForSeconds(bossConfig[currentPhase].patterns[currentPattern].waitTime);
+        yield return new WaitForSeconds(bossPhases[currentPhase].patterns[currentPattern].waitTime);
         isChangingPattron = false;
     }
 }

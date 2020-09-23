@@ -18,7 +18,11 @@ public class BossEntity : BaseEntity
     private void LateUpdate()
     {
         if (player != null)
-            transform.LookAt(player);
+        {
+            var rotation = Quaternion.LookRotation(player.position - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * movementSpeed);
+        }
+            
     }
 
     public override void TakeDamage(float damage)

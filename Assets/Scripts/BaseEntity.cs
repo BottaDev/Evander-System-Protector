@@ -12,13 +12,13 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
 
     protected Color defaultColor;
     protected MeshRenderer meshRenderer; 
-
-    public LevelManager levelManager;
-
+    
     [Header("Audio Options")]
     public AudioClip[] sounds;
     [HideInInspector]
     public AudioSource audioSource;
+
+    protected LevelManager levelManager;
 
     public virtual void Awake()
     {
@@ -26,6 +26,11 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
         audioSource = GetComponent<AudioSource>();
         meshRenderer = transform.GetChild(0).GetComponent<MeshRenderer>();
         defaultColor = meshRenderer.material.color;
+    }
+
+    public virtual void Start()
+    {
+        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
     }
 
     virtual public void TakeDamage(float damage)

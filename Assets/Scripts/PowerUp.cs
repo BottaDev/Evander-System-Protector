@@ -14,7 +14,7 @@ public class PowerUp : MonoBehaviour
 
     private void Start()
     {
-        manager = GameObject.Find("Level Manager").GetComponent<UIManager>();
+        manager = GameObject.Find("LevelManager").GetComponent<UIManager>();
         Destroy(gameObject, 10);
     }
 
@@ -33,7 +33,6 @@ public class PowerUp : MonoBehaviour
                 manager.CheckPowerUpActive(true);
                 break;
         }
-
 
         Destroy(gameObject);
     }

@@ -17,19 +17,21 @@ public class PlayerEntity : BaseEntity
     [Header("Objects")]
     public GameObject shotPrefab;
     public Transform shotSpawn;
-    public UIManager manager;
 
     [HideInInspector]
     public bool canBeDamaged = true;
 
     private bool hasPowerUp = false;
     private float baseFireRate;
+    private HealthBar healthBar;
+    private UIManager uiManager;
 
-    public HealthBar healthBar;
 
-    private void Start()
+    public override void Start()
     {
+        base.Start();
         healthBar = GameObject.Find("HealthBar").GetComponent<HealthBar>();
+        uiManager = levelManager.gameObject.GetComponent<UIManager>();
         baseFireRate = fireRate;
         healthBar.SetMaxHealt(baseHP);
     }
@@ -55,10 +57,6 @@ public class PlayerEntity : BaseEntity
         canBeDamaged = isVulnerable;
     }
 
-    void ChangedSkill() 
-    {
-    }
-
     public override void TakeDamage(float damage)
     {
         if (canBeDamaged)
@@ -71,11 +69,11 @@ public class PlayerEntity : BaseEntity
     public void CheckGunAmmo()
     {
         pellets--;
-        manager.ShowAmmo(pellets);
+        uiManager.ShowAmmo(pellets);
 
         if (pellets <= 0 && hasPowerUp)
         {
-            manager.CheckPowerUpActive(false);
+            uiManager.CheckPowerUpActive(false);
             SetToBaseFireRate();
         }
     }
