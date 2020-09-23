@@ -77,4 +77,10 @@ public class PlayerEntity : BaseEntity
             SetToBaseFireRate();
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 9)
+            TakeDamage(1);
+    }
 }
