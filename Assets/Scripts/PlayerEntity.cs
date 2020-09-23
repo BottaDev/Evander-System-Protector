@@ -25,9 +25,13 @@ public class PlayerEntity : BaseEntity
     private bool hasPowerUp = false;
     private float baseFireRate;
 
+    public HealthBar healthBar;
+
     private void Start()
     {
+        healthBar = GameObject.Find("HealthBar").GetComponent<HealthBar>();
         baseFireRate = fireRate;
+        healthBar.SetMaxHealt(baseHP);
     }
 
     public void SetToBaseFireRate()
@@ -58,7 +62,10 @@ public class PlayerEntity : BaseEntity
     public override void TakeDamage(float damage)
     {
         if (canBeDamaged)
+        {
             base.TakeDamage(damage);
+            healthBar.SetHealth(currentHP);
+        }
     }
 
     public void CheckGunAmmo()
