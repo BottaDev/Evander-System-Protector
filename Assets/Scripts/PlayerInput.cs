@@ -35,7 +35,7 @@ public class PlayerInput : MonoBehaviour
         else
             currentFireRate -= Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(1) && (moveInput.x != 0 || moveInput.z != 0) && currentBlinkRate <= 0)
+        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) && (moveInput.x != 0 || moveInput.z != 0) && currentBlinkRate <= 0)
             Blink();
         else
             currentBlinkRate -= Time.deltaTime;
@@ -69,16 +69,17 @@ public class PlayerInput : MonoBehaviour
         {
             Debug.Log("Blink interference");
             Vector3 nextPosition = CalculateBlinkDirection(hit.distance);
-            transform.position = Vector3.Lerp(transform.position, nextPosition, player.speed);
+            transform.position = Vector3.Lerp(transform.position, nextPosition, player.movementSpeed);
         }
         else
         {
             Debug.Log("No blink interference");
             Vector3 nextPosition = CalculateBlinkDirection();
-            transform.position = Vector3.Lerp(transform.position, nextPosition, player.speed);
+            transform.position = Vector3.Lerp(transform.position, nextPosition, player.movementSpeed);
         }
 
         currentBlinkRate = player.blinkRate;
+        StartCoroutine(SetInvulnerability());
     }
 
     private void RotatePlayer()
@@ -101,7 +102,7 @@ public class PlayerInput : MonoBehaviour
         if (moveInput != Vector3.zero)
         {
             debuggedMovement = false;
-            transform.Translate(moveInput * Time.fixedDeltaTime * player.speed, Space.World);
+            transform.Translate(moveInput * Time.fixedDeltaTime * player.movementSpeed, Space.World);
         }
         else if (moveInput == Vector3.zero && !debuggedMovement)
         {
@@ -118,13 +119,18 @@ public class PlayerInput : MonoBehaviour
 
         currentFireRate = player.fireRate;
 
-
         player.CheckGunAmmo();
 
         player.audioSource.PlayOneShot(player.sounds[0]); //player[0]--->bullet sound
 
         currentFireRate = player.fireRate;
+    }
 
+    private IEnumerator SetInvulnerability()
+    {
+        player.SetInvulnerability(false);
+        yield return new WaitForSeconds(0.3f);
+        player.SetInvulnerability(true);
     }
 
     private Vector3 CalculateBlinkDirection(float hitDistance = 1f)

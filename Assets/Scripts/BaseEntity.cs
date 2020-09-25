@@ -4,22 +4,33 @@ using UnityEngine;
 
 public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
 {
+    [Header("Entity Stats")]
     public float baseHP;
     [SerializeField]
     protected float currentHP;
-    protected float movementSpeed;
+    public float movementSpeed;
 
     protected Color defaultColor;
-
-    [SerializeField]
+    protected MeshRenderer meshRenderer; 
+    
+    [Header("Audio Options")]
     public AudioClip[] sounds;
+    [HideInInspector]
     public AudioSource audioSource;
+
+    protected LevelManager levelManager;
 
     public virtual void Awake()
     {
         currentHP = baseHP;
         audioSource = GetComponent<AudioSource>();
-        defaultColor = GetComponent<MeshRenderer>().material.color;
+        meshRenderer = transform.GetChild(0).GetComponent<MeshRenderer>();
+        defaultColor = meshRenderer.material.color;
+    }
+
+    public virtual void Start()
+    {
+        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
     }
 
     virtual public void TakeDamage(float damage)
@@ -27,7 +38,10 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
         currentHP -= damage;
         StartCoroutine(DamageBlink());
         if (currentHP <= 0)
-            Destroy(this.gameObject);
+        {
+            levelManager.WinLoseGame(gameObject);
+            Destroy(gameObject);
+        }
     }
 
     // Change the color to RED when damaged
@@ -35,9 +49,9 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
     {
         audioSource.PlayOneShot(sounds[1]); //sounds[1] is the hurt sound
 
-        gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+        meshRenderer.material.color = Color.red;
         yield return new WaitForSeconds(0.2f);
-        gameObject.GetComponent<MeshRenderer>().material.color = defaultColor;
+        meshRenderer.material.color = defaultColor;
 
         yield return null;
     }

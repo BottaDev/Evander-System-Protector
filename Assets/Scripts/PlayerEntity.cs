@@ -2,29 +2,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerEntity : BaseEntity
 {
-    public float speed;
+    [Header("Player Stats")]
     public float fireRate = 0.3f;
     public float blinkRate = 1f;
     public float blinkDistance = 2;
     public float shotSpeed;
     public float shotDamage;
     public int pellets;
-    private bool hasPowerUp = false;
-    private float baseFireRate;
 
+    [Header("Objects")]
     public GameObject shotPrefab;
     public Transform shotSpawn;
 
-    private void Start()
-    {
-        baseFireRate = fireRate;
-    }
+    [HideInInspector]
+    public bool canBeDamaged = true;
 
-    private void OnTriggerEnter(Collider collision)
+    private bool hasPowerUp = false;
+    private float baseFireRate;
+    private HealthBar healthBar;
+    private UIManager uiManager;
+
+
+    public override void Start()
     {
+        base.Start();
+        healthBar = GameObject.Find("HealthBar").GetComponent<HealthBar>();
+        uiManager = levelManager.gameObject.GetComponent<UIManager>();
+        baseFireRate = fireRate;
+        healthBar.SetMaxHealt(baseHP);
     }
 
     public void SetToBaseFireRate()
@@ -43,15 +52,35 @@ public class PlayerEntity : BaseEntity
         hasPowerUp = true;
     }
 
-    void ChangedSkill() 
+    public void SetInvulnerability(bool isVulnerable)
     {
+        canBeDamaged = isVulnerable;
+    }
+
+    public override void TakeDamage(float damage)
+    {
+        if (canBeDamaged)
+        {
+            base.TakeDamage(damage);
+            healthBar.SetHealth(currentHP);
+        }
     }
 
     public void CheckGunAmmo()
     {
         pellets--;
+        uiManager.ShowAmmo(pellets);
 
         if (pellets <= 0 && hasPowerUp)
+        {
+            uiManager.CheckPowerUpActive(false);
             SetToBaseFireRate();
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 9)
+            TakeDamage(1);
     }
 }
