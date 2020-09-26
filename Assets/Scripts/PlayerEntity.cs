@@ -84,7 +84,7 @@ public class PlayerEntity : BaseEntity
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 9)
+        if (collision.gameObject.layer == 9 || collision.gameObject.layer == 14)
             TakeDamage(1);
     }
 

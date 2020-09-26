@@ -14,12 +14,13 @@ TagManager:
   - 
   - 
   - Player
-  - Boss
+  - Enemy
   - Map
   - EnemyShot
   - PlayerShot
   - Power Up
   - BarrierSkill
+  - EnemyWall
   - 
   - 
   - 
