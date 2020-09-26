@@ -17,9 +17,12 @@ public class PlayerEntity : BaseEntity
     [Header("Objects")]
     public GameObject shotPrefab;
     public Transform shotSpawn;
+    public GameObject barrier;
+    public GameObject boss;
 
     [HideInInspector]
     public bool canBeDamaged = true;
+    public Skill currentSkill;
 
     private bool hasPowerUp = false;
     private float baseFireRate;
@@ -34,6 +37,7 @@ public class PlayerEntity : BaseEntity
         uiManager = levelManager.gameObject.GetComponent<UIManager>();
         baseFireRate = fireRate;
         healthBar.SetMaxHealt(baseHP);
+        boss.GetComponent<BossEntity>().RegisterPhaseSwitchEvent(onBossPhaseSwitch);
     }
 
     public void SetToBaseFireRate()
@@ -82,5 +86,16 @@ public class PlayerEntity : BaseEntity
     {
         if (collision.gameObject.layer == 9)
             TakeDamage(1);
+    }
+
+    private void onBossPhaseSwitch()
+    {
+        currentSkill = Skill.Barrier;
+    }
+
+    public enum Skill
+    {
+        Blink,
+        Barrier,
     }
 }
