@@ -20,8 +20,8 @@ public class ShotController : MonoBehaviour
             case Type.PlayerShot:
                 if (other.gameObject.layer == 9)
                 {
-                    BossEntity boss = other.gameObject.GetComponent<BossEntity>();
-                    boss.TakeDamage(damage);
+                    BaseEntity enemy = other.gameObject.GetComponent<BaseEntity>();
+                    enemy.TakeDamage(damage);
                 }
                 break;
 

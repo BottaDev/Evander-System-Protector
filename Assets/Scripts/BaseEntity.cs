@@ -47,7 +47,8 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
     // Change the color to RED when damaged
     virtual protected IEnumerator DamageBlink()
     {
-        audioSource.PlayOneShot(sounds[1]); //sounds[1] is the hurt sound
+        if (sounds.Length > 0)
+            audioSource.PlayOneShot(sounds[1]); //sounds[1] is the hurt sound
 
         meshRenderer.material.color = Color.red;
         yield return new WaitForSeconds(0.2f);

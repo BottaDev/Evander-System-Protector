@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - Player
-  - Boss
+  - Enemy
   - Map
   - EnemyShot
   - PlayerShot
