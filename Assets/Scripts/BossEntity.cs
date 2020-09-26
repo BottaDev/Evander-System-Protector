@@ -7,6 +7,9 @@ public class BossEntity : BaseEntity
     private AttackPattern pattern;
     private Transform player;
 
+    public delegate void PhaseSwitchEvent();
+    public PhaseSwitchEvent onPhaseSwitch;
+
     public  override void Awake()
     {
         base.Awake();
@@ -29,6 +32,24 @@ public class BossEntity : BaseEntity
     {
         base.TakeDamage(damage);
 
-        pattern.CheckPattern(currentHP);   
+        pattern.CheckPattern(currentHP);
+
+        bool isSecondPhaseActive = false;
+        if (currentHP  <= baseHP/2 && !isSecondPhaseActive)
+        {
+            isSecondPhaseActive = true;
+            onPhaseSwitch?.Invoke();
+        }
     }
+
+    virtual public void RegisterPhaseSwitchEvent(PhaseSwitchEvent newEvent)
+    {
+        onPhaseSwitch += newEvent;
+    }
+
+    virtual public void ForgetPhaseSwitchEvent(PhaseSwitchEvent eventToRemove)
+    {
+        onPhaseSwitch -= eventToRemove;
+    }
+
 }

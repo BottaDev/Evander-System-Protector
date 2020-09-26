@@ -19,6 +19,7 @@ TagManager:
   - EnemyShot
   - PlayerShot
   - Power Up
+  - BarrierSkill
   - EnemyWall
   - 
   - 

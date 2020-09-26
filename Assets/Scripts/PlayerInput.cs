@@ -34,11 +34,26 @@ public class PlayerInput : MonoBehaviour
             Shoot();
         else
             currentFireRate -= Time.deltaTime;
+        switch (player.currentSkill)
+        {
+            case PlayerEntity.Skill.Blink:
+                if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) && (moveInput.x != 0 || moveInput.z != 0) && currentBlinkRate <= 0)
+                    Blink();
+                else
+                    currentBlinkRate -= Time.deltaTime;
+                break;
 
-        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) && (moveInput.x != 0 || moveInput.z != 0) && currentBlinkRate <= 0)
-            Blink();
-        else
-            currentBlinkRate -= Time.deltaTime;
+            case PlayerEntity.Skill.Barrier:
+                if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) && currentBlinkRate <= 0)
+                    Barrier();
+                else
+                    currentBlinkRate -= Time.deltaTime;
+                break;
+
+            default:
+                break;
+        }
+
     }
 
     private void FixedUpdate()
@@ -80,6 +95,16 @@ public class PlayerInput : MonoBehaviour
 
         currentBlinkRate = player.blinkRate;
         StartCoroutine(SetInvulnerability());
+    }
+
+    private void Barrier()
+    {
+        player.audioSource.PlayOneShot(player.sounds[2]); //Player.sounds[2] is the blink sound
+        GameObject BarrierHB = Instantiate(player.barrier, transform.position, Quaternion.identity);
+        BarrierHB.transform.parent = gameObject.transform;
+
+        Destroy(BarrierHB, 0.6f);
+        currentBlinkRate = player.blinkRate;
     }
 
     private void RotatePlayer()
