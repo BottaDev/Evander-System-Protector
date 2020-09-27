@@ -3235,5 +3235,112 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[0].numberOfProjectiles
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[1].numberOfProjectiles
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].duration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].waitTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].numberOfProjectiles
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].rotationPerSecond
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].changeDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].numberOfProjectiles
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].fireRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].rotationPerSecond
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].changeDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[1].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[1].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3224cdd9da224984e9b94ebbe3f94819, type: 3}
