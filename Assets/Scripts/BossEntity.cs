@@ -5,7 +5,8 @@ using UnityEngine;
 public class BossEntity : BaseEntity
 {
     private AttackPattern pattern;
-    private Transform player;
+    [HideInInspector]
+    public Transform player;
 
     public delegate void PhaseSwitchEvent();
     public PhaseSwitchEvent onPhaseSwitch;
@@ -32,7 +33,7 @@ public class BossEntity : BaseEntity
     {
         base.TakeDamage(damage);
 
-        pattern.CheckPattern(currentHP);
+        pattern.CheckPhase(currentHP);
 
         bool isSecondPhaseActive = false;
         if (currentHP  <= baseHP/2 && !isSecondPhaseActive)

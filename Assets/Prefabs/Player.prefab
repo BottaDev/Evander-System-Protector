@@ -137,6 +137,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7e2c5bbaeb7e5a84f9d7db8f672d4407, type: 3}
   - {fileID: 8300000, guid: 03122b3d80cadbe46ae89fe507dd3328, type: 3}
   audioSource: {fileID: 0}
+  currentSkill: 0
   fireRate: 0.3
   blinkRate: 1
   blinkDistance: 3
@@ -146,6 +147,9 @@ MonoBehaviour:
   shotPrefab: {fileID: 4459537073249658549, guid: ee7d7a4c7e2fdb74f90a6584044567b5,
     type: 3}
   shotSpawn: {fileID: 3728621156347324888}
+  skills:
+  - {fileID: 2767685570571654205, guid: 2c2fd2d909b3a86468c6b4d52ad86bf1, type: 3}
+  boss: {fileID: 0}
   canBeDamaged: 1
 --- !u!114 &3728621155346993349
 MonoBehaviour:

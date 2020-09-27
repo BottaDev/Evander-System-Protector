@@ -1,18 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackPattern : MonoBehaviour
+public class TrojanPattern : MonoBehaviour
 {
+    public Animator animator;
     public BossPhase[] bossPhases;
 
+
     private BossEntity boss;
+
     private float accumulatedRotation;
     private float currentRate = 0;
     private float currentPatternDuration;
+
     private int currentPattern = 0;
     private int currentPhase = 0;
-    private bool isChangingPattron = false;     // If it's true, the boss will not shoot
+    private int currentAnimation = 0;
+
+    private bool isChangingPattern = false;     // If it's true, the boss will not shoot
+    private bool isExecutingAnimation = false;
 
     [System.Serializable]
     public class BossPhase
@@ -25,6 +33,7 @@ public class AttackPattern : MonoBehaviour
     public class BossPattern
     {
         public float duration;
+        public AnimationClip[] animationAttaks;
         public float waitTime = 1f;         // The time that must pass to execute the following pattern 
         public GameObject projectile;
         [Range(0, 100)]
@@ -61,23 +70,41 @@ public class AttackPattern : MonoBehaviour
     
     private void Update()
     {
-        if (!isChangingPattron)
+        if (!isChangingPattern)
         {
-            if (currentPatternDuration <= 0)
-                ChangePattern();
-            else
-                currentPatternDuration -= Time.deltaTime;
+            if (bossPhases[currentPhase].patterns[currentPattern].animationAttaks.Length <= 0)
+            {
+                if (currentPatternDuration <= 0)
+                    ChangePattern();
+                else
+                    currentPatternDuration -= Time.deltaTime;
 
-            if (currentRate <= 0)
-                SpawnProjectiles();
+                if (currentRate <= 0)
+                    SpawnProjectiles();
+                else
+                    currentRate -= Time.deltaTime;
+            }
             else
-                currentRate -= Time.deltaTime;
+            {
+                if (!isExecutingAnimation)
+                    ExecuteAnimationAttack();
+            }
         }
 
         accumulatedRotation += Time.deltaTime * bossPhases[currentPhase].patterns[currentPattern].rotationPerSecond;
         if (accumulatedRotation >= 360f)
             accumulatedRotation -= 360f;
-    } 
+    }
+
+    private void ExecuteAnimationAttack()
+    {
+        isExecutingAnimation = true;
+
+        currentAnimation = UnityEngine.Random.Range(0, bossPhases[currentPhase].patterns[currentPattern].animationAttaks.Length);
+        animator.Play(bossPhases[currentPhase].patterns[currentPattern].animationAttaks[currentAnimation].name);
+
+        StartCoroutine(WaitForAnimation());
+    }
 
     private void SpawnProjectiles()
     {
@@ -105,7 +132,7 @@ public class AttackPattern : MonoBehaviour
     }
 
     // Checks the current HP of the boss
-    public void CheckPhase(float currentHp)
+    public void CheckPattern(float currentHp)
     {
         if (currentHp == 0)
             return;
@@ -133,8 +160,14 @@ public class AttackPattern : MonoBehaviour
 
     private IEnumerator Stop()
     {
-        isChangingPattron = true;
+        isChangingPattern = true;
         yield return new WaitForSeconds(bossPhases[currentPhase].patterns[currentPattern].waitTime);
-        isChangingPattron = false;
+        isChangingPattern = false;
+    }
+
+    private IEnumerator WaitForAnimation()
+    {
+        yield return new WaitForSeconds(bossPhases[currentPhase].patterns[currentPattern].animationAttaks[currentAnimation].length);
+        isExecutingAnimation = false;
     }
 }

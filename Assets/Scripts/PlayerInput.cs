@@ -100,7 +100,7 @@ public class PlayerInput : MonoBehaviour
     private void Barrier()
     {
         player.audioSource.PlayOneShot(player.sounds[2]); //Player.sounds[2] is the blink sound
-        GameObject BarrierHB = Instantiate(player.barrier, transform.position, Quaternion.identity);
+        GameObject BarrierHB = Instantiate(player.skills[0], transform.position, Quaternion.identity);
         BarrierHB.transform.parent = gameObject.transform;
 
         Destroy(BarrierHB, 0.6f);

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PlayerEntity : BaseEntity
 {
     [Header("Player Stats")]
+    public Skill currentSkill;
     public float fireRate = 0.3f;
     public float blinkRate = 1f;
     public float blinkDistance = 2;
@@ -17,12 +18,11 @@ public class PlayerEntity : BaseEntity
     [Header("Objects")]
     public GameObject shotPrefab;
     public Transform shotSpawn;
-    public GameObject barrier;
+    public GameObject[] skills;
     public GameObject boss;
 
     [HideInInspector]
     public bool canBeDamaged = true;
-    public Skill currentSkill;
 
     private bool hasPowerUp = false;
     private float baseFireRate;

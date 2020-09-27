@@ -55,6 +55,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 993fcf1ecb5b086449819e76068a0d07, type: 3}
   - {fileID: 8300000, guid: 7e2c5bbaeb7e5a84f9d7db8f672d4407, type: 3}
   audioSource: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &4772033840898332727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,6 +265,7 @@ GameObject:
   - component: {fileID: 1999184986386075715}
   - component: {fileID: 2806649850501234678}
   - component: {fileID: 6563775323032941000}
+  - component: {fileID: 5193484976092166687}
   m_Layer: 9
   m_Name: Model
   m_TagString: Untagged
@@ -331,3 +333,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!95 &5193484976092166687
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5339200238190304423}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d1a1bcd934bdfe145bec7562d5328ec8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
