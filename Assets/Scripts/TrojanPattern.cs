@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class TrojanPattern : MonoBehaviour
 {
-    public Animator animator;
     public BossPhase[] bossPhases;
 
 
+    private Animator animator;
     private BossEntity boss;
 
     private float accumulatedRotation;
@@ -17,6 +17,7 @@ public class TrojanPattern : MonoBehaviour
 
     private int currentPattern = 0;
     private int currentPhase = 0;
+    [SerializeField]
     private int currentAnimation = 0;
 
     private bool isChangingPattern = false;     // If it's true, the boss will not shoot
@@ -25,6 +26,7 @@ public class TrojanPattern : MonoBehaviour
     [System.Serializable]
     public class BossPhase
     {
+        public string name = "Phase";
         public BossPattern[] patterns;
         public int hpToChange;          // HP that must be reached to change phase
     }
@@ -32,6 +34,7 @@ public class TrojanPattern : MonoBehaviour
     [System.Serializable]
     public class BossPattern
     {
+        public string name = "Pattern";
         public float duration;
         public AnimationClip[] animationAttaks;
         public float waitTime = 1f;         // The time that must pass to execute the following pattern 
@@ -50,6 +53,7 @@ public class TrojanPattern : MonoBehaviour
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         boss = GetComponent<BossEntity>();
         float baseHP = boss.baseHP;
 
@@ -66,8 +70,11 @@ public class TrojanPattern : MonoBehaviour
         }
 
         currentPatternDuration = bossPhases[currentPhase].patterns[currentPattern].duration;
+
+        boss.RegisterPhaseCheckEvent(CheckPhase);
     }
-    
+
+
     private void Update()
     {
         if (!isChangingPattern)
@@ -98,12 +105,10 @@ public class TrojanPattern : MonoBehaviour
 
     private void ExecuteAnimationAttack()
     {
-        isExecutingAnimation = true;
-
         currentAnimation = UnityEngine.Random.Range(0, bossPhases[currentPhase].patterns[currentPattern].animationAttaks.Length);
         animator.Play(bossPhases[currentPhase].patterns[currentPattern].animationAttaks[currentAnimation].name);
 
-        StartCoroutine(WaitForAnimation());
+        StartCoroutine(WaitForAnimation());   
     }
 
     private void SpawnProjectiles()
@@ -132,12 +137,12 @@ public class TrojanPattern : MonoBehaviour
     }
 
     // Checks the current HP of the boss
-    public void CheckPattern(float currentHp)
+    public void CheckPhase()
     {
-        if (currentHp == 0)
+        if (boss.currentHP == 0)
             return;
 
-        if (currentHp <= bossPhases[currentPhase].hpToChange)
+        if (boss.currentHP <= bossPhases[currentPhase].hpToChange)
         {
             currentPhase++;
             currentPattern = 0;
@@ -167,7 +172,10 @@ public class TrojanPattern : MonoBehaviour
 
     private IEnumerator WaitForAnimation()
     {
-        yield return new WaitForSeconds(bossPhases[currentPhase].patterns[currentPattern].animationAttaks[currentAnimation].length);
+        isExecutingAnimation = true;
+        print("Esperando");
+        yield return new WaitForSeconds(bossPhases[currentPhase].patterns[currentPattern].animationAttaks[currentAnimation].length + bossPhases[currentPhase].patterns[currentPattern].waitTime);
+        print("Dejo de esperar");
         isExecutingAnimation = false;
     }
 }

@@ -57,6 +57,7 @@ public class AttackPattern : MonoBehaviour
         }
 
         currentPatternDuration = bossPhases[currentPhase].patterns[currentPattern].duration;
+        boss.RegisterPhaseCheckEvent(CheckPhase);
     }
     
     private void Update()
@@ -105,12 +106,12 @@ public class AttackPattern : MonoBehaviour
     }
 
     // Checks the current HP of the boss
-    public void CheckPhase(float currentHp)
+    public void CheckPhase()
     {
-        if (currentHp == 0)
+        if (boss.currentHP == 0)
             return;
 
-        if (currentHp <= bossPhases[currentPhase].hpToChange)
+        if (boss.currentHP <= bossPhases[currentPhase].hpToChange)
         {
             currentPhase++;
             currentPattern = 0;

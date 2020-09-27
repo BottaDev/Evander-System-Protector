@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ public class BossEntity : BaseEntity
     [HideInInspector]
     public Transform player;
 
+    public delegate void PhaseCheckEvent();
+    public PhaseCheckEvent onPhaseCheck;
     public delegate void PhaseSwitchEvent();
     public PhaseSwitchEvent onPhaseSwitch;
 
@@ -33,7 +36,7 @@ public class BossEntity : BaseEntity
     {
         base.TakeDamage(damage);
 
-        pattern.CheckPhase(currentHP);
+        onPhaseCheck?.Invoke();
 
         bool isSecondPhaseActive = false;
         if (currentHP  <= baseHP/2 && !isSecondPhaseActive)
@@ -41,6 +44,11 @@ public class BossEntity : BaseEntity
             isSecondPhaseActive = true;
             onPhaseSwitch?.Invoke();
         }
+    }
+
+    virtual public void RegisterPhaseCheckEvent(PhaseCheckEvent newEvent)
+    {
+        onPhaseCheck += newEvent;
     }
 
     virtual public void RegisterPhaseSwitchEvent(PhaseSwitchEvent newEvent)
@@ -52,5 +60,4 @@ public class BossEntity : BaseEntity
     {
         onPhaseSwitch -= eventToRemove;
     }
-
 }
