@@ -77,7 +77,7 @@ public class PlayerEntity : BaseEntity
 
         if (pellets <= 0 && hasPowerUp)
         {
-            uiManager.CheckPowerUpActive(false);
+            uiManager.ShowAmmo(0);
             SetToBaseFireRate();
         }
     }
