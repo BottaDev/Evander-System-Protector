@@ -10,11 +10,11 @@ public class PowerUp : MonoBehaviour
     public float bulletSpeed;
     public int bullets;
 
-    public UIManager manager;
+    public UIManager uiManager;
 
     private void Start()
     {
-        manager = GameObject.Find("LevelManager").GetComponent<UIManager>();
+        uiManager = GameObject.Find("LevelManager").GetComponent<UIManager>();
         Destroy(gameObject, 10);
     }
 
@@ -30,7 +30,7 @@ public class PowerUp : MonoBehaviour
         {
             case Type.MachineGun:
                 player.GetComponent<PlayerEntity>().ChangeGun(bulletFireRate, bulletSpeed, bulletDamage, bullets);
-                manager.CheckPowerUpActive(true);
+                uiManager.ShowAmmo(bullets);
                 break;
         }
 
