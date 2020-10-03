@@ -12669,10 +12669,25 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 27.9
       objectReference: {fileID: 0}
+    - target: {fileID: 7313297706708870542, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8206831028860974547, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
       propertyPath: m_fontSize
       value: 18.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162972427426279358, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: hotSpot.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162972427426279358, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: hotSpot.y
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 210482de75866c9418918421cfb1126d, type: 3}
