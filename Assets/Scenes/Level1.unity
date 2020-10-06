@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427182, b: 0.5645241, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1809,7 +1809,7 @@ PrefabInstance:
     - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
         type: 3}
       propertyPath: bossPhases.Array.data[1].patterns.Array.data[2].waitTime
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
         type: 3}
@@ -2034,7 +2034,7 @@ PrefabInstance:
     - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
         type: 3}
       propertyPath: bossPhases.Array.data[2].patterns.Array.data[4].waitTime
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
         type: 3}
@@ -2044,7 +2044,7 @@ PrefabInstance:
     - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
         type: 3}
       propertyPath: bossPhases.Array.data[2].patterns.Array.data[5].waitTime
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
         type: 3}
@@ -2085,7 +2085,7 @@ PrefabInstance:
     - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
         type: 3}
       propertyPath: bossPhases.Array.data[2].patterns.Array.data[6].waitTime
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
         type: 3}
@@ -2126,7 +2126,7 @@ PrefabInstance:
     - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
         type: 3}
       propertyPath: bossPhases.Array.data[2].patterns.Array.data[7].waitTime
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
         type: 3}
@@ -2158,6 +2158,21 @@ PrefabInstance:
         type: 3}
       propertyPath: bossPhases.Array.data[2].patterns.Array.data[7].changeDirection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[0].waitTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[1].waitTime
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 3224cdd9da224984e9b94ebbe3f94819,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[0].waitTime
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3224cdd9da224984e9b94ebbe3f94819, type: 3}

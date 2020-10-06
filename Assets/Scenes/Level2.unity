@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427182, b: 0.5645241, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1793,6 +1793,156 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[5].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[6].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[11].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[12].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[17].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[18].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[23].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[24].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[29].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[30].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[35].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[36].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[41].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[42].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[0].waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[0].waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[5].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[6].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[11].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[12].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[17].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[18].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[23].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[24].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[29].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[30].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[35].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[36].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[41].waitTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[42].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6587952536946322926, guid: 808fec5239683b441902178c4a6a5a19,
         type: 3}
       propertyPath: m_LocalPosition.x
