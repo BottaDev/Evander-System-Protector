@@ -10,12 +10,17 @@ public class BossEntity : BaseEntity
     public delegate void PhaseSwitchEvent();
     public PhaseSwitchEvent onPhaseSwitch;
 
+    private GameObject currentModel;
+
     public  override void Awake()
     {
         base.Awake();
 
         pattern = GetComponent<AttackPattern>();
         player = GameObject.Find("Player").GetComponent<Transform>();
+        meshRenderer = gameObject.transform.GetChild(0).GetComponent<MeshRenderer>();
+
+        currentModel = gameObject.transform.GetChild(0).gameObject;
     }
 
     private void LateUpdate()
@@ -52,4 +57,14 @@ public class BossEntity : BaseEntity
         onPhaseSwitch -= eventToRemove;
     }
 
+    public void ChangeModel(GameObject newModel, int currentPhase)
+    {
+        currentModel.SetActive(false);
+
+        currentModel = newModel;
+
+        currentModel.SetActive(true);
+
+        meshRenderer = transform.GetChild(currentPhase).GetComponent<MeshRenderer>();
+    }
 }

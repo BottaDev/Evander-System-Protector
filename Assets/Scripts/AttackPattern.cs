@@ -19,6 +19,7 @@ public class AttackPattern : MonoBehaviour
     {
         public BossPattern[] patterns;
         public int hpToChange;          // HP that must be reached to change phase
+        public GameObject nextPhaseModel;
     }
 
     [System.Serializable]
@@ -112,6 +113,9 @@ public class AttackPattern : MonoBehaviour
 
         if (currentHp <= bossPhases[currentPhase].hpToChange)
         {
+            if (bossPhases[currentPhase].nextPhaseModel != null)
+                boss.ChangeModel(bossPhases[currentPhase].nextPhaseModel, currentPhase + 1);
+
             currentPhase++;
             currentPattern = 0;
             currentPatternDuration = bossPhases[currentPhase].patterns[currentPattern].duration;
