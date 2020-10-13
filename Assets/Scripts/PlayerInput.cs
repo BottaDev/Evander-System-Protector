@@ -73,11 +73,6 @@ public class PlayerInput : MonoBehaviour
 
         Vector3 direction = new Vector3(moveInput.x, 0, moveInput.z);
 
-        ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams();
-        emitParams.position = transform.position;
-        emitParams.applyShapeToPosition = true;
-        particles.Emit(emitParams, 50);
-
         player.audioSource.PlayOneShot(player.sounds[2]); //Player.sounds[2] is the blink sound
 
         if (Physics.Raycast(transform.position, direction, out hit, player.blinkDistance, layerMask))
@@ -95,6 +90,11 @@ public class PlayerInput : MonoBehaviour
 
         currentBlinkRate = player.blinkRate;
         StartCoroutine(SetInvulnerability());
+
+        ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams();
+        emitParams.position = transform.position;
+        emitParams.applyShapeToPosition = true;
+        particles.Emit(emitParams, 50);
     }
 
     private void Barrier()
