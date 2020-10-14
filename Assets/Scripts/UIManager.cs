@@ -22,8 +22,16 @@ public class UIManager : MonoBehaviour
     public void ShowAmmo(int ammo)
     {
         if (ammo > 0)
+        {
             bulletsCountText.text = ammo.ToString();
+            Color color;
+            if (ColorUtility.TryParseHtmlString("#22AA55", out color))
+                bulletsCountText.color = color;
+        }
         else
+        {
             bulletsCountText.text = "NULL";
+            bulletsCountText.color = Color.red;
+        }
     }
 }
