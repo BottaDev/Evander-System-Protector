@@ -1387,11 +1387,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-<<<<<<< Updated upstream
   m_fontSize: 19.5
-=======
-  m_fontSize: 25.75
->>>>>>> Stashed changes
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1624,11 +1620,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-<<<<<<< Updated upstream
   m_fontSize: 23.35
-=======
-  m_fontSize: 35.9
->>>>>>> Stashed changes
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1966,11 +1958,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-<<<<<<< Updated upstream
   m_fontSize: 26.25
-=======
-  m_fontSize: 40.45
->>>>>>> Stashed changes
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2452,11 +2440,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-<<<<<<< Updated upstream
   m_fontSize: 20.8
-=======
-  m_fontSize: 27.3
->>>>>>> Stashed changes
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
