@@ -138,7 +138,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 03122b3d80cadbe46ae89fe507dd3328, type: 3}
   audioSource: {fileID: 0}
   fireRate: 0.3
-  blinkRate: 1
+  skillRate: 1
   blinkDistance: 3
   shotSpeed: 20
   shotDamage: 1
@@ -150,6 +150,7 @@ MonoBehaviour:
   boss: {fileID: 0}
   canBeDamaged: 1
   currentSkill: 0
+  nextSkill: 1
 --- !u!114 &3728621155346993349
 MonoBehaviour:
   m_ObjectHideFlags: 0

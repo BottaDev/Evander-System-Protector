@@ -8,7 +8,7 @@ public class PlayerEntity : BaseEntity
 {
     [Header("Player Stats")]
     public float fireRate = 0.3f;
-    public float blinkRate = 1f;
+    public float skillRate = 1f;
     public float blinkDistance = 2;
     public float shotSpeed;
     public float shotDamage;
@@ -22,12 +22,17 @@ public class PlayerEntity : BaseEntity
 
     [HideInInspector]
     public bool canBeDamaged = true;
+
+    [Header("Skill")]
     public Skill currentSkill;
+    public Skill nextSkill;
 
     private bool hasPowerUp = false;
     private float baseFireRate;
     private HealthBar healthBar;
     private UIManager uiManager;
+    private float damageStayReset = 2f;
+    private float damageStayCounter;
 
 
     public override void Start()
@@ -88,14 +93,36 @@ public class PlayerEntity : BaseEntity
             TakeDamage(1);
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        // Enemy Wall collision
+        if (collision.gameObject.layer == 15)
+        {
+            if (damageStayCounter <= 0)
+            {
+                damageStayCounter = damageStayReset;
+                TakeDamage(1);
+            }
+            else
+                damageStayCounter -= Time.deltaTime;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        // Enemy Wall collision
+        if (collision.gameObject.layer == 15)
+            damageStayCounter = damageStayReset;
+    }
+
     private void onBossPhaseSwitch()
     {
-        currentSkill = Skill.Barrier;
+        currentSkill = nextSkill;
     }
 
     public enum Skill
     {
         Blink,
-        Barrier,
+        BlankBullet,
     }
 }
