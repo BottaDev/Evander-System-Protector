@@ -18,7 +18,6 @@ public class PlayerInput : MonoBehaviour
     private GameObject tpPointInstance;
     private bool tpPointSet = false;
 
-
     private void Awake()
     {
         player = GetComponent<PlayerEntity>();
@@ -72,20 +71,15 @@ public class PlayerInput : MonoBehaviour
                 if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) && currentSkillRate <= 0)
                 {
                     if (tpPointSet)
-                    {
                         UseTeleport();
-                    }
                     else
-                    {
                         SetTeleportPoint();
-                    }
                 }
                 else
                 {
                     currentSkillRate -= Time.deltaTime;
                 }
-
-                    break;
+                break;
         }
     }
 
@@ -134,13 +128,15 @@ public class PlayerInput : MonoBehaviour
         currentSkillRate = player.skillRate;
     }
 
-
-
     private void UseTeleport()
     {
         player.audioSource.PlayOneShot(player.sounds[2]); //Player.sounds[2] is the blink sound
-        transform.position = tpPointInstance.transform.position;
+
+        Vector3 newPos = new Vector3(tpPointInstance.transform.position.x, transform.position.y, tpPointInstance.transform.position.z);
+        transform.position = newPos;
+
         Destroy(tpPointInstance);
+
         tpPointSet = false;
     }
 
@@ -149,7 +145,6 @@ public class PlayerInput : MonoBehaviour
         tpPointSet = true;
         tpPointInstance = Instantiate(tpPointPrefab, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
     }
-
 
     private void RotatePlayer()
     {
