@@ -124,5 +124,6 @@ public class PlayerEntity : BaseEntity
     {
         Blink,
         BlankBullet,
+        Teleport,
     }
 }
