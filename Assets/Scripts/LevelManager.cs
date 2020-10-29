@@ -19,4 +19,5 @@ public class LevelManager : MonoBehaviour
         else if (entity.layer == 8)
             manager.ShowFinalGui(false);
     }
+
 }

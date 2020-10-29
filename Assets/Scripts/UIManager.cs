@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+
     [Header("Screen")]
     public GameObject youLoseScreen;
     public GameObject youWinScreen;
     [Header("Bullet Count")]
     public GameObject countBullets;
     public TMPro.TextMeshProUGUI bulletsCountText;
+    [Header("Skill Change Text Panel")]
+    public GameObject boss;
+    public GameObject skillChangeTextPanel;
 
     public void ShowFinalGui(bool win)
     {
@@ -33,5 +37,16 @@ public class UIManager : MonoBehaviour
             bulletsCountText.text = "NULL";
             bulletsCountText.color = Color.red;
         }
+    }
+
+    private void Awake()
+    {
+        boss.GetComponent<BossEntity>().RegisterPhaseSwitchEvent(onBossPhaseSwitch);
+    }
+
+    void onBossPhaseSwitch()
+    {
+        boss.GetComponent<BossEntity>().ForgetPhaseSwitchEvent(onBossPhaseSwitch);
+        skillChangeTextPanel.SetActive(true);
     }
 }
