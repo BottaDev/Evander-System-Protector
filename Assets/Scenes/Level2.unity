@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427182, b: 0.5645241, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1546,6 +1546,16 @@ PrefabInstance:
       propertyPath: bulletsCountText
       value: 
       objectReference: {fileID: 1048857519}
+    - target: {fileID: 796853347431051489, guid: 94c521cdd191a2a4aa1c738a5ad1594f,
+        type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 1314856269}
+    - target: {fileID: 796853347431051489, guid: 94c521cdd191a2a4aa1c738a5ad1594f,
+        type: 3}
+      propertyPath: skillChangeTextPanel
+      value: 
+      objectReference: {fileID: 2402249076787320297}
     - target: {fileID: 796853347431051491, guid: 94c521cdd191a2a4aa1c738a5ad1594f,
         type: 3}
       propertyPath: m_Name
@@ -1560,11 +1570,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 358312374131705116, guid: 210482de75866c9418918421cfb1126d,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 25.6
-      objectReference: {fileID: 0}
     - target: {fileID: 2402249076338848649, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1685,23 +1690,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2402249077752290887, guid: 210482de75866c9418918421cfb1126d,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 17.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 4670617032929650773, guid: 210482de75866c9418918421cfb1126d,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 27.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8206831028860974547, guid: 210482de75866c9418918421cfb1126d,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 18.25
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 210482de75866c9418918421cfb1126d, type: 3}
+--- !u!1 &2402249076787320297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6922609141839232389, guid: 210482de75866c9418918421cfb1126d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2402249076787320296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3728621156421246569
 PrefabInstance:
   m_ObjectHideFlags: 0
