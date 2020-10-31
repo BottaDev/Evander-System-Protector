@@ -6,10 +6,9 @@ using TMPro;
 
 public class SkillChangeText : MonoBehaviour
 {
-    public TextMeshProUGUI text;
-    public string skillName;
+    private TextMeshProUGUI text;
+    private string skillName;
 
-    // Start is called before the first frame update
     void OnEnable()
     {
         skillName = GameObject.Find("Player").GetComponent<PlayerEntity>().nextSkill.ToString();
