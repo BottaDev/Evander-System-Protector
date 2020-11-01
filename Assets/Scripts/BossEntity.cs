@@ -11,10 +11,14 @@ public class BossEntity : BaseEntity
     public PhaseSwitchEvent onPhaseSwitch;
 
     private GameObject currentModel;
+    private HealthBar healthBar;
 
     public  override void Awake()
     {
         base.Awake();
+
+        healthBar = GameObject.Find("Boss HealthBar").GetComponent<HealthBar>();
+        healthBar.SetMaxHealt(baseHP);
 
         pattern = GetComponent<AttackPattern>();
         player = GameObject.Find("Player").GetComponent<Transform>();
@@ -36,6 +40,8 @@ public class BossEntity : BaseEntity
     public override void TakeDamage(float damage)
     {
         base.TakeDamage(damage);
+
+        healthBar.SetHealth(currentHP);
 
         pattern.CheckPattern(currentHP);
 

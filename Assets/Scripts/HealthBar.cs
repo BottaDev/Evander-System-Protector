@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Slider slider;
-    public PlayerEntity player;
     public Gradient gradient;
     public Image fill;
 
