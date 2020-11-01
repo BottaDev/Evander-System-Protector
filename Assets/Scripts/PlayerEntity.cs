@@ -87,6 +87,16 @@ public class PlayerEntity : BaseEntity
         }
     }
 
+    public void Heal(int amount)
+    {
+        currentHP += amount;
+
+        if (currentHP > baseHP)
+            currentHP = baseHP;
+
+        healthBar.SetHealth(currentHP);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == 9 || collision.gameObject.layer == 15)

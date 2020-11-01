@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PowerUpManager : MonoBehaviour
 {
-    public GameObject machineGun;
-    private float timeToSpawn = 10;
+    public GameObject[] powerUps;
+    private float timeToSpawn = 15;
     private float currentTimeToSpawn;
 
     public Vector3 center;
@@ -24,12 +24,16 @@ public class PowerUpManager : MonoBehaviour
         {
             Vector3 pos = CalculateSpawnPosition();
 
-            int randomPowerUp = Random.Range(1, 2);
+            int randomPowerUp = Random.Range(0, powerUps.Length);
 
             switch (randomPowerUp)
             {
+                case 0:
+                    Instantiate(powerUps[0] ,pos , Quaternion.identity);
+                    break;
+
                 case 1:
-                    Instantiate(machineGun ,pos , Quaternion.identity);
+                    Instantiate(powerUps[1], pos, Quaternion.identity);
                     break;
             }
 
