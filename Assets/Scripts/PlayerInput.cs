@@ -177,9 +177,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject bullet = Instantiate(player.shotPrefab, player.shotSpawn.position, player.shotSpawn.rotation);
-        ShotController controller = bullet.GetComponent<ShotController>();
-        controller.SetStats(player.shotSpeed, player.shotDamage);
+        Instantiate(player.currentShotPrefab, player.shotSpawn.position, player.shotSpawn.rotation);
 
         currentFireRate = player.fireRate;
 

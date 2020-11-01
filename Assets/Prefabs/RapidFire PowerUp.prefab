@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 1246345855567752291}
   - component: {fileID: 1723463640265354058}
   m_Layer: 13
-  m_Name: MachinGun Power Up
+  m_Name: RapidFire PowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -490,12 +490,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268f0e6c98e29414fa858154fbdf4017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  bulletFireRate: 0.15
-  bulletDamage: 1
-  bulletSpeed: 20
-  bullets: 30
-  uiManager: {fileID: 0}
+  timeToDestroy: 10
+  playerFireRate: 0.15
+  bulletsCount: 40
+  bulletPrefab: {fileID: 4459537073249658549, guid: db6ddb92256737e41ba2c9aee6a9e8de,
+    type: 3}
 --- !u!65 &1723463640265354058
 BoxCollider:
   m_ObjectHideFlags: 0

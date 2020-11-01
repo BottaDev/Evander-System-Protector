@@ -10,8 +10,6 @@ public class PlayerEntity : BaseEntity
     public float fireRate = 0.3f;
     public float skillRate = 1f;
     public float blinkDistance = 2;
-    public float shotSpeed;
-    public float shotDamage;
     public int pellets;
 
     [Header("Objects")]
@@ -19,9 +17,9 @@ public class PlayerEntity : BaseEntity
     public Transform shotSpawn;
     public GameObject barrier;
     public GameObject boss;
+    [HideInInspector] public GameObject currentShotPrefab;
 
-    [HideInInspector]
-    public bool canBeDamaged = true;
+    [HideInInspector] public bool canBeDamaged = true;
 
     [Header("Skill")]
     public Skill currentSkill;
@@ -38,27 +36,35 @@ public class PlayerEntity : BaseEntity
     public override void Start()
     {
         base.Start();
+
         healthBar = GameObject.Find("HealthBar").GetComponent<HealthBar>();
-        uiManager = levelManager.gameObject.GetComponent<UIManager>();
-        baseFireRate = fireRate;
         healthBar.SetMaxHealt(baseHP);
+
+        uiManager = levelManager.gameObject.GetComponent<UIManager>();
+
+        baseFireRate = fireRate;
+        currentShotPrefab = shotPrefab;
+
         boss.GetComponent<BossEntity>().RegisterPhaseSwitchEvent(onBossPhaseSwitch);
     }
 
     public void SetToBaseFireRate()
     {
         hasPowerUp = false;
+
         fireRate = baseFireRate;
+        currentShotPrefab = shotPrefab;
     }
 
-    public void ChangeGun(float bulletFireRate, float bulletSpeed, float bulletDamage, int bullets)
+    public void ChangeGun(float bulletFireRate,  int bullets, GameObject prefab)
     {
         fireRate = bulletFireRate;
-        shotSpeed = bulletSpeed;
-        shotDamage = bulletDamage;
         pellets = bullets;
+        currentShotPrefab = prefab;
 
         hasPowerUp = true;
+
+        uiManager.ShowAmmo(bullets);
     }
 
     public void SetInvulnerability(bool isVulnerable)

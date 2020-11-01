@@ -58,6 +58,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUps:
   - {fileID: 8976497066422250419, guid: 8ec1217e1ec214e42bfda7b23eadd1b5, type: 3}
+  - {fileID: 8976497066422250419, guid: 58cb54d584d52f540a1b933c103806de, type: 3}
   - {fileID: 8831608116991688014, guid: 7eac619f9e2fa77458c2bf388ac9a578, type: 3}
   center: {x: 0, y: 1, z: 0}
   size: {x: 42.5, y: 0, z: 42.5}

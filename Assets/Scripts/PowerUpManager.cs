@@ -26,16 +26,7 @@ public class PowerUpManager : MonoBehaviour
 
             int randomPowerUp = Random.Range(0, powerUps.Length);
 
-            switch (randomPowerUp)
-            {
-                case 0:
-                    Instantiate(powerUps[0] ,pos , Quaternion.identity);
-                    break;
-
-                case 1:
-                    Instantiate(powerUps[1], pos, Quaternion.identity);
-                    break;
-            }
+            Instantiate(powerUps[randomPowerUp], pos, Quaternion.identity);
 
             currentTimeToSpawn = timeToSpawn;
         }
