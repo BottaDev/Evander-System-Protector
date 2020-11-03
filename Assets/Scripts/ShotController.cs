@@ -8,7 +8,7 @@ public class ShotController : MonoBehaviour
     public float speed = 15f;
     public float damage = 1;
 
-    void Update()
+    protected virtual void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);        
     }
@@ -35,12 +35,6 @@ public class ShotController : MonoBehaviour
         }
 
         Destroy(gameObject);
-    }
-
-    public void SetStats(float targetSpeed,float targetDamage)
-    {
-        speed = targetSpeed;
-        damage = targetDamage;
     }
 
     public enum Type

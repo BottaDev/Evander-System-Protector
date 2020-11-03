@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PowerUpManager : MonoBehaviour
 {
-    public GameObject machineGun;
-    private float timeToSpawn = 10;
+    public float spawnDistance = 8f;        // Boss distance to spawn PowerUp 
+    public GameObject[] powerUps;
+
+    private float timeToSpawn = 15;
     private float currentTimeToSpawn;
+    private GameObject boss;
 
     public Vector3 center;
     public Vector3 size;
@@ -14,6 +17,14 @@ public class PowerUpManager : MonoBehaviour
     private void Awake()
     {
         currentTimeToSpawn = timeToSpawn;
+    }
+
+    private void Start()
+    {
+        boss = GameObject.FindGameObjectWithTag("Boss");
+        
+        if (boss == null)
+            Debug.LogError("Object with tag 'Boss' not finded");
     }
 
     private void Update()
@@ -24,14 +35,10 @@ public class PowerUpManager : MonoBehaviour
         {
             Vector3 pos = CalculateSpawnPosition();
 
-            int randomPowerUp = Random.Range(1, 2);
+            int randomPowerUp = Random.Range(0, powerUps.Length);
 
-            switch (randomPowerUp)
-            {
-                case 1:
-                    Instantiate(machineGun ,pos , Quaternion.identity);
-                    break;
-            }
+            if (pos != Vector3.zero)
+                Instantiate(powerUps[randomPowerUp], pos, Quaternion.identity);
 
             currentTimeToSpawn = timeToSpawn;
         }
@@ -53,12 +60,33 @@ public class PowerUpManager : MonoBehaviour
             bCol.isTrigger = true;
             bCol.radius = 0.2f;
 
-            Collider[] colls = Physics.OverlapSphere(pos, bCol.radius, 10);
+            float distance = 0f;
 
-            if (colls.Length == 0)
+            if (boss != null)
             {
-                GameObject.Destroy(tempObj);
-                canSpawn = true;
+                distance = Vector3.Distance(boss.transform.position, tempObj.transform.position);
+            }
+            else
+            {
+                // Boss died. Don't spawn power up
+                return Vector3.zero;
+            }
+                
+            
+            if (distance >= spawnDistance)
+            {
+                Collider[] colls = Physics.OverlapSphere(pos, bCol.radius, 10);
+
+                if (colls.Length == 0)
+                {
+                    GameObject.Destroy(tempObj);
+                    canSpawn = true;
+                }
+                else
+                {
+                    canSpawn = false;
+                    GameObject.Destroy(tempObj);
+                }
             }
             else
             {
