@@ -33,7 +33,7 @@ public class PlayerEntity : BaseEntity
     private UIManager uiManager;
     private float damageStayReset = 2f;
     private float damageStayCounter;
-
+    private ChangeImageSkill skillChange;
 
     public override void Start()
     {
@@ -43,6 +43,8 @@ public class PlayerEntity : BaseEntity
         baseFireRate = fireRate;
         healthBar.SetMaxHealt(baseHP);
         boss.GetComponent<BossEntity>().RegisterPhaseSwitchEvent(onBossPhaseSwitch);
+        skillChange = GameObject.Find("GamePlay Canvas").GetComponent<ChangeImageSkill>();
+        skillChange.CheckSkill(currentSkill);
     }
 
     public void SetToBaseFireRate()
@@ -118,6 +120,7 @@ public class PlayerEntity : BaseEntity
     private void onBossPhaseSwitch()
     {
         currentSkill = nextSkill;
+        skillChange.CheckSkill(currentSkill);
     }
 
     public enum Skill

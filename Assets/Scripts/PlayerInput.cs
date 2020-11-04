@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -18,10 +19,16 @@ public class PlayerInput : MonoBehaviour
     private GameObject tpPointInstance;
     private bool tpPointSet = false;
 
+    //public Slider sliderBlink;
+    //public Slider sliderBlank;
+    //public Slider sliderTP;
+    //public ChangeImageSkill changeImage;
+
     private void Awake()
     {
         player = GetComponent<PlayerEntity>();
         rb = GetComponent<Rigidbody>();
+        //changeImage = GameObject.Find("GamePlay Canvas").GetComponent<ChangeImageSkill>();
     }
 
     private void Start()
@@ -57,14 +64,22 @@ public class PlayerInput : MonoBehaviour
                 if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) && (moveInput.x != 0 || moveInput.z != 0) && currentSkillRate <= 0)
                     UseBlink();
                 else
+                {
+                    //sliderBlink.maxValue = player.skillRate;
+                    //sliderBlink.value = currentSkillRate;
                     currentSkillRate -= Time.deltaTime;
+                }
                 break;
 
             case PlayerEntity.Skill.BlankBullet:
                 if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) && currentSkillRate <= 0)
                     UseBlankBullet();
                 else
+                {
+                    //sliderBlank.maxValue = player.skillRate;
+                    //sliderBlank.value = currentSkillRate;
                     currentSkillRate -= Time.deltaTime;
+                }
                 break;
 
             case PlayerEntity.Skill.Teleport:
@@ -77,6 +92,8 @@ public class PlayerInput : MonoBehaviour
                 }
                 else
                 {
+                    //sliderTP.maxValue = player.skillRate;
+                    //sliderTP.value = currentSkillRate;
                     currentSkillRate -= Time.deltaTime;
                 }
                 break;
