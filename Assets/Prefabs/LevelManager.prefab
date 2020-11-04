@@ -46,9 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   youLoseScreen: {fileID: 0}
   youWinScreen: {fileID: 0}
-  imgBullets: {fileID: 0}
   countBullets: {fileID: 0}
   bulletsCountText: {fileID: 0}
+  boss: {fileID: 0}
+  skillChangeTextPanel: {fileID: 0}
 --- !u!114 &796853347431051490
 MonoBehaviour:
   m_ObjectHideFlags: 0
