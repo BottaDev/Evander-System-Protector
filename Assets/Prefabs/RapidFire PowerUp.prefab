@@ -493,7 +493,7 @@ MonoBehaviour:
   timeToDestroy: 10
   playerFireRate: 0.15
   bulletsCount: 40
-  bulletPrefab: {fileID: 4459537073249658549, guid: db6ddb92256737e41ba2c9aee6a9e8de,
+  bulletPrefab: {fileID: 4459537073249658549, guid: f3a2c19c09a2d604e8369b88dcfd3d9f,
     type: 3}
 --- !u!65 &1723463640265354058
 BoxCollider:
