@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AttackPattern : MonoBehaviour
 {
@@ -12,14 +13,18 @@ public class AttackPattern : MonoBehaviour
     private float currentPatternDuration;
     private int currentPattern = 0;
     private int currentPhase = 0;
+    public int currentWayPoint = 0;
     private bool isChangingPattron = false;     // If it's true, the boss will not shoot
+    private NavMeshAgent agent;
 
     [System.Serializable]
     public class BossPhase
     {
+        public string name;
         public BossPattern[] patterns;
         public int hpToChange;          // HP that must be reached to change phase
         public GameObject nextPhaseModel;
+        public Transform[] wayPoints;
     }
 
     [System.Serializable]
@@ -39,9 +44,9 @@ public class AttackPattern : MonoBehaviour
         public bool changeDirection;
     }
 
-
     private void Awake()
     {
+        agent = GetComponent<NavMeshAgent>();
         boss = GetComponent<BossEntity>();
         float baseHP = boss.baseHP;
 
@@ -75,10 +80,29 @@ public class AttackPattern : MonoBehaviour
                 currentRate -= Time.deltaTime;
         }
 
+        Move();
+
         accumulatedRotation += Time.deltaTime * bossPhases[currentPhase].patterns[currentPattern].rotationPerSecond;
         if (accumulatedRotation >= 360f)
             accumulatedRotation -= 360f;
-    } 
+    }
+
+    private void Move()
+    {
+        if (bossPhases[currentPhase].wayPoints.Length <= 0)
+            return;
+
+        agent.speed = boss.movementSpeed;
+
+        if (Vector3.Distance(bossPhases[currentPhase].wayPoints[currentWayPoint].position, transform.position) < agent.stoppingDistance)
+        {
+            currentWayPoint++;
+            if (currentWayPoint > bossPhases[currentPhase].wayPoints.Length - 1)
+                currentWayPoint = 0;
+        }
+
+        agent.destination = bossPhases[currentPhase].wayPoints[currentWayPoint].position;
+    }
 
     private void SpawnProjectiles()
     {
@@ -118,6 +142,7 @@ public class AttackPattern : MonoBehaviour
 
             currentPhase++;
             currentPattern = 0;
+            currentWayPoint = 0;
             currentPatternDuration = bossPhases[currentPhase].patterns[currentPattern].duration;
         }
     }
@@ -131,7 +156,7 @@ public class AttackPattern : MonoBehaviour
 
         currentPatternDuration = bossPhases[currentPhase].patterns[currentPattern].duration;
 
-        if(bossPhases[currentPhase].patterns[currentPattern].waitTime > 0)
+        if (bossPhases[currentPhase].patterns[currentPattern].waitTime > 0)
             StartCoroutine(Stop());
     }
 
