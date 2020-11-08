@@ -133,6 +133,21 @@ public class PlayerEntity : BaseEntity
             damageStayCounter = damageStayReset;
     }
 
+    protected override IEnumerator KillEntity()
+    {
+        Animator animator = meshRenderer.gameObject.GetComponent<Animator>();
+
+        animator.SetBool("isDeath", true);
+        yield return new WaitForSeconds(0.7f);
+
+        GameObject particleSystem = Instantiate(deathParticle, transform.position, transform.rotation);
+        Destroy(particleSystem, 1.5f);
+
+        levelManager.WinLoseGame(gameObject);
+
+        Destroy(gameObject);
+    }
+
     private void onBossPhaseSwitch()
     {
         currentSkill = nextSkill;
