@@ -13,7 +13,7 @@ public class AttackPattern : MonoBehaviour
     private float currentPatternDuration;
     private int currentPattern = 0;
     private int currentPhase = 0;
-    public int currentWayPoint = 0;
+    private int currentWayPoint = 0;
     private bool isChangingPattron = false;     // If it's true, the boss will not shoot
     private NavMeshAgent agent;
 
