@@ -96,6 +96,7 @@ public class AttackPattern : MonoBehaviour
 
         if (Vector3.Distance(bossPhases[currentPhase].wayPoints[currentWayPoint].position, transform.position) < agent.stoppingDistance)
         {
+            print("point reached");
             currentWayPoint++;
             if (currentWayPoint > bossPhases[currentPhase].wayPoints.Length - 1)
                 currentWayPoint = 0;
