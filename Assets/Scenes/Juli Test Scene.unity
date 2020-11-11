@@ -1179,10 +1179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2013d81d988983549945e323901b97c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  machineGun: {fileID: 8976497066422250419, guid: 8ec1217e1ec214e42bfda7b23eadd1b5,
-    type: 3}
+  spawnDistance: 8
+  powerUps: []
   center: {x: 0, y: 1, z: 0}
-  size: {x: 42.5, y: 0, z: 42.5}
+  size: {x: 4, y: 0, z: 4}
 --- !u!114 &1661215759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1388,6 +1388,8 @@ MonoBehaviour:
   listImage:
   - {fileID: 0}
   - {fileID: 0}
+  blank: {fileID: 0}
+  tp: {fileID: 0}
 --- !u!1001 &56795058274635405
 PrefabInstance:
   m_ObjectHideFlags: 0
