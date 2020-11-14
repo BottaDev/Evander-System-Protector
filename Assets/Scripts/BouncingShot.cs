@@ -19,6 +19,7 @@ public class BouncingShot : ShotController
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
+        // Works like OnTriggerEnter but more precise
         if (Physics.Raycast(ray, out hit, Time.deltaTime * speed + 0.1f, bouncingMask))
         {
             if (bouncingCount == maxBounces)
