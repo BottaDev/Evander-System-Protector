@@ -42,6 +42,9 @@ public class BossEntity : BaseEntity
 
         healthBar.SetHealth(currentHP);
 
+        if (currentHP <= 0)
+            return;
+
         pattern.CheckPattern(currentHP);
 
         bool isSecondPhaseActive = false;

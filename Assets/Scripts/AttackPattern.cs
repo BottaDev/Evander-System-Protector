@@ -67,6 +67,9 @@ public class AttackPattern : MonoBehaviour
     
     private void Update()
     {
+        if (boss.currentHP <= 0)
+            return;
+
         if (!isChangingPattron)
         {
             if (currentPatternDuration <= 0)
@@ -96,6 +99,7 @@ public class AttackPattern : MonoBehaviour
 
         if (Vector3.Distance(bossPhases[currentPhase].wayPoints[currentWayPoint].position, transform.position) < agent.stoppingDistance)
         {
+            print("point reached");
             currentWayPoint++;
             if (currentWayPoint > bossPhases[currentPhase].wayPoints.Length - 1)
                 currentWayPoint = 0;
@@ -132,9 +136,6 @@ public class AttackPattern : MonoBehaviour
     // Checks the current HP of the boss
     public void CheckPattern(float currentHp)
     {
-        if (currentHp == 0)
-            return;
-
         if (currentHp <= bossPhases[currentPhase].hpToChange)
         {
             if (bossPhases[currentPhase].nextPhaseModel != null)

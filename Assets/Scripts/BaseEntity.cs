@@ -6,8 +6,7 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
 {
     [Header("Entity Stats")]
     public float baseHP;
-    [SerializeField]
-    protected float currentHP;
+    public float currentHP;
     public float movementSpeed;
 
     protected Color defaultColor;
@@ -17,6 +16,9 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
     public AudioClip[] sounds;
     [HideInInspector]
     public AudioSource audioSource;
+
+    [Header("Death Objects")]
+    public GameObject deathParticle;
 
     protected LevelManager levelManager;
 
@@ -35,13 +37,31 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
 
     virtual public void TakeDamage(float damage)
     {
+        if (currentHP <= 0)
+            return;
+
         currentHP -= damage;
         StartCoroutine(DamageBlink());
         if (currentHP <= 0)
-        {
-            levelManager.WinLoseGame(gameObject);
-            Destroy(gameObject);
-        }
+            StartCoroutine(KillEntity());
+    }
+
+    protected virtual IEnumerator KillEntity()
+    {
+        Animator animator = meshRenderer.gameObject.GetComponent<Animator>();
+
+        animator.SetBool("isDeath", true);
+        yield return new WaitForSeconds(1f);    // We give the animator time to change the animation
+
+        int animationDuration = animator.GetCurrentAnimatorClipInfo(0).Length;
+        yield return new WaitForSeconds(animationDuration);
+
+        GameObject particleSystem = Instantiate(deathParticle, transform.position, transform.rotation);
+        Destroy(particleSystem, 1.5f);
+
+        levelManager.WinLoseGame(gameObject);
+
+        Destroy(gameObject);
     }
 
     // Change the color to RED when damaged

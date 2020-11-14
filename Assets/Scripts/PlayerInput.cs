@@ -39,6 +39,9 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
+        if (player.currentHP <= 0)
+            return;
+
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
 
         if (Input.GetMouseButton(0) && currentFireRate <= 0)
@@ -51,6 +54,9 @@ public class PlayerInput : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (player.currentHP <= 0)
+            return;
+
         RotatePlayer();
         MovePlayer();
     }

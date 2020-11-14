@@ -87,6 +87,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8831608116492919598}
+  - component: {fileID: 4408216058272547784}
   m_Layer: 13
   m_Name: Model
   m_TagString: Untagged
@@ -110,6 +111,25 @@ Transform:
   m_Father: {fileID: 8831608116991688015}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &4408216058272547784
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8831608116492919597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26a99c1518068df468265d86c70d7cdf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8831608116904535751
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,6 +219,7 @@ GameObject:
   - component: {fileID: 8831608116991688015}
   - component: {fileID: 8831608116991688009}
   - component: {fileID: 8831608116991688008}
+  - component: {fileID: 733441185975255702}
   m_Layer: 13
   m_Name: Heal PowerUp
   m_TagString: Untagged
@@ -213,14 +234,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8831608116991688014}
-  m_LocalRotation: {x: 0.3220014, y: -0, z: -0, w: 0.9467392}
+  m_LocalRotation: {x: -0.26359513, y: -0, z: -0, w: 0.9646334}
   m_LocalPosition: {x: 0, y: 1, z: -16.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8831608116492919598}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 37.568, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -30.567001, y: 0, z: 0}
 --- !u!114 &8831608116991688009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5cb01531b019243832e354d8f61b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToDestroy: 10
   healAmount: 5
 --- !u!65 &8831608116991688008
 BoxCollider:
@@ -247,3 +269,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &733441185975255702
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8831608116991688014}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
