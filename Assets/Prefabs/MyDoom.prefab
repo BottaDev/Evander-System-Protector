@@ -56,6 +56,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 993fcf1ecb5b086449819e76068a0d07, type: 3}
   - {fileID: 8300000, guid: 7e2c5bbaeb7e5a84f9d7db8f672d4407, type: 3}
   audioSource: {fileID: 0}
+  deathParticle: {fileID: 168542, guid: 439c793a572dbb34bbeb0a97c40d3cc1, type: 3}
 --- !u!114 &4772033840898332727
 MonoBehaviour:
   m_ObjectHideFlags: 0
