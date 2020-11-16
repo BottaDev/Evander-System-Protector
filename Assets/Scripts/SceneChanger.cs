@@ -21,4 +21,45 @@ public class SceneChanger : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void GoToNextLevel()
+    {
+        string scneneName = SceneManager.GetActiveScene().name;
+
+        switch (scneneName)
+        {
+            case "Level1":
+                SceneManager.LoadScene("Level2");
+                break;
+
+            case "Level2":
+                SceneManager.LoadScene("Level3");
+                break;
+
+            case "Level3":
+                SceneManager.LoadScene("Level4");
+                break;
+
+            case "Level4":
+                SceneManager.LoadScene("Level5");
+                break;
+
+            case "Level5":
+                SceneManager.LoadScene("Level6");
+                break;
+
+            case "Level6":
+                SceneManager.LoadScene("Level7");
+                break;
+
+            case "Level7":
+                SceneManager.LoadScene("Level8");
+                break;
+
+            default:
+                Debug.LogError("Next level was not found!");
+                SceneManager.LoadScene("MainMenu");
+                break;
+        }
+    }
 }
