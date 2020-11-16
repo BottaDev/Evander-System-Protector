@@ -5,13 +5,15 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
 
-    [Header("Screen")]
+    [Header("SCREENS")]
+    public GameObject menuScreen;
+    public GameObject playerScreen;
     public GameObject youLoseScreen;
     public GameObject youWinScreen;
-    [Header("Bullet Count")]
+    [Header("BULLET COUNT")]
     public GameObject countBullets;
     public TMPro.TextMeshProUGUI bulletsCountText;
-    [Header("Skill Change Text Panel")]
+    [Header("SKILL CHANGE")]
     public GameObject boss;
     public GameObject skillChangeTextPanel;
 
@@ -21,6 +23,9 @@ public class UIManager : MonoBehaviour
             youWinScreen.SetActive(true);
         else
             youLoseScreen.SetActive(true);
+
+        menuScreen.SetActive(true);
+        playerScreen.SetActive(false);
     }
 
     public void ShowAmmo(int ammo)
