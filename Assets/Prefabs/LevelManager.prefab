@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 796853347431051488}
   - component: {fileID: 796853347431051489}
   - component: {fileID: 796853347431051490}
+  - component: {fileID: 2323239109836869603}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -44,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b2151585764c746853eff127c0ca53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuScreen: {fileID: 0}
+  playerScreen: {fileID: 0}
   youLoseScreen: {fileID: 0}
   youWinScreen: {fileID: 0}
   countBullets: {fileID: 0}
@@ -62,3 +65,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d5a731afba8bc941a4d92a5d9b903ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2323239109836869603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796853347431051491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2013d81d988983549945e323901b97c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 8976497066422250419, guid: 8ec1217e1ec214e42bfda7b23eadd1b5, type: 3}
+  - {fileID: 8976497066422250419, guid: c1c312d9808474548ac8081e97839ec3, type: 3}
+  - {fileID: 8976497066422250419, guid: 783ff7f4c8c1cdd489075cdb4aa6f68c, type: 3}
+  - {fileID: 8831608116991688014, guid: 7eac619f9e2fa77458c2bf388ac9a578, type: 3}
+  center: {x: 0, y: 1, z: 0}
+  size: {x: 42.16, y: 0, z: 42.6}
