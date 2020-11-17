@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427182, b: 0.5645241, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -312,6 +312,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 105673514}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &127329487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127329488}
+  - component: {fileID: 127329490}
+  - component: {fileID: 127329489}
+  m_Layer: 0
+  m_Name: Cube (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &127329488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127329487}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20, y: 0, z: 14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 226712260}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &127329489
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127329487}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &127329490
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127329487}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &210125643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -476,6 +554,199 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 222507838}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &226712259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 226712260}
+  m_Layer: 0
+  m_Name: Phase 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &226712260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226712259}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 277906117}
+  - {fileID: 2113459486}
+  - {fileID: 1276385455}
+  - {fileID: 254565366}
+  - {fileID: 2140308797}
+  - {fileID: 127329488}
+  - {fileID: 1397161686}
+  m_Father: {fileID: 1205912643}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &254565365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 254565366}
+  - component: {fileID: 254565368}
+  - component: {fileID: 254565367}
+  m_Layer: 0
+  m_Name: Cube (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &254565366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254565365}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20, y: 0, z: 7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 226712260}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &254565367
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254565365}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &254565368
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254565365}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &277906116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 277906117}
+  - component: {fileID: 277906119}
+  - component: {fileID: 277906118}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &277906117
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277906116}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 226712260}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &277906118
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277906116}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &277906119
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277906116}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &321887118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -678,6 +949,84 @@ Transform:
   m_Father: {fileID: 1544233391}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &411919889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 411919890}
+  - component: {fileID: 411919892}
+  - component: {fileID: 411919891}
+  m_Layer: 0
+  m_Name: Cube (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &411919890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411919889}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.5, y: 0, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 506924882}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &411919891
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411919889}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &411919892
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411919889}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &488701553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -760,6 +1109,142 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 488701553}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &506924881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 506924882}
+  m_Layer: 0
+  m_Name: Phase 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &506924882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506924881}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1557402923}
+  - {fileID: 1593372943}
+  - {fileID: 722391399}
+  - {fileID: 411919890}
+  - {fileID: 1802213751}
+  - {fileID: 1035271221}
+  - {fileID: 762407927}
+  - {fileID: 1751356103}
+  m_Father: {fileID: 1205912643}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &519058464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519058465}
+  - component: {fileID: 519058468}
+  - component: {fileID: 519058467}
+  - component: {fileID: 519058466}
+  m_Layer: 9
+  m_Name: Phase 1 Model (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &519058465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519058464}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 1.86, z: 0.13}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 1928438437}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!95 &519058466
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519058464}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d1a1bcd934bdfe145bec7562d5328ec8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!23 &519058467
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519058464}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 101c1be4b8ec31e42a614f89f8fa32c7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &519058468
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519058464}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &544443043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1403,12 +1888,168 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &722391398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 722391399}
+  - component: {fileID: 722391401}
+  - component: {fileID: 722391400}
+  m_Layer: 0
+  m_Name: Cube (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &722391399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722391398}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 8.36}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 506924882}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &722391400
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722391398}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &722391401
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722391398}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &746355534 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2402249077520035494, guid: 210482de75866c9418918421cfb1126d,
     type: 3}
   m_PrefabInstance: {fileID: 2402249076787320296}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &762407926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 762407927}
+  - component: {fileID: 762407929}
+  - component: {fileID: 762407928}
+  m_Layer: 0
+  m_Name: Cube (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &762407927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762407926}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -8.36}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 506924882}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &762407928
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762407926}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &762407929
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762407926}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &917179242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1420,6 +2061,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MyDoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332720, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: baseHP
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 4772033840898332725, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
         type: 3}
@@ -1479,7 +2125,2461 @@ PrefabInstance:
     - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
         type: 3}
       propertyPath: bossPhases.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.size
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.size
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.size
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[0].duration
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[1].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[1].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[1].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[1].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[1].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[1].changeDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[2].changeDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[0].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[0].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[3].changeDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[1].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[0].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[4].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[4].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[4].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[4].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[4].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[4].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[4].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[5].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[5].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[5].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[5].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[5].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[5].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[5].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[6].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[6].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[6].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[6].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[6].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[6].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[6].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[7].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[7].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[7].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[7].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[7].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[7].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[7].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[8].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[8].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[8].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[8].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[8].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[8].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[8].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[9].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[9].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[9].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[9].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[9].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[9].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[9].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[10].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[10].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[10].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[10].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[10].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[10].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[10].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[11].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[11].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[11].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[11].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[11].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[11].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[11].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[12].duration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[12].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[12].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[12].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[12].fireRate
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[12].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[12].rotationPerSecond
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[13].duration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[13].waitTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[13].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[13].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[13].fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[13].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[13].rotationPerSecond
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[14].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[14].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[14].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[14].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[14].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[14].rotationPerSecond
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[14].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[15].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[15].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[15].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[15].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[15].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[15].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[15].rotationPerSecond
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[16].duration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[16].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[16].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: b024abfd2ae1cc745be1416987dfc770,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[16].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[16].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[16].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].patterns.Array.data[16].rotationPerSecond
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1557402923}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1593372943}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 722391399}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 411919890}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1802213751}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 411919890}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 722391399}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[7]
+      value: 
+      objectReference: {fileID: 1593372943}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[8]
+      value: 
+      objectReference: {fileID: 1557402923}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[9]
+      value: 
+      objectReference: {fileID: 1751356103}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[10]
+      value: 
+      objectReference: {fileID: 762407927}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[11]
+      value: 
+      objectReference: {fileID: 1035271221}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[12]
+      value: 
+      objectReference: {fileID: 1802213751}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[13]
+      value: 
+      objectReference: {fileID: 411919890}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[14]
+      value: 
+      objectReference: {fileID: 722391399}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[15]
+      value: 
+      objectReference: {fileID: 1593372943}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[16]
+      value: 
+      objectReference: {fileID: 1557402923}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[17]
+      value: 
+      objectReference: {fileID: 1593372943}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[18]
+      value: 
+      objectReference: {fileID: 722391399}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[19]
+      value: 
+      objectReference: {fileID: 411919890}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[20]
+      value: 
+      objectReference: {fileID: 1802213751}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[21]
+      value: 
+      objectReference: {fileID: 1035271221}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[22]
+      value: 
+      objectReference: {fileID: 762407927}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[23]
+      value: 
+      objectReference: {fileID: 1751356103}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[24]
+      value: 
+      objectReference: {fileID: 1557402923}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[25]
+      value: 
+      objectReference: {fileID: 1557402923}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].wayPoints.Array.data[26]
+      value: 
+      objectReference: {fileID: 1557402923}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].hpToChange
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].name
+      value: Phase 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[0].duration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[0].waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[0].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: b024abfd2ae1cc745be1416987dfc770,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[0].numberOfProjectiles
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[0].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[0].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[0].rotationPerSecond
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[1].duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[1].waitTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[1].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[1].numberOfProjectiles
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[1].fireRate
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[1].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[1].rotationPerSecond
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[2].duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[2].waitTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[2].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[2].numberOfProjectiles
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[2].fireRate
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[2].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[2].rotationPerSecond
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[3].duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[3].waitTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[3].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[3].numberOfProjectiles
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[3].fireRate
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[3].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[3].rotationPerSecond
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[4].duration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[4].waitTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[4].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[4].numberOfProjectiles
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[4].fireRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[4].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[4].rotationPerSecond
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[5].duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[5].waitTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[5].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[5].numberOfProjectiles
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[5].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[5].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[5].rotationPerSecond
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[6].duration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[6].waitTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[6].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[6].numberOfProjectiles
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[6].fireRate
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[6].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[6].rotationPerSecond
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[7].duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[7].waitTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[7].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[7].numberOfProjectiles
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[7].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[7].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[7].rotationPerSecond
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[8].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[8].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[8].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[8].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[8].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[8].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[8].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[9].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[9].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[9].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[9].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[9].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[9].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[9].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[10].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[10].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[10].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[10].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[10].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[10].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[10].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[11].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[11].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[11].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[11].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[11].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[11].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[11].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[12].duration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[12].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[12].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[12].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[12].fireRate
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[12].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[12].rotationPerSecond
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[13].duration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[13].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[13].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[13].fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[13].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[13].rotationPerSecond
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[14].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[14].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[14].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[14].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[14].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[14].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[14].rotationPerSecond
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[15].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[15].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[15].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[15].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[15].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[15].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[15].rotationPerSecond
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[16].duration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[16].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[16].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: b024abfd2ae1cc745be1416987dfc770,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[16].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[16].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[16].radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[16].rotationPerSecond
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].hpToChange
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1557402923}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1593372943}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 722391399}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 411919890}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1802213751}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 411919890}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 722391399}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[7]
+      value: 
+      objectReference: {fileID: 1593372943}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[8]
+      value: 
+      objectReference: {fileID: 1557402923}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[9]
+      value: 
+      objectReference: {fileID: 1751356103}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[10]
+      value: 
+      objectReference: {fileID: 762407927}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[11]
+      value: 
+      objectReference: {fileID: 1035271221}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[12]
+      value: 
+      objectReference: {fileID: 1802213751}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[13]
+      value: 
+      objectReference: {fileID: 411919890}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[14]
+      value: 
+      objectReference: {fileID: 722391399}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[15]
+      value: 
+      objectReference: {fileID: 1593372943}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[16]
+      value: 
+      objectReference: {fileID: 1557402923}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[17]
+      value: 
+      objectReference: {fileID: 1593372943}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[18]
+      value: 
+      objectReference: {fileID: 722391399}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[19]
+      value: 
+      objectReference: {fileID: 411919890}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[20]
+      value: 
+      objectReference: {fileID: 1802213751}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[21]
+      value: 
+      objectReference: {fileID: 1035271221}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[22]
+      value: 
+      objectReference: {fileID: 762407927}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].wayPoints.Array.data[23]
+      value: 
+      objectReference: {fileID: 1751356103}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].name
+      value: Phase 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[0].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[0].waitTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[0].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: b024abfd2ae1cc745be1416987dfc770,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[0].numberOfProjectiles
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[0].fireRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[0].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[0].rotationPerSecond
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[1].duration
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[1].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[1].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[1].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[1].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[1].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[1].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[2].duration
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[2].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[2].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[2].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[2].fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[2].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[2].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[3].duration
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[3].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[3].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[3].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[3].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[3].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[3].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[4].duration
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[4].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[4].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[4].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[4].fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[4].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[4].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[5].duration
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[5].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[5].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[5].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[5].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[5].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[5].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[6].duration
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[6].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[6].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[6].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[6].fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[6].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[6].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[7].duration
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[7].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[7].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[7].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[7].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[7].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[7].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[8].duration
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[8].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[8].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[8].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[8].fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[8].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[8].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[9].duration
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[9].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[9].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[9].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[9].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[9].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[9].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[10].duration
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[10].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[10].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[10].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[10].fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[10].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[10].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[11].duration
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[11].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[11].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[11].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[11].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[11].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[11].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[12].duration
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[12].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[12].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[12].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[12].fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[12].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[12].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[13].duration
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[13].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[13].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[13].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[13].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[13].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[14].duration
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[14].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[14].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[14].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[14].fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[14].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[14].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[15].duration
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[15].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[15].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[15].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[15].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[15].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[15].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[16].duration
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[16].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[16].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[16].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[16].fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[16].radius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[16].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].hpToChange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1397161686}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 127329488}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 254565366}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 277906117}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 2113459486}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 2140308797}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 722391399}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[7]
+      value: 
+      objectReference: {fileID: 1593372943}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[8]
+      value: 
+      objectReference: {fileID: 1557402923}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[9]
+      value: 
+      objectReference: {fileID: 1751356103}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[10]
+      value: 
+      objectReference: {fileID: 762407927}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[11]
+      value: 
+      objectReference: {fileID: 1035271221}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[12]
+      value: 
+      objectReference: {fileID: 1802213751}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[13]
+      value: 
+      objectReference: {fileID: 411919890}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[14]
+      value: 
+      objectReference: {fileID: 722391399}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[15]
+      value: 
+      objectReference: {fileID: 1593372943}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[16]
+      value: 
+      objectReference: {fileID: 1557402923}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[17]
+      value: 
+      objectReference: {fileID: 1593372943}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[18]
+      value: 
+      objectReference: {fileID: 722391399}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[19]
+      value: 
+      objectReference: {fileID: 411919890}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[20]
+      value: 
+      objectReference: {fileID: 1802213751}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[21]
+      value: 
+      objectReference: {fileID: 1035271221}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[22]
+      value: 
+      objectReference: {fileID: 762407927}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[23]
+      value: 
+      objectReference: {fileID: 1751356103}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].nextPhaseModel
+      value: 
+      objectReference: {fileID: 1723486019}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].nextPhaseModel
+      value: 
+      objectReference: {fileID: 1723486019}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[5].changeDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[6].changeDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].patterns.Array.data[7].changeDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[5].changeDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[7].changeDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[4].changeDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[6].changeDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[3].changeDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[2].changeDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[1].changeDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[13].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[17].duration
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[17].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[17].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[17].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[17].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[17].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[18].duration
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[18].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[18].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[18].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[18].fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[18].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[19].duration
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[19].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[19].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[19].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[19].fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[19].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[20].duration
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[20].waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[20].projectile
+      value: 
+      objectReference: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[20].numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[20].fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772033840898332727, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].patterns.Array.data[20].rotationPerSecond
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310378903085872975, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310378903085872975, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: m_AutoBraking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310378903085872975, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+        type: 3}
+      propertyPath: m_Speed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871, type: 3}
@@ -1707,6 +4807,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1027266973}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1035271220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1035271221}
+  - component: {fileID: 1035271223}
+  - component: {fileID: 1035271222}
+  m_Layer: 0
+  m_Name: Cube (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1035271221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035271220}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.5, y: 0, z: -6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 506924882}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1035271222
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035271220}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1035271223
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035271220}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1042235229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2250,6 +5428,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1189620162}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1205912642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1205912643}
+  m_Layer: 0
+  m_Name: Boss Waypoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1205912643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205912642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 506924882}
+  - {fileID: 226712260}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1216813550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2570,6 +5780,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1274036269}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1276385454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1276385455}
+  - component: {fileID: 1276385457}
+  - component: {fileID: 1276385456}
+  m_Layer: 0
+  m_Name: Cube (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1276385455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276385454}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20, y: 0, z: -14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 226712260}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1276385456
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276385454}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1276385457
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276385454}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1323411733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2645,6 +5933,104 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1323411733}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1338153534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338153535}
+  - component: {fileID: 1338153538}
+  - component: {fileID: 1338153537}
+  - component: {fileID: 1338153536}
+  m_Layer: 9
+  m_Name: Phase 1 Model (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1338153535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338153534}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 1.86, z: 0.13}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 1928438437}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!95 &1338153536
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338153534}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d1a1bcd934bdfe145bec7562d5328ec8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!23 &1338153537
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338153534}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 101c1be4b8ec31e42a614f89f8fa32c7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1338153538
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338153534}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1390674369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2727,6 +6113,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1390674369}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1397161685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1397161686}
+  - component: {fileID: 1397161688}
+  - component: {fileID: 1397161687}
+  m_Layer: 0
+  m_Name: Cube (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1397161686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397161685}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20, y: 0, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 226712260}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1397161687
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397161685}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1397161688
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397161685}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1422834514
 GameObject:
   m_ObjectHideFlags: 0
@@ -2957,6 +6421,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1557402922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1557402923}
+  - component: {fileID: 1557402925}
+  - component: {fileID: 1557402924}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1557402923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557402922}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 506924882}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1557402924
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557402922}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1557402925
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557402922}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1571995599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3039,6 +6581,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1571995599}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1593372942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1593372943}
+  - component: {fileID: 1593372945}
+  - component: {fileID: 1593372944}
+  m_Layer: 0
+  m_Name: Cube (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1593372943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593372942}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.5, y: 0, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 506924882}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1593372944
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593372942}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1593372945
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593372942}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1674730991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3126,6 +6746,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2402249076184868346, guid: 210482de75866c9418918421cfb1126d,
     type: 3}
   m_PrefabInstance: {fileID: 2402249076787320296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1723486019 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5339200238190304423, guid: 0cf06307d92d8bc49bb7cfb4b7e3a871,
+    type: 3}
+  m_PrefabInstance: {fileID: 917179242}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1749339009
 GameObject:
@@ -3236,6 +6862,84 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749339009}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1751356102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1751356103}
+  - component: {fileID: 1751356105}
+  - component: {fileID: 1751356104}
+  m_Layer: 0
+  m_Name: Cube (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1751356103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751356102}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.5, y: 0, z: -6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 506924882}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1751356104
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751356102}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1751356105
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751356102}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1761301759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3318,6 +7022,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1761301759}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1802213750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1802213751}
+  - component: {fileID: 1802213753}
+  - component: {fileID: 1802213752}
+  m_Layer: 0
+  m_Name: Cube (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1802213751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802213750}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 506924882}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1802213752
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802213750}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1802213753
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802213750}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1820859818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3904,6 +7686,162 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2104493416}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2113459485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2113459486}
+  - component: {fileID: 2113459488}
+  - component: {fileID: 2113459487}
+  m_Layer: 0
+  m_Name: Cube (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2113459486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113459485}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20, y: 0, z: -7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 226712260}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &2113459487
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113459485}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2113459488
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113459485}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2140308796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2140308797}
+  - component: {fileID: 2140308799}
+  - component: {fileID: 2140308798}
+  m_Layer: 0
+  m_Name: Cube (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2140308797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140308796}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20, y: 0, z: -20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 226712260}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &2140308798
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140308796}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2140308799
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140308796}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &796853347952283531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4228,7 +8166,7 @@ PrefabInstance:
     - target: {fileID: 3728621155346993347, guid: 656038b6bfdd50f4f95d996c228eefcb,
         type: 3}
       propertyPath: nextSkill
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3728621155346993349, guid: 656038b6bfdd50f4f95d996c228eefcb,
         type: 3}
