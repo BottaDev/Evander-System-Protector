@@ -27,13 +27,14 @@ public class Reflector : MonoBehaviour
     {
         if (other.gameObject.layer == 11)
         {
-            print("triggered with bullet");
             BouncingShot bshot = other.GetComponent<BouncingShot>();
             if (bshot)
             {
-                print("triggered with bounce bullet");
                 bshot.maxBounces += 2;
                 bshot.shotType = ShotController.Type.PlayerShot;
+                bshot.damage = bshot.damage * 2;
+
+                other.gameObject.layer = 12;
                 other.GetComponent<MeshRenderer>().material = playerBulletMaterial;
             }
         }
