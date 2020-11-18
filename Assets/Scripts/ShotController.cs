@@ -35,7 +35,10 @@ public class ShotController : MonoBehaviour
                 break;
         }
 
-        Destroy(gameObject);
+        if (other.gameObject.layer != 16)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public enum Type

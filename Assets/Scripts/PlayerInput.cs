@@ -114,6 +114,17 @@ public class PlayerInput : MonoBehaviour
                     currentSkillRate -= Time.deltaTime;
                 }
                 break;
+
+            case PlayerEntity.Skill.Timestop:
+                if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) && currentSkillRate <= 0)
+                {
+                    UseTimestop();
+                }
+                else
+                {
+                    currentSkillRate -= Time.deltaTime;
+                }
+                break;
         }
     }
 
@@ -159,6 +170,14 @@ public class PlayerInput : MonoBehaviour
         BarrierHB.transform.parent = gameObject.transform;
 
         Destroy(BarrierHB, 0.6f);
+        currentSkillRate = player.skillRate;
+    }
+
+    private void UseTimestop()
+    {
+        player.audioSource.PlayOneShot(player.sounds[2]); //Player.sounds[2] is the blink sound
+        GameObject TimestopHB = Instantiate(player.timestop, transform.position, Quaternion.identity);
+
         currentSkillRate = player.skillRate;
     }
 
