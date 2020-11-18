@@ -1,5 +1,103 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1388715219778439878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5157856009348929755}
+  - component: {fileID: 4145846752301349098}
+  - component: {fileID: 3478380945550420569}
+  - component: {fileID: 2085336398130632379}
+  m_Layer: 9
+  m_Name: Phase 3 Model
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5157856009348929755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388715219778439878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.21, y: 0.77, z: 0.62}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_Children: []
+  m_Father: {fileID: 4772033840898332725}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4145846752301349098
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388715219778439878}
+  m_Mesh: {fileID: -2432090755550338912, guid: f496863c862a82743a36970eb8ac844f, type: 3}
+--- !u!23 &3478380945550420569
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388715219778439878}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d5b0151d054e4954a875c26d39adbace, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &2085336398130632379
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388715219778439878}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab3b38795184c884993f6a1333a3f67e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4772033840898332713
 GameObject:
   m_ObjectHideFlags: 0
@@ -34,6 +132,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1999184986386075715}
+  - {fileID: 859727064183246067}
+  - {fileID: 5157856009348929755}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -72,27 +172,478 @@ MonoBehaviour:
   bossPhases:
   - name: Phase 1
     patterns:
-    - duration: 6
+    - duration: 1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 150
+      changeDirection: 0
+    - duration: 1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 150
+      changeDirection: 0
+    - duration: 1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 150
+      changeDirection: 0
+    - duration: 1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 150
+      changeDirection: 0
+    - duration: 1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 5
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.3
+      radius: 3
+      rotationPerSecond: 90
+      changeDirection: 1
+    - duration: 5
+      waitTime: 0
+      projectile: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.2
+      radius: 3
+      rotationPerSecond: 90
+      changeDirection: 1
+    - duration: 1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 100
+      changeDirection: 1
+    - duration: 1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 100
+      changeDirection: 1
+    - duration: 0.1
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: b024abfd2ae1cc745be1416987dfc770,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 130
+      changeDirection: 1
+    hpToChange: 200
+    nextPhaseModel: {fileID: 8628567591765540777}
+    wayPoints:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - name: Phase 2
+    patterns:
+    - duration: 0.1
+      waitTime: 1
+      projectile: {fileID: 4459537073249658549, guid: b024abfd2ae1cc745be1416987dfc770,
+        type: 3}
+      numberOfProjectiles: 4
+      fireRate: 0.1
+      radius: 0
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 2
+      waitTime: 0.5
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 3
+      fireRate: 0.15
+      radius: 0
+      rotationPerSecond: 45
+      changeDirection: 1
+    - duration: 2
+      waitTime: 0
+      projectile: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+      numberOfProjectiles: 3
+      fireRate: 0.15
+      radius: 0
+      rotationPerSecond: 45
+      changeDirection: 1
+    - duration: 2
+      waitTime: 0
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 3
+      fireRate: 0.15
+      radius: 0
+      rotationPerSecond: 45
+      changeDirection: 1
+    - duration: 10
+      waitTime: 0
+      projectile: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+      numberOfProjectiles: 3
+      fireRate: 0.5
+      radius: 0
+      rotationPerSecond: 180
+      changeDirection: 1
+    - duration: 2
       waitTime: 0.5
       projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
         type: 3}
       numberOfProjectiles: 3
       fireRate: 0.1
-      radius: 3
-      rotationPerSecond: 50
-      changeDirection: 0
-    - duration: 0.5
-      waitTime: 0.3
+      radius: 0
+      rotationPerSecond: 90
+      changeDirection: 1
+    - duration: 3
+      waitTime: 0.5
       projectile: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
         type: 3}
-      numberOfProjectiles: 30
-      fireRate: 0.5
+      numberOfProjectiles: 3
+      fireRate: 0.25
+      radius: 0
+      rotationPerSecond: 90
+      changeDirection: 0
+    - duration: 2
+      waitTime: 0.5
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 3
+      fireRate: 0.1
+      radius: 0
+      rotationPerSecond: 90
+      changeDirection: 1
+    hpToChange: 80
+    nextPhaseModel: {fileID: 1388715219778439878}
+    wayPoints:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - name: Phase 3
+    patterns:
+    - duration: 1
+      waitTime: 0
+      projectile: {fileID: 4459537073249658549, guid: b024abfd2ae1cc745be1416987dfc770,
+        type: 3}
+      numberOfProjectiles: 5
+      fireRate: 1
+      radius: 0
+      rotationPerSecond: 30
+      changeDirection: 0
+    - duration: 1.5
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 0
+    - duration: 0.6
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.2
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 0
+    - duration: 1.5
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 0
+    - duration: 0.6
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.2
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 0
+    - duration: 1.5
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 0
+    - duration: 0.6
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.2
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 0
+    - duration: 1.5
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 0
+    - duration: 0.6
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.2
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 1.5
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 0.6
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.2
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 1.5
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 0.6
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.2
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 1.5
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 0.6
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.2
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 1.5
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 0.6
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.2
+      radius: 0
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 1.5
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 83698b494f8739e4fa0b55c25e8d9011,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
       radius: 3
-      rotationPerSecond: 50
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 0.6
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: 41eb70ce704258d4fa80c5fd3ef4a163,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.2
+      radius: 3
+      rotationPerSecond: 150
+      changeDirection: 1
+    - duration: 2.5
+      waitTime: 0.2
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 0.1
+      radius: 3
+      rotationPerSecond: 150
       changeDirection: 1
     hpToChange: 0
-    nextPhaseModel: {fileID: 0}
-    wayPoints: []
+    nextPhaseModel: {fileID: 5339200238190304423}
+    wayPoints:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
 --- !u!65 &7011864085021829564
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -104,7 +655,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 4.5, z: 2}
+  m_Size: {x: 4.54, y: 4.5, z: 2}
   m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!54 &4772033840898332726
 Rigidbody:
@@ -266,13 +817,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5339200238190304423}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 1.86, z: 0.13}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.21, y: 0.77, z: 0.62}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 4772033840898332725}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2806649850501234678
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -280,7 +831,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5339200238190304423}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: ae319922aaf0f244d935e300634c903d, type: 3}
 --- !u!23 &6563775323032941000
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -298,7 +849,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 101c1be4b8ec31e42a614f89f8fa32c7, type: 2}
+  - {fileID: 2100000, guid: d5b0151d054e4954a875c26d39adbace, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -329,7 +880,105 @@ Animator:
   m_GameObject: {fileID: 5339200238190304423}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d1a1bcd934bdfe145bec7562d5328ec8, type: 2}
+  m_Controller: {fileID: 9100000, guid: ab3b38795184c884993f6a1333a3f67e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &8628567591765540777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 859727064183246067}
+  - component: {fileID: 4140292091246131592}
+  - component: {fileID: 9001389343766366608}
+  - component: {fileID: 2550588424383149749}
+  m_Layer: 9
+  m_Name: Phase 2 Model
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &859727064183246067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8628567591765540777}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.21, y: 0.77, z: 0.62}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_Children: []
+  m_Father: {fileID: 4772033840898332725}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4140292091246131592
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8628567591765540777}
+  m_Mesh: {fileID: -2432090755550338912, guid: 687e8fd4ddf7ff04d981a4eeb099342b, type: 3}
+--- !u!23 &9001389343766366608
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8628567591765540777}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d5b0151d054e4954a875c26d39adbace, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &2550588424383149749
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8628567591765540777}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab3b38795184c884993f6a1333a3f67e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
