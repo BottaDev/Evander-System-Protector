@@ -24,7 +24,7 @@ public class PowerUp : MonoBehaviour
     {
         if (other.gameObject.layer == 8)
             ApplyPowerUp(other.gameObject);
-        else if (other.gameObject.layer == 16)
+        else if (other.gameObject.layer == 17)
             Destroy(gameObject);
     }
 

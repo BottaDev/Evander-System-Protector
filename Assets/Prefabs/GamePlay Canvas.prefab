@@ -590,8 +590,10 @@ MonoBehaviour:
   - {fileID: 5518742139205437126}
   - {fileID: 2665358649229460707}
   - {fileID: 8301711231145093162}
+  - {fileID: 8095335965687810676}
   blank: {fileID: 7660745103121158890}
   tp: {fileID: 5926967101656364392}
+  reflector: {fileID: 7815175938347905923}
 --- !u!1 &2402249076857059046
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,10 +3313,10 @@ RectTransform:
   m_Father: {fileID: 7313297706708870542}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.054, y: 0.029000001}
-  m_AnchorMax: {x: 0.13263388, y: 0.17}
-  m_AnchoredPosition: {x: 0.2000122, y: -0.2999878}
-  m_SizeDelta: {x: 0.25, y: 0.25}
+  m_AnchorMin: {x: 0.059355017, y: 0.036228914}
+  m_AnchorMax: {x: 0.12729, y: 0.16040964}
+  m_AnchoredPosition: {x: 0.20001006, y: -0.18836999}
+  m_SizeDelta: {x: 1.4200001, y: 0.36000013}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4568231190257869858
 CanvasRenderer:
