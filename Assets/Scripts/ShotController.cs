@@ -26,6 +26,7 @@ public class ShotController : MonoBehaviour
                 break;
 
             case Type.EnemyShot:
+
                 if (other.gameObject.layer == 8)
                 {
                     PlayerEntity player = other.gameObject.GetComponent<PlayerEntity>();
