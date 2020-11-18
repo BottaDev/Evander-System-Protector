@@ -103,6 +103,17 @@ public class PlayerInput : MonoBehaviour
                     currentSkillRate -= Time.deltaTime;
                 }
                 break;
+
+            case PlayerEntity.Skill.Reflector:
+                if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) && currentSkillRate <= 0)
+                {
+                    UseReflector();
+                }
+                else
+                {
+                    currentSkillRate -= Time.deltaTime;
+                }
+                break;
         }
     }
 
@@ -148,6 +159,17 @@ public class PlayerInput : MonoBehaviour
         BarrierHB.transform.parent = gameObject.transform;
 
         Destroy(BarrierHB, 0.6f);
+        currentSkillRate = player.skillRate;
+    }
+
+    private void UseReflector()
+    {
+        player.audioSource.PlayOneShot(player.sounds[2]); //Player.sounds[2] is the blink sound
+        GameObject ReflectorHB = Instantiate(player.reflector, transform.position, Quaternion.identity);
+        ReflectorHB.transform.parent = gameObject.transform;
+        ReflectorHB.transform.rotation = transform.rotation;
+
+        Destroy(ReflectorHB, 1f);
         currentSkillRate = player.skillRate;
     }
 
