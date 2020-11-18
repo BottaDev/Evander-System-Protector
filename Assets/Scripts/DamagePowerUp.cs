@@ -15,6 +15,8 @@ public class DamagePowerUp : PowerUp
     {
         if (other.gameObject.layer == 8)
             ApplyPowerUp(other.gameObject);
+        else if (other.gameObject.layer == 17)
+            Destroy(gameObject);
     }
 
     public override void ApplyPowerUp(GameObject player)
