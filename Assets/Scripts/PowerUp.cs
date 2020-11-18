@@ -10,6 +10,8 @@ public class PowerUp : MonoBehaviour
 
     public virtual void Start()
     {
+        float rotationY = Random.Range(0, 361);
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, rotationY, transform.eulerAngles.z);
         Destroy(gameObject, timeToDestroy);
     }
 
@@ -22,10 +24,9 @@ public class PowerUp : MonoBehaviour
     {
         if (other.gameObject.layer == 8)
             ApplyPowerUp(other.gameObject);
-        else if (other.gameObject.layer == 10 || other.gameObject.layer == 15)
+        else if (other.gameObject.layer == 16)
             Destroy(gameObject);
     }
-
 
     public virtual void ApplyPowerUp(GameObject player) { }
 }

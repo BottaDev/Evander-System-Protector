@@ -35,12 +35,8 @@ public class PowerUpManager : MonoBehaviour
             Vector3 pos = new Vector3(0, 1, 0);
 
             int randomPowerUp = Random.Range(0, powerUps.Length);
-
-            float rotationY = Random.Range(0, 361);
-
-            Quaternion rotation = new Quaternion(0, rotationY, 0, 0);
-
-            Instantiate(powerUps[randomPowerUp], pos, rotation);
+            
+            GameObject go = Instantiate(powerUps[randomPowerUp], pos, Quaternion.identity);
 
             currentTimeToSpawn = timeToSpawn;
         }
