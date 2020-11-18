@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427182, b: 0.5645241, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 96281947}
   - component: {fileID: 96281946}
   - component: {fileID: 96281945}
-  m_Layer: 10
+  m_Layer: 17
   m_Name: Invisible Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!65 &96281946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -884,7 +884,7 @@ GameObject:
   - component: {fileID: 1175233657}
   - component: {fileID: 1175233656}
   - component: {fileID: 1175233655}
-  m_Layer: 10
+  m_Layer: 17
   m_Name: Invisible Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -920,7 +920,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!65 &1175233656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1164,7 +1164,7 @@ GameObject:
   - component: {fileID: 1422834516}
   - component: {fileID: 1422834515}
   - component: {fileID: 1422834519}
-  m_Layer: 10
+  m_Layer: 17
   m_Name: Invisible Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1259,7 +1259,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &1489109276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,7 +1676,7 @@ GameObject:
   - component: {fileID: 1749339013}
   - component: {fileID: 1749339012}
   - component: {fileID: 1749339011}
-  m_Layer: 10
+  m_Layer: 17
   m_Name: Invisible Wall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1712,7 +1712,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!65 &1749339012
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -97,7 +97,7 @@ MonoBehaviour:
   damage: 1
   bouncingMask:
     serializedVersion: 2
-    m_Bits: 33792
+    m_Bits: 164864
   maxBounces: 1
 --- !u!135 &8257048932300341167
 SphereCollider:
