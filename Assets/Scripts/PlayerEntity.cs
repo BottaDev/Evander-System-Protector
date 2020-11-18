@@ -17,6 +17,7 @@ public class PlayerEntity : BaseEntity
     public Transform shotSpawn;
     public GameObject barrier;
     public GameObject reflector;
+    public GameObject timestop;
     public GameObject boss;
     [HideInInspector] public GameObject currentShotPrefab;
 
@@ -159,6 +160,7 @@ public class PlayerEntity : BaseEntity
     {
         Blink,
         BlankBullet,
+        Timestop,
         Teleport,
         Reflector,
     }
