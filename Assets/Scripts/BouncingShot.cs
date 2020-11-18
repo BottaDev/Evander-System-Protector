@@ -20,7 +20,7 @@ public class BouncingShot : ShotController
         RaycastHit hit;
 
         // Works like OnTriggerEnter but more precise
-        if (Physics.Raycast(ray, out hit, Time.deltaTime * speed + 0.1f, bouncingMask))
+        if (Physics.Raycast(ray, out hit, Time.deltaTime * speed + 0.4f, bouncingMask))
         {
             if (bouncingCount == maxBounces)
                 Destroy(gameObject);
