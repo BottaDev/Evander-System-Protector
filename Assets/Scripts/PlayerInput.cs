@@ -19,16 +19,12 @@ public class PlayerInput : MonoBehaviour
     private GameObject tpPointInstance;
     private bool tpPointSet = false;
 
-    //public Slider sliderBlink;
-    //public Slider sliderBlank;
-    //public Slider sliderTP;
-    //public ChangeImageSkill changeImage;
+    private bool soundActive = true;
 
     private void Awake()
     {
         player = GetComponent<PlayerEntity>();
         rb = GetComponent<Rigidbody>();
-        //changeImage = GameObject.Find("GamePlay Canvas").GetComponent<ChangeImageSkill>();
     }
 
     private void Start()
@@ -71,8 +67,7 @@ public class PlayerInput : MonoBehaviour
                     UseBlink();
                 else
                 {
-                    //sliderBlink.maxValue = player.skillRate;
-                    //sliderBlink.value = currentSkillRate;
+                    CheckReadySkillSound();
                     currentSkillRate -= Time.deltaTime;
                 }
                 break;
@@ -82,8 +77,7 @@ public class PlayerInput : MonoBehaviour
                     UseBlankBullet();
                 else
                 {
-                    //sliderBlank.maxValue = player.skillRate;
-                    //sliderBlank.value = currentSkillRate;
+                    CheckReadySkillSound();
                     currentSkillRate -= Time.deltaTime;
                 }
                 break;
@@ -98,8 +92,7 @@ public class PlayerInput : MonoBehaviour
                 }
                 else
                 {
-                    //sliderTP.maxValue = player.skillRate;
-                    //sliderTP.value = currentSkillRate;
+                    CheckReadySkillSound();
                     currentSkillRate -= Time.deltaTime;
                 }
                 break;
@@ -111,6 +104,7 @@ public class PlayerInput : MonoBehaviour
                 }
                 else
                 {
+                    CheckReadySkillSound();
                     currentSkillRate -= Time.deltaTime;
                 }
                 break;
@@ -122,6 +116,7 @@ public class PlayerInput : MonoBehaviour
                 }
                 else
                 {
+                    CheckReadySkillSound();
                     currentSkillRate -= Time.deltaTime;
                 }
                 break;
@@ -161,6 +156,8 @@ public class PlayerInput : MonoBehaviour
         emitParams.position = transform.position;
         emitParams.applyShapeToPosition = true;
         particles.Emit(emitParams, 50);
+
+        soundActive = false;
     }
 
     private void UseBlankBullet()
@@ -171,6 +168,8 @@ public class PlayerInput : MonoBehaviour
 
         Destroy(BarrierHB, 0.6f);
         currentSkillRate = player.skillRate;
+
+        soundActive = false;
     }
 
     private void UseTimestop()
@@ -179,6 +178,8 @@ public class PlayerInput : MonoBehaviour
         GameObject TimestopHB = Instantiate(player.timestop, transform.position, Quaternion.identity);
 
         currentSkillRate = player.skillRate;
+
+        soundActive = false;
     }
 
     private void UseReflector()
@@ -190,6 +191,8 @@ public class PlayerInput : MonoBehaviour
 
         Destroy(ReflectorHB, 1f);
         currentSkillRate = player.skillRate;
+
+        soundActive = false;
     }
 
     private void UseTeleport()
@@ -202,6 +205,8 @@ public class PlayerInput : MonoBehaviour
         Destroy(tpPointInstance);
 
         tpPointSet = false;
+
+        soundActive = false;
     }
 
     private void SetTeleportPoint()
@@ -300,5 +305,15 @@ public class PlayerInput : MonoBehaviour
         }
 
         return Vector3.zero;
+    }
+
+    private void CheckReadySkillSound()
+    {
+        if (!soundActive && currentSkillRate <= 0)
+        {
+            soundActive = true;
+            player.audioSource.clip = player.sounds[3];
+            player.audioSource.Play();
+        }
     }
 }
