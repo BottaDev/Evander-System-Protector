@@ -157,6 +157,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d00608a7430e1534796c51cb6ec8db37, type: 3}
   - {fileID: 8300000, guid: 7e2c5bbaeb7e5a84f9d7db8f672d4407, type: 3}
   - {fileID: 8300000, guid: 03122b3d80cadbe46ae89fe507dd3328, type: 3}
+  - {fileID: 8300000, guid: 097eed618d2a37c4784f4c86870a9983, type: 3}
   audioSource: {fileID: 0}
   deathParticle: {fileID: 8739941521154544507, guid: 121cb2bd8f676c94aa0988f4548d4ec4,
     type: 3}
@@ -168,6 +169,8 @@ MonoBehaviour:
     type: 3}
   shotSpawn: {fileID: 3728621156347324888}
   barrier: {fileID: 2767685570571654205, guid: 2c2fd2d909b3a86468c6b4d52ad86bf1, type: 3}
+  reflector: {fileID: 0}
+  timestop: {fileID: 0}
   boss: {fileID: 0}
   currentShotPrefab: {fileID: 0}
   canBeDamaged: 1

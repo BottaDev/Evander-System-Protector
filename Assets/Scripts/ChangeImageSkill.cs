@@ -9,6 +9,7 @@ public class ChangeImageSkill : MonoBehaviour
     public Animator blank;
     public Animator tp;
     public Animator reflector;
+    public Animator slow;
 
     public void CheckSkill(PlayerEntity.Skill skill)
     {
@@ -19,6 +20,7 @@ public class ChangeImageSkill : MonoBehaviour
                 listImage[1].SetActive(false);
                 listImage[2].SetActive(false);
                 listImage[3].SetActive(false);
+                listImage[4].SetActive(false);
                 break;
 
             case PlayerEntity.Skill.BlankBullet:
@@ -26,15 +28,17 @@ public class ChangeImageSkill : MonoBehaviour
                 listImage[1].SetActive(true);
                 listImage[2].SetActive(false);
                 listImage[3].SetActive(false);
+                listImage[4].SetActive(false);
                 blank.SetBool("Change", true);
                 break;
 
-            case PlayerEntity.Skill.Teleport:
+            case PlayerEntity.Skill.Timestop:
                 listImage[0].SetActive(false);
                 listImage[1].SetActive(false);
                 listImage[2].SetActive(true);
                 listImage[3].SetActive(false);
-                tp.SetBool("Change", true);
+                listImage[4].SetActive(false);
+                slow.SetBool("Change", true);
                 break;
 
             case PlayerEntity.Skill.Reflector:
@@ -42,7 +46,17 @@ public class ChangeImageSkill : MonoBehaviour
                 listImage[1].SetActive(false);
                 listImage[2].SetActive(false);
                 listImage[3].SetActive(true);
+                listImage[4].SetActive(false);
                 reflector.SetBool("Change", true);
+                break;
+
+            case PlayerEntity.Skill.Teleport:
+                listImage[0].SetActive(false);
+                listImage[1].SetActive(false);
+                listImage[2].SetActive(false);
+                listImage[3].SetActive(false);
+                listImage[4].SetActive(true);
+                tp.SetBool("Change", true);
                 break;
         }
     }
