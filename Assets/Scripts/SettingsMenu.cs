@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -13,107 +14,123 @@ public class SettingsMenu : MonoBehaviour
     public Toggle fullScreenToggle;
 
     private Resolution[] resolutions;
+    private bool loadComplete = false;
+    private int savedWidth = 0;
+    private int savedHeight = 0;
+    private bool savedFullScreen = false;
 
     private void Start()
     {
-        PlayerPrefs.DeleteAll();
+        volumeSlider.value = PlayerPrefs.GetFloat("Volume");
+
+        savedWidth = PlayerPrefs.GetInt("ScreenWidth");
+        savedHeight = PlayerPrefs.GetInt("ScreenHeight");
+        savedFullScreen = PlayerPrefs.GetInt("FullScreen") == 1 ? true : false;
+
+        if (savedWidth == 0 || savedHeight == 0)
+        {
+            Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, Screen.fullScreen);
+            savedWidth = Screen.currentResolution.width;
+            savedHeight = Screen.currentResolution.height;
+        }
+        else
+        {
+            Screen.SetResolution(savedWidth, savedHeight, savedFullScreen);
+        }
+
+        GetResolutions();
+
+        GetFullScreenMode();
+
+        loadComplete = true;
     }
 
-    //private void Start()
-    //{
-    //    GetResolutions();
+    private void GetFullScreenMode()
+    {
+        int mode = PlayerPrefs.GetInt("FullScreen");
 
-    //    GetFullScreenMode();
+        if (mode == 1)          // FullScreen on
+        {
+            Screen.fullScreen = true;
+            fullScreenToggle.isOn = true;
+        }
+        else if (mode == 0)     // FullScreen off
+        {
+            Screen.fullScreen = false;
+            fullScreenToggle.isOn = false;
+        }
+    }
 
-    //    volumeSlider.value = PlayerPrefs.GetFloat("Volume");
+    private void GetResolutions()
+    {
+        // All resolutions supported by the monitor (fullscreen)
+        resolutions = Screen.resolutions.Distinct().ToArray();       
+        resolutions = resolutions.Where(val => val.width >= 800).ToArray();
+        resolutions = resolutions.Where(val => val.refreshRate == 60).ToArray();
 
-    //    int savedWidth = PlayerPrefs.GetInt("ScreenWidth");
-    //    int savedHeight = PlayerPrefs.GetInt("ScreenHeight");
+        resolutionDropdown.ClearOptions();
 
-    //    Screen.SetResolution(savedWidth, savedHeight, Screen.fullScreen);
-    //}
+        List<string> resolutionOptions = new List<string>();
 
-    //private void GetFullScreenMode()
-    //{
-    //    int mode = PlayerPrefs.GetInt("FullScreen");
+        int currentResolutionIndex = 0;
 
-    //    if (mode == 1)          // FullScreen activado
-    //    {
-    //        Screen.fullScreen = true;
-    //        fullScreenToggle.isOn = true;
-    //    } 
-    //    else if (mode == 0)     // FullScreen desactivado
-    //    {
-    //        Screen.fullScreen = false;
-    //        fullScreenToggle.isOn = false;
-    //    }
-    //}
+        for (int i = 0; i < resolutions.Length; i++)
+        {
+            string option = resolutions[i].width + " x " + resolutions[i].height;
 
-    //private void GetResolutions()
-    //{
-    //    resolutions = Screen.resolutions;       // Todas las resoluciones soportadas por el monitor (fulllscreen)
+            resolutionOptions.Add(option);
 
-    //    resolutionDropdown.ClearOptions();
+            if ((resolutions[i].width == savedWidth) && (resolutions[i].height == savedHeight))
+                currentResolutionIndex = i;
+        }
 
-    //    List<string> options = new List<string>();
+        resolutionDropdown.AddOptions(resolutionOptions);
+        resolutionDropdown.value = currentResolutionIndex;
+        resolutionDropdown.RefreshShownValue();
+    }
 
-    //    int currentResolutionIndex = 0;
+    private void SaveOptions()
+    {
+        PlayerPrefs.Save();
+    }
 
-    //    for (int i = 0; i < resolutions.Length; i++)
-    //    {
-    //        string option = resolutions[i].width + " x " + resolutions[i].height;
+    // Runs when you select a resolution
+    public void SetResolution()
+    {
+        if (loadComplete)
+        {
+            int resolutionIndex = resolutionDropdown.value;
+            Resolution resolution = resolutions[resolutionIndex];
+            Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
 
-    //        options.Add(option);
+            PlayerPrefs.SetInt("ScreenWidth", resolution.width);
+            PlayerPrefs.SetInt("ScreenHeight", resolution.height);
 
-    //        if ((resolutions[i].width == Screen.currentResolution.width) && (resolutions[i].height == Screen.currentResolution.height))
-    //            currentResolutionIndex = i;
+            SaveOptions();
+        }
+    }
 
-    //        Debug.Log(resolutions[i]);
-    //    }
+    // It is executed when modifying the volume bar
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("Volume", volume);
 
-    //    resolutionDropdown.AddOptions(options);
-    //    resolutionDropdown.value = currentResolutionIndex;
-    //    resolutionDropdown.RefreshShownValue();
-    //}
+        PlayerPrefs.SetFloat("Volume", volume);
 
-    //private void SaveOptions()
-    //{
-    //    PlayerPrefs.Save();
-    //}
+        SaveOptions();
+    }
 
-    //// Se ejecuta al seleccionar una resolucion
-    //public void SetResolution(int resolutionIndex)
-    //{     
-    //    Resolution resolution = resolutions[resolutionIndex];
-    //    Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    // It is executed by pressing the Fullscreen button
+    public void SetFullscreen()
+    {
+        bool isFullScreen = fullScreenToggle.isOn;
+        Screen.fullScreen = isFullScreen;
 
-    //    PlayerPrefs.SetInt("ScreenWidth", resolution.width);
-    //    PlayerPrefs.SetInt("ScreenHeight", resolution.height);
+        if (isFullScreen)
+            PlayerPrefs.SetInt("FullScreen", 1);
+        else
+            PlayerPrefs.SetInt("FullScreen", 0);
 
-    //    SaveOptions();
-    //}
-
-    //// Se ejecuta al modificar la barra de volumen
-    //public void SetVolume(float volume)
-    //{
-    //    audioMixer.SetFloat("Volume", volume);
-
-    //    PlayerPrefs.SetFloat("Volume", volume);
-
-    //    SaveOptions();
-    //}
-
-    //// Se ejecuta al apretar el boton de Fullscreen
-    //public void SetFullscreen(bool isFullScreen)
-    //{
-    //    Screen.fullScreen = isFullScreen;
-
-    //    if (isFullScreen)
-    //        PlayerPrefs.SetInt("FullScreen", 1);
-    //    else
-    //        PlayerPrefs.SetInt("FullScreen", 0);
-
-    //    SaveOptions();
-    //}
-
+        SaveOptions();
+    }
 }
