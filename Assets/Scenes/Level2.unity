@@ -2086,6 +2086,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2307605330142355311, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.19329834
+      objectReference: {fileID: 0}
     - target: {fileID: 2402249076338848649, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2205,6 +2210,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4716987778341723665, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.19329834
       objectReference: {fileID: 0}
     - target: {fileID: 7752139644468575501, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
@@ -2376,6 +2386,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StoppingDistance
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587952536946322923, guid: 808fec5239683b441902178c4a6a5a19,
+        type: 3}
+      propertyPath: baseHP
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6587952536946322924, guid: 808fec5239683b441902178c4a6a5a19,
         type: 3}

@@ -20,6 +20,7 @@ public class Timestop : MonoBehaviour
         {
             other.GetComponent<ShotController>().speed = 0;
             frozenObjects.Add(other.gameObject);
+            other.GetComponent<Animator>().SetTrigger("Stop");
         }
         
         if(other.gameObject.layer == 15)
@@ -27,6 +28,8 @@ public class Timestop : MonoBehaviour
             other.GetComponent<EnemyWallController>().movementSpeed = 0;
             frozenObjects.Add(other.gameObject);
         }
+
+
 
         StartCoroutine(TimeControl());
         
@@ -42,12 +45,15 @@ public class Timestop : MonoBehaviour
                 if (go && go.layer == 11)
                 {
                     go.GetComponent<ShotController>().speed = 15;
+                    go.GetComponent<Animator>().SetTrigger("Go");
                 }
 
-                if (go && go.gameObject.layer == 15)
+                else if (go && go.gameObject.layer == 15)
                 {
                     go.GetComponent<EnemyWallController>().movementSpeed = 12;
                 }
+
+
             }
         }
     }
