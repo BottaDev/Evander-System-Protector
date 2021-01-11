@@ -126,7 +126,10 @@ public class PlayerInput : MonoBehaviour
     private void UseBlink()
     {
         // This would cast rays only against colliders in layer 9
-        int layerMask = 1 << 9;
+        int aux9 = 1 << 9;
+        int aux11 = 1 << 11;
+        int layerMask = aux9 | aux11;
+
         // But instead we want to collide against everything except layer 9
         layerMask = ~layerMask;
 
@@ -138,7 +141,7 @@ public class PlayerInput : MonoBehaviour
 
         if (Physics.Raycast(transform.position, direction, out hit, player.blinkDistance, layerMask))
         {
-            Debug.Log("Blink interference");
+            Debug.Log("Blink interference, layer: " + hit.collider.gameObject.layer);
             Vector3 nextPosition = CalculateBlinkDirection(hit.distance);
             transform.position = Vector3.Lerp(transform.position, nextPosition, player.movementSpeed);
         }
