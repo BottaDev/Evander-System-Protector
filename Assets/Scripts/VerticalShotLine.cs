@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VerticalShotLine : VerticalShot
 {
-    Vector3 _startPosition = new Vector3(-20, 1, 20);
+    Vector3 _startPosition = new Vector3(-21, 1, 20);
     public GameObject bullet;
 
     public override void Awake()
@@ -16,7 +16,7 @@ public class VerticalShotLine : VerticalShot
 
     void SetLine()
     {
-        for (int i = 0; i < 22; i++)
+        for (int i = 0; i < 24; i++)
         {
             GameObject go = Instantiate(bullet, _startPosition + Vector3.right * i * 2, Quaternion.identity);
         }
