@@ -147,7 +147,7 @@ public class PlayerEntity : BaseEntity
 
         levelManager.WinLoseGame(gameObject);
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     private void onBossPhaseSwitch()
