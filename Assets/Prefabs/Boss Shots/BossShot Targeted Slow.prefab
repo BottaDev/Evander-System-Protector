@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7271026869310298514}
   - component: {fileID: 3655855924241704208}
   m_Layer: 11
-  m_Name: BossShot Targeted
+  m_Name: BossShot Targeted Slow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,5 +127,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotType: 1
-  speed: 15
+  speed: 8
   damage: 1

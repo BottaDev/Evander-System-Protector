@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class TargetedBossShot : ShotController
 {
-    Transform target;
-    float starTime;
-    bool hasAimed = false;
+    private Transform target;
+    private float starTime;
+    private bool hasAimed = false;
+    private float baseSpeed; 
 
     private void Start()
     {
+        baseSpeed = speed;
         target = GameObject.FindGameObjectWithTag("Player").transform;
         starTime = Time.time;
     }
@@ -33,7 +35,7 @@ public class TargetedBossShot : ShotController
     {
         if (hasAimed)
         {
-            speed = 15;
+            speed = baseSpeed;
         }else
         {
             speed = Mathf.Exp(-(Time.time - starTime) * 3.5f) * 30;
