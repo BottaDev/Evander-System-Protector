@@ -2,23 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossEntity : BaseEntity
+public class SasserAddEntity : BaseEntity
 {
     private AttackPattern pattern;
     private Transform player;
-
-    public delegate void PhaseSwitchEvent();
-    public PhaseSwitchEvent onPhaseSwitch;
-
     private GameObject currentModel;
-    protected HealthBar healthBar;
 
-    public  override void Awake()
+    public override void Awake()
     {
         base.Awake();
-
-        healthBar = GameObject.Find("Boss HealthBar").GetComponent<HealthBar>();
-        healthBar.SetMaxHealt(baseHP);
 
         pattern = GetComponent<AttackPattern>();
         player = GameObject.Find("Player").GetComponent<Transform>();
@@ -40,29 +32,10 @@ public class BossEntity : BaseEntity
     {
         base.TakeDamage(damage);
 
-        healthBar.SetHealth(currentHP);
-
         if (currentHP <= 0)
             return;
 
         pattern.CheckPattern(currentHP);
-
-        bool isSecondPhaseActive = false;
-        if (currentHP  <= baseHP/2 && !isSecondPhaseActive)
-        {
-            isSecondPhaseActive = true;
-            onPhaseSwitch?.Invoke();
-        }
-    }
-
-    virtual public void RegisterPhaseSwitchEvent(PhaseSwitchEvent newEvent)
-    {
-        onPhaseSwitch += newEvent;
-    }
-
-    virtual public void ForgetPhaseSwitchEvent(PhaseSwitchEvent eventToRemove)
-    {
-        onPhaseSwitch -= eventToRemove;
     }
 
     public void ChangeModel(GameObject newModel, int currentPhase)
@@ -74,5 +47,12 @@ public class BossEntity : BaseEntity
         currentModel.SetActive(true);
 
         meshRenderer = transform.GetChild(currentPhase).GetComponent<MeshRenderer>();
+    }
+
+    public void SetBaseHp(int newHp)
+    {
+        baseHP = newHp;
+
+        currentHP = baseHP;
     }
 }
