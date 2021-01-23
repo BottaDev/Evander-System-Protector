@@ -50,6 +50,15 @@ public class SasserEntity : BossEntity
             return;
 
         currentHP -= damage;
+
+        healthBar.SetHealth(currentHP);
+
+        bool isSecondPhaseActive = false;
+        if (currentHP <= baseHP / 2 && !isSecondPhaseActive)
+        {
+            isSecondPhaseActive = true;
+            onPhaseSwitch?.Invoke();
+        }
     }
 
     public void SumDeath()

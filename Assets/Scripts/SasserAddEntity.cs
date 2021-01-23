@@ -2,51 +2,67 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SasserAddEntity : BaseEntity
+public class SasserAddEntity : BossEntity
 {
-    private AttackPattern pattern;
-    private Transform player;
-    private GameObject currentModel;
+    private SasserEntity sasser;
 
     public override void Awake()
     {
-        base.Awake();
-
+        // Base Entity awake
+        audioSource = GetComponent<AudioSource>();
+        meshRenderer = gameObject.transform.GetChild(0).GetComponent<MeshRenderer>();
+        defaultColor = meshRenderer.material.color;
+        
         pattern = GetComponent<AttackPattern>();
         player = GameObject.Find("Player").GetComponent<Transform>();
-        meshRenderer = gameObject.transform.GetChild(0).GetComponent<MeshRenderer>();
 
         currentModel = gameObject.transform.GetChild(0).gameObject;
     }
 
-    private void LateUpdate()
+    public override void Start()
     {
-        if (player != null)
-        {
-            var rotation = Quaternion.LookRotation(player.position - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * movementSpeed);
-        }
+        base.Start();
+
+        sasser = GameObject.Find("SASSER").GetComponent<SasserEntity>();
     }
 
     public override void TakeDamage(float damage)
     {
-        base.TakeDamage(damage);
-
         if (currentHP <= 0)
             return;
+
+        currentHP -= damage;
+        sasser.TakeDamage(damage);
+
+        StartCoroutine(DamageBlink());
+        if (currentHP <= 0)
+        {
+            StartCoroutine(KillEntity());
+            return;
+        }   
 
         pattern.CheckPattern(currentHP);
     }
 
-    public void ChangeModel(GameObject newModel, int currentPhase)
+    protected override IEnumerator KillEntity()
     {
-        currentModel.SetActive(false);
+        Animator animator = meshRenderer.gameObject.GetComponent<Animator>();
 
-        currentModel = newModel;
+        animator.SetBool("isDeath", true);
+        yield return new WaitForSeconds(1f);    // We give the animator time to change the animation
 
-        currentModel.SetActive(true);
+        int animationDuration = animator.GetCurrentAnimatorClipInfo(0).Length;
+        yield return new WaitForSeconds(animationDuration);
 
-        meshRenderer = transform.GetChild(currentPhase).GetComponent<MeshRenderer>();
+        if (deathParticle != null)
+        {
+            GameObject particleSystem = Instantiate(deathParticle, transform.position, transform.rotation);
+            Destroy(particleSystem, 1.5f);
+        }
+
+        sasser.SumDeath();
+
+        Destroy(gameObject);
     }
 
     public void SetBaseHp(int newHp)
@@ -55,4 +71,10 @@ public class SasserAddEntity : BaseEntity
 
         currentHP = baseHP;
     }
+
+    // Do nothing
+    public override void RegisterPhaseSwitchEvent(PhaseSwitchEvent newEvent){ }
+
+    // Do nothing
+    public override void ForgetPhaseSwitchEvent(PhaseSwitchEvent eventToRemove) { }
 }
