@@ -64,7 +64,7 @@ public class SasserAddEntity : BossEntity
 
         sasser.SumDeath();
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     // Do nothing
