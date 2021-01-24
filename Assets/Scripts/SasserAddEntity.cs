@@ -16,6 +16,8 @@ public class SasserAddEntity : BossEntity
         pattern = GetComponent<AttackPattern>();
         player = GameObject.Find("Player").GetComponent<Transform>();
 
+        currentHP = baseHP;
+
         currentModel = gameObject.transform.GetChild(0).gameObject;
     }
 
@@ -63,13 +65,6 @@ public class SasserAddEntity : BossEntity
         sasser.SumDeath();
 
         Destroy(gameObject);
-    }
-
-    public void SetBaseHp(int newHp)
-    {
-        baseHP = newHp;
-
-        currentHP = baseHP;
     }
 
     // Do nothing

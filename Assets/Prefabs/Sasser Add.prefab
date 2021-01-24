@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 972069596363181903}
   m_Layer: 9
   m_Name: Sasser Add
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f17d7626d0414b44795b7db93aecac41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHP: 50
+  baseHP: 75
   currentHP: 0
   movementSpeed: 3
   sounds:
@@ -115,7 +115,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2955723172886319960}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 2.4
+  m_Radius: 1.5
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
