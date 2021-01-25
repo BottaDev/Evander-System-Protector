@@ -120,6 +120,18 @@ public class PlayerInput : MonoBehaviour
                     currentSkillRate -= Time.deltaTime;
                 }
                 break;
+
+            case PlayerEntity.Skill.Tranquilizer:
+                if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) && currentSkillRate <= 0)
+                {
+                    UseTranquilizer();
+                }
+                else
+                {
+                    CheckReadySkillSound();
+                    currentSkillRate -= Time.deltaTime;
+                }
+                break;
         }
     }
 
@@ -195,6 +207,14 @@ public class PlayerInput : MonoBehaviour
         Destroy(ReflectorHB, 1f);
         currentSkillRate = player.skillRate;
 
+        soundActive = false;
+    }
+
+    private void UseTranquilizer()
+    {
+        Instantiate(player.tranquilizer, player.shotSpawn.position, player.shotSpawn.rotation);
+        player.audioSource.PlayOneShot(player.sounds[0]); //player[0]--->bullet sound
+        currentSkillRate = player.skillRate;
         soundActive = false;
     }
 
