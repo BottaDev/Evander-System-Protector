@@ -1605,7 +1605,7 @@ MonoBehaviour:
       radius: 0
       rotationPerSecond: 45
       changeDirection: 0
-    hpToChange: 299
+    hpToChange: 230
     nextPhaseModel: {fileID: 0}
     wayPoints:
     - {fileID: 1712757233}
@@ -1659,7 +1659,7 @@ MonoBehaviour:
       radius: 0
       rotationPerSecond: 45
       changeDirection: 0
-    hpToChange: 298
+    hpToChange: 100
     nextPhaseModel: {fileID: 0}
     wayPoints:
     - {fileID: 165104709}
@@ -1692,24 +1692,6 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 30
       fireRate: 0.2
-      radius: 0
-      rotationPerSecond: 0
-      changeDirection: 0
-    - duration: 5
-      waitTime: 1
-      projectile: {fileID: 4459537073249658549, guid: fdf25afc725663f42b75903ca976d4ae,
-        type: 3}
-      numberOfProjectiles: 8
-      fireRate: 0.1
-      radius: 0
-      rotationPerSecond: 0
-      changeDirection: 0
-    - duration: 15
-      waitTime: 3
-      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
-        type: 3}
-      numberOfProjectiles: 4
-      fireRate: 0.1
       radius: 0
       rotationPerSecond: 0
       changeDirection: 0
