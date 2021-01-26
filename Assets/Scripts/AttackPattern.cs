@@ -7,15 +7,15 @@ public class AttackPattern : MonoBehaviour
 {
     public BossPhase[] bossPhases;
 
-    private BossEntity boss;
+    protected BossEntity boss;
     private float accumulatedRotation;
     private float currentRate = 0;
     private float currentPatternDuration;
-    private int currentPattern = 0;
-    private int currentPhase = 0;
-    private int currentWayPoint = 0;
+    protected int currentPattern = 0;
+    protected int currentPhase = 0;
+    protected int currentWayPoint = 0;
+    protected NavMeshAgent agent;
     private bool isChangingPattron = false;     // If it's true, the boss will not shoot
-    private NavMeshAgent agent;
 
     [System.Serializable]
     public class BossPhase
@@ -44,7 +44,7 @@ public class AttackPattern : MonoBehaviour
         public bool changeDirection;
     }
 
-    private void Awake()
+    protected virtual void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         boss = GetComponent<BossEntity>();
@@ -90,7 +90,7 @@ public class AttackPattern : MonoBehaviour
             accumulatedRotation -= 360f;
     }
 
-    private void Move()
+    protected virtual void Move()
     {
         if (bossPhases[currentPhase].wayPoints.Length <= 0)
             return;
