@@ -169,8 +169,12 @@ MonoBehaviour:
     type: 3}
   shotSpawn: {fileID: 3728621156347324888}
   barrier: {fileID: 2767685570571654205, guid: 2c2fd2d909b3a86468c6b4d52ad86bf1, type: 3}
-  reflector: {fileID: 0}
-  timestop: {fileID: 0}
+  reflector: {fileID: 2767685570571654205, guid: 746e813fae6a9c74f8a1e70fe97832d9,
+    type: 3}
+  timestop: {fileID: 2767685570571654205, guid: e24fb47b2b6aeee48b64f2889bfb6a74,
+    type: 3}
+  tranquilizer: {fileID: 1461457600299556481, guid: 8d28e3dcb54ac4f49a594576137daf84,
+    type: 3}
   boss: {fileID: 0}
   currentShotPrefab: {fileID: 0}
   canBeDamaged: 1
