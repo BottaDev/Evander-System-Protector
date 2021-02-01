@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class BossEntity : BaseEntity
 {
-    private AttackPattern pattern;
-    private Transform player;
+    protected AttackPattern pattern;
+    protected Transform player;
 
     public delegate void PhaseSwitchEvent();
     public PhaseSwitchEvent onPhaseSwitch;
 
-    private GameObject currentModel;
-    private HealthBar healthBar;
+    protected GameObject currentModel;
+    protected HealthBar healthBar;
 
-    public  override void Awake()
+    public override void Awake()
     {
         base.Awake();
 
@@ -22,7 +22,6 @@ public class BossEntity : BaseEntity
 
         pattern = GetComponent<AttackPattern>();
         player = GameObject.Find("Player").GetComponent<Transform>();
-        meshRenderer = gameObject.transform.GetChild(0).GetComponent<MeshRenderer>();
 
         currentModel = gameObject.transform.GetChild(0).gameObject;
     }
@@ -40,7 +39,8 @@ public class BossEntity : BaseEntity
     {
         base.TakeDamage(damage);
 
-        healthBar.SetHealth(currentHP);
+        if (healthBar != null)
+            healthBar.SetHealth(currentHP);
 
         if (currentHP <= 0)
             return;

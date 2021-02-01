@@ -8,7 +8,6 @@ public class PowerUpManager : MonoBehaviour
 
     private float timeToSpawn = 15;
     private float currentTimeToSpawn;
-    private GameObject boss;
 
     public Vector3 center;
     public Vector3 size;
@@ -16,14 +15,6 @@ public class PowerUpManager : MonoBehaviour
     private void Awake()
     {
         currentTimeToSpawn = timeToSpawn;
-    }
-
-    private void Start()
-    {
-        boss = GameObject.FindGameObjectWithTag("Boss");
-        
-        if (boss == null)
-            Debug.LogError("Object with tag 'Boss' not finded");
     }
 
     private void Update()

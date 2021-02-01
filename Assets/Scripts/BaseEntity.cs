@@ -56,8 +56,11 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
         int animationDuration = animator.GetCurrentAnimatorClipInfo(0).Length;
         yield return new WaitForSeconds(animationDuration);
 
-        GameObject particleSystem = Instantiate(deathParticle, transform.position, transform.rotation);
-        Destroy(particleSystem, 1.5f);
+        if (deathParticle != null)
+        {
+            GameObject particleSystem = Instantiate(deathParticle, transform.position, transform.rotation);
+            Destroy(particleSystem, 1.5f);
+        }
 
         levelManager.WinLoseGame(gameObject);
 
