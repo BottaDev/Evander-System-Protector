@@ -14,7 +14,11 @@ public class EnemyEntity : BaseEntity
 
     private NavMeshAgent agent;
     private float currentFireRate;
-    private GameObject player;    
+    private GameObject player;
+
+    private Flamethrower flame;
+    private float damageStayCounter;
+    private float damageStayReset = 0.3f;
 
     public override void Start()
     {
@@ -60,5 +64,25 @@ public class EnemyEntity : BaseEntity
         StartCoroutine(DamageBlink());
         if (currentHP <= 0)
             Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 18 && flame == null)
+            flame = other.gameObject.GetComponent<Flamethrower>();
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.layer == 18)
+        {
+            if (damageStayCounter <= 0)
+            {
+                damageStayCounter = damageStayReset;
+                TakeDamage(flame.damage);
+            }
+            else
+                damageStayCounter -= Time.deltaTime;
+        }
     }
 }

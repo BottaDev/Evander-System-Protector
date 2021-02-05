@@ -132,6 +132,15 @@ public class PlayerInput : MonoBehaviour
                     currentSkillRate -= Time.deltaTime;
                 }
                 break;
+
+            case PlayerEntity.Skill.Flamethrower:
+                if ((Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.LeftShift)) && currentSkillRate <= 0)
+                    UseFlamethrower();
+                else if ((Input.GetMouseButtonUp(1) || Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.LeftShift)))
+                    CancelFlamethrower();
+                else
+                    currentSkillRate -= Time.deltaTime;
+                break;
         }
     }
 
@@ -236,6 +245,23 @@ public class PlayerInput : MonoBehaviour
     {
         tpPointSet = true;
         tpPointInstance = Instantiate(tpPointPrefab, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+    }
+
+    private void UseFlamethrower()
+    {
+        //player.audioSource.PlayOneShot(player.sounds[2]); //Player.sounds[2] is the blink sound
+
+        player.flametrhower.SetActive(true);
+        player.movementSpeed = 6;
+    }
+
+    private void CancelFlamethrower()
+    {
+        player.flametrhower.SetActive(false);
+        player.movementSpeed = 12;
+        currentSkillRate = player.skillRate;
+
+        soundActive = false;
     }
 
     private void RotatePlayer()
