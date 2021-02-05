@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427182, b: 0.5645241, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 4e0b0d16183e49e4d8d7122984ffd98a, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: dbefc252b368ca24dbbb0382de6ca6bd, type: 2}
 --- !u!1 &96281943
 GameObject:
   m_ObjectHideFlags: 0
@@ -6072,6 +6072,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 648905363777419548, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.09692383
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183782021209841710, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.20007324
+      objectReference: {fileID: 0}
     - target: {fileID: 2307605330142355311, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -6235,7 +6245,7 @@ PrefabInstance:
     - target: {fileID: 8866142976939114370, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.785797
+      value: -2.7857666
       objectReference: {fileID: 0}
     - target: {fileID: 8866142976939114370, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
@@ -6341,17 +6351,6 @@ PrefabInstance:
         type: 3}
       propertyPath: nextSkill
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3728621155346993347, guid: 656038b6bfdd50f4f95d996c228eefcb,
-        type: 3}
-      propertyPath: reflector
-      value: 
-      objectReference: {fileID: 2767685570571654205, guid: 746e813fae6a9c74f8a1e70fe97832d9,
-        type: 3}
-    - target: {fileID: 3728621155346993347, guid: 656038b6bfdd50f4f95d996c228eefcb,
-        type: 3}
-      propertyPath: currentSkill
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3728621155346993349, guid: 656038b6bfdd50f4f95d996c228eefcb,
         type: 3}
