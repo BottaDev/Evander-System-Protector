@@ -13,6 +13,10 @@ public class BossEntity : BaseEntity
     private GameObject currentModel;
     private HealthBar healthBar;
 
+    private Flamethrower flame;
+    private float damageStayCounter;
+    private float damageStayReset = 0.3f;
+
     public  override void Awake()
     {
         base.Awake();
@@ -74,5 +78,25 @@ public class BossEntity : BaseEntity
         currentModel.SetActive(true);
 
         meshRenderer = transform.GetChild(currentPhase).GetComponent<MeshRenderer>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 18 && flame == null)
+            flame = other.gameObject.GetComponent<Flamethrower>();
+    }
+
+    private void OnTriggerStay(Collider collision)
+    {
+        if (collision.gameObject.layer == 18)
+        {
+            if (damageStayCounter <= 0)
+            {
+                damageStayCounter = damageStayReset;
+                TakeDamage(flame.damage);
+            }
+            else
+                damageStayCounter -= Time.deltaTime;
+        }
     }
 }
