@@ -213,7 +213,7 @@ public class PlayerInput : MonoBehaviour
         ReflectorHB.transform.parent = gameObject.transform;
         ReflectorHB.transform.rotation = transform.rotation;
 
-        Destroy(ReflectorHB, 0.5f);
+        Destroy(ReflectorHB, 1f);
         currentSkillRate = player.skillRate;
 
         soundActive = false;

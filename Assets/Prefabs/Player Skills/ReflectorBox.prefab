@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2767685570571654211}
+  - component: {fileID: 4520139972289903390}
   - component: {fileID: 2767685570571654209}
   - component: {fileID: 2767685570571654210}
   - component: {fileID: 2442944803722295700}
@@ -34,6 +35,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &4520139972289903390
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2767685570571654205}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 1.7951189
+  m_Height: 5.139497
+  m_Direction: 0
+  m_Center: {x: 0, y: -0.13282871, z: 1.4531964}
 --- !u!199 &2767685570571654209
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -4856,5 +4871,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.8324366, y: 2.0229397, z: 1.8625441}
-  m_Center: {x: -0.009865284, y: 0.9762449, z: 2.0998883}
+  m_Size: {x: 4.8324366, y: 4.678542, z: 3.4374804}
+  m_Center: {x: -0.009865284, y: -0.3515563, z: 1.3124201}
