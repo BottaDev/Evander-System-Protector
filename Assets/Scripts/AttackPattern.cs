@@ -47,7 +47,7 @@ public class AttackPattern : MonoBehaviour
     protected virtual void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        boss = GetComponent<BossEntity>();
+        boss = GetComponent<BossEntity>() != null ? GetComponent<BossEntity>() : GetComponent<SasserAddEntity>();
         float baseHP = boss.baseHP;
 
         for (int i = 0; i < bossPhases.Length; i++)
