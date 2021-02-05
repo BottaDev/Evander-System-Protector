@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class BossEntity : BaseEntity
 {
-    protected AttackPattern pattern;
-    protected Transform player;
+    private AttackPattern pattern;
+    private Transform player;
 
     public delegate void PhaseSwitchEvent();
     public PhaseSwitchEvent onPhaseSwitch;
 
-    protected GameObject currentModel;
-    protected HealthBar healthBar;
+    private GameObject currentModel;
+    private HealthBar healthBar;
 
-    public override void Awake()
+    private Flamethrower flame;
+    private float damageStayCounter;
+    private float damageStayReset = 0.3f;
+
+    public  override void Awake()
     {
         base.Awake();
 
@@ -22,6 +26,7 @@ public class BossEntity : BaseEntity
 
         pattern = GetComponent<AttackPattern>();
         player = GameObject.Find("Player").GetComponent<Transform>();
+        meshRenderer = gameObject.transform.GetChild(0).GetComponent<MeshRenderer>();
 
         currentModel = gameObject.transform.GetChild(0).gameObject;
     }
@@ -39,8 +44,7 @@ public class BossEntity : BaseEntity
     {
         base.TakeDamage(damage);
 
-        if (healthBar != null)
-            healthBar.SetHealth(currentHP);
+        healthBar.SetHealth(currentHP);
 
         if (currentHP <= 0)
             return;
@@ -74,5 +78,25 @@ public class BossEntity : BaseEntity
         currentModel.SetActive(true);
 
         meshRenderer = transform.GetChild(currentPhase).GetComponent<MeshRenderer>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 18 && flame == null)
+            flame = other.gameObject.GetComponent<Flamethrower>();
+    }
+
+    private void OnTriggerStay(Collider collision)
+    {
+        if (collision.gameObject.layer == 18)
+        {
+            if (damageStayCounter <= 0)
+            {
+                damageStayCounter = damageStayReset;
+                TakeDamage(flame.damage);
+            }
+            else
+                damageStayCounter -= Time.deltaTime;
+        }
     }
 }

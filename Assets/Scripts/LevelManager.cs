@@ -12,12 +12,12 @@ public class LevelManager : MonoBehaviour
         manager = GetComponent<UIManager>();
     }
 
-    public void WinLoseGame(GameObject entity, bool isSasser = false)
+    public void WinLoseGame(GameObject entity)
     {
         if (entity.layer == 9)
         {
-            if (!isSasser && (GameObject.FindGameObjectWithTag("Boss").GetComponent<AttackPattern>().enabled = false) == true)
-                Debug.LogWarning("Can't turn off Boss AttackPattern!");
+            if ((GameObject.FindGameObjectWithTag("Boss").GetComponent<AttackPattern>().enabled = false) == true)
+                Debug.LogError("Can't turn off Boss AttackPattern!");
 
             manager.ShowFinalGui(true);
         }
