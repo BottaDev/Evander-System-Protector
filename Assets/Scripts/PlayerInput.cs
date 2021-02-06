@@ -132,6 +132,18 @@ public class PlayerInput : MonoBehaviour
                     currentSkillRate -= Time.deltaTime;
                 }
                 break;
+                
+            case PlayerEntity.Skill.Wall:
+                if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) && currentSkillRate <= 0)
+                {
+                    UseWall();
+                }
+                else
+                {
+                    CheckReadySkillSound();
+                    currentSkillRate -= Time.deltaTime;
+                }
+                break;
 
             case PlayerEntity.Skill.Flamethrower:
                 if ((Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.LeftShift)) && currentSkillRate <= 0)
@@ -222,6 +234,14 @@ public class PlayerInput : MonoBehaviour
     private void UseTranquilizer()
     {
         Instantiate(player.tranquilizer, player.shotSpawn.position, player.shotSpawn.rotation);
+        player.audioSource.PlayOneShot(player.sounds[0]); //player[0]--->bullet sound
+        currentSkillRate = player.skillRate;
+        soundActive = false;
+    }
+
+    private void UseWall()
+    {
+        Instantiate(player.wall, transform.position + transform.forward * 2, transform.rotation);
         player.audioSource.PlayOneShot(player.sounds[0]); //player[0]--->bullet sound
         currentSkillRate = player.skillRate;
         soundActive = false;

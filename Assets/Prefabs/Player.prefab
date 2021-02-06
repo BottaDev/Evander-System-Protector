@@ -175,6 +175,7 @@ MonoBehaviour:
     type: 3}
   tranquilizer: {fileID: 1461457600299556481, guid: 8d28e3dcb54ac4f49a594576137daf84,
     type: 3}
+  wall: {fileID: 5271456728426932716, guid: 621df749367d0604d8c887d0c4d6c161, type: 3}
   flametrhower: {fileID: 8241387098708852835}
   boss: {fileID: 0}
   currentShotPrefab: {fileID: 0}
