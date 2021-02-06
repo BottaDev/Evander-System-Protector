@@ -179,8 +179,8 @@ MonoBehaviour:
   boss: {fileID: 0}
   currentShotPrefab: {fileID: 0}
   canBeDamaged: 1
-  currentSkill: 6
-  nextSkill: 6
+  currentSkill: 0
+  nextSkill: 0
 --- !u!114 &3728621155346993349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5077,7 +5077,7 @@ PrefabInstance:
     - target: {fileID: 2767685570571654205, guid: dec6c69e60487404987be9b041731dbb,
         type: 3}
       propertyPath: m_Name
-      value: flamethrower
+      value: Flamethrower
       objectReference: {fileID: 0}
     - target: {fileID: 2767685570571654211, guid: dec6c69e60487404987be9b041731dbb,
         type: 3}
