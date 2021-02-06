@@ -64,7 +64,7 @@ public abstract class BaseEntity : MonoBehaviour, IDamagable<float>
 
         levelManager.WinLoseGame(gameObject);
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     // Change the color to RED when damaged
