@@ -132,6 +132,27 @@ public class PlayerInput : MonoBehaviour
                     currentSkillRate -= Time.deltaTime;
                 }
                 break;
+                
+            case PlayerEntity.Skill.Wall:
+                if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) && currentSkillRate <= 0)
+                {
+                    UseWall();
+                }
+                else
+                {
+                    CheckReadySkillSound();
+                    currentSkillRate -= Time.deltaTime;
+                }
+                break;
+
+            case PlayerEntity.Skill.Flamethrower:
+                if ((Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.LeftShift)) && currentSkillRate <= 0)
+                    UseFlamethrower();
+                else if ((Input.GetMouseButtonUp(1) || Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.LeftShift)))
+                    CancelFlamethrower();
+                else
+                    currentSkillRate -= Time.deltaTime;
+                break;
         }
     }
 
@@ -218,6 +239,14 @@ public class PlayerInput : MonoBehaviour
         soundActive = false;
     }
 
+    private void UseWall()
+    {
+        Instantiate(player.wall, transform.position + transform.forward * 2, transform.rotation);
+        player.audioSource.PlayOneShot(player.sounds[0]); //player[0]--->bullet sound
+        currentSkillRate = player.skillRate;
+        soundActive = false;
+    }
+
     private void UseTeleport()
     {
         player.audioSource.PlayOneShot(player.sounds[2]); //Player.sounds[2] is the blink sound
@@ -236,6 +265,23 @@ public class PlayerInput : MonoBehaviour
     {
         tpPointSet = true;
         tpPointInstance = Instantiate(tpPointPrefab, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+    }
+
+    private void UseFlamethrower()
+    {
+        //player.audioSource.PlayOneShot(player.sounds[2]); //Player.sounds[2] is the blink sound
+
+        player.flametrhower.SetActive(true);
+        player.movementSpeed = 6;
+    }
+
+    private void CancelFlamethrower()
+    {
+        player.flametrhower.SetActive(false);
+        player.movementSpeed = 12;
+        currentSkillRate = player.skillRate;
+
+        soundActive = false;
     }
 
     private void RotatePlayer()

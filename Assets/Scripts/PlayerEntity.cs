@@ -19,6 +19,8 @@ public class PlayerEntity : BaseEntity
     public GameObject reflector;
     public GameObject timestop;
     public GameObject tranquilizer;
+    public GameObject wall;
+    public GameObject flametrhower;
     public GameObject boss;
     [HideInInspector] public GameObject currentShotPrefab;
 
@@ -165,5 +167,7 @@ public class PlayerEntity : BaseEntity
         Teleport,
         Reflector,
         Tranquilizer,
+        Wall,
+        Flamethrower,
     }
 }
