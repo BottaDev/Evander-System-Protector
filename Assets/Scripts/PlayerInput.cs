@@ -132,7 +132,7 @@ public class PlayerInput : MonoBehaviour
                     currentSkillRate -= Time.deltaTime;
                 }
                 break;
-
+                
             case PlayerEntity.Skill.Wall:
                 if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) && currentSkillRate <= 0)
                 {
@@ -143,6 +143,8 @@ public class PlayerInput : MonoBehaviour
                     CheckReadySkillSound();
                     currentSkillRate -= Time.deltaTime;
                 }
+                break;
+
             case PlayerEntity.Skill.Flamethrower:
                 if ((Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.LeftShift)) && currentSkillRate <= 0)
                     UseFlamethrower();
