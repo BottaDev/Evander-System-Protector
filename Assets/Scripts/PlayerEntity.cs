@@ -8,7 +8,6 @@ public class PlayerEntity : BaseEntity
 {
     [Header("Player Stats")]
     public float fireRate = 0.3f;
-    public float skillRate = 1f;
     public float blinkDistance = 2;
     public int pellets;
 
@@ -17,6 +16,7 @@ public class PlayerEntity : BaseEntity
     public Transform shotSpawn;
     public GameObject barrier;
     public GameObject reflector;
+    public GameObject tpPoint;
     public GameObject timestop;
     public GameObject tranquilizer;
     public GameObject wall;
@@ -29,6 +29,15 @@ public class PlayerEntity : BaseEntity
     [Header("Skill")]
     public Skill currentSkill;
     public Skill nextSkill;
+    public float blinkRate = 1f;
+    public float blankBulletRate = 3f;
+    public float teleportRate = 3f;
+    public float reflectorRate = 2f;
+    public float timeStopRate = 3f;
+    public float tranquilizerRate = 5f;
+    public float wallRate = 7f;
+    public float flamethrowerRate = 2f;
+
 
     private bool hasPowerUp = false;
     private float baseFireRate;
