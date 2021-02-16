@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class WallSkill : MonoBehaviour
 {
+    public float duration;
+
     private void Start()
     {
-        Destroy(gameObject, 5);
+        Destroy(gameObject, duration);
     }
 }

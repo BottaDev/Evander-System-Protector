@@ -15,7 +15,6 @@ public class PlayerInput : MonoBehaviour
     private float currentSkillRate = 0;
     private PlayerEntity player;
 
-    public  GameObject tpPointPrefab;
     private GameObject tpPointInstance;
     private bool tpPointSet = false;
 
@@ -147,23 +146,30 @@ public class PlayerInput : MonoBehaviour
 
             case PlayerEntity.Skill.Flamethrower:
                 if ((Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.LeftShift)) && currentSkillRate <= 0)
+                {
                     UseFlamethrower();
+                }
                 else if ((Input.GetMouseButtonUp(1) || Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.LeftShift)))
+                {
                     CancelFlamethrower();
+                }
                 else
+                {
+                    CheckReadySkillSound();
                     currentSkillRate -= Time.deltaTime;
+                }                    
                 break;
         }
     }
 
     private void UseBlink()
     {
-        // This would cast rays only against colliders in layer 9
+        // This would cast rays only against colliders in layer 9 and 11
         int aux9 = 1 << 9;
         int aux11 = 1 << 11;
         int layerMask = aux9 | aux11;
 
-        // But instead we want to collide against everything except layer 9
+        // But instead we want to collide against everything except layer 9 and 11
         layerMask = ~layerMask;
 
         RaycastHit hit;
@@ -185,7 +191,7 @@ public class PlayerInput : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position, nextPosition, player.movementSpeed);
         }
 
-        currentSkillRate = player.skillRate;
+        currentSkillRate = player.blinkRate;
         StartCoroutine(SetInvulnerability());
 
         ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams();
@@ -203,7 +209,7 @@ public class PlayerInput : MonoBehaviour
         BarrierHB.transform.parent = gameObject.transform;
 
         Destroy(BarrierHB, 0.6f);
-        currentSkillRate = player.skillRate;
+        currentSkillRate = player.blankBulletRate;
 
         soundActive = false;
     }
@@ -213,7 +219,7 @@ public class PlayerInput : MonoBehaviour
         player.audioSource.PlayOneShot(player.sounds[2]); //Player.sounds[2] is the blink sound
         GameObject TimestopHB = Instantiate(player.timestop, transform.position, Quaternion.identity);
 
-        currentSkillRate = player.skillRate;
+        currentSkillRate = player.timeStopRate;
 
         soundActive = false;
     }
@@ -226,7 +232,7 @@ public class PlayerInput : MonoBehaviour
         ReflectorHB.transform.rotation = transform.rotation;
 
         Destroy(ReflectorHB, 0.5f);
-        currentSkillRate = player.skillRate;
+        currentSkillRate = player.reflectorRate;
 
         soundActive = false;
     }
@@ -235,7 +241,7 @@ public class PlayerInput : MonoBehaviour
     {
         Instantiate(player.tranquilizer, player.shotSpawn.position, player.shotSpawn.rotation);
         player.audioSource.PlayOneShot(player.sounds[0]); //player[0]--->bullet sound
-        currentSkillRate = player.skillRate;
+        currentSkillRate = player.tranquilizerRate;
         soundActive = false;
     }
 
@@ -243,7 +249,7 @@ public class PlayerInput : MonoBehaviour
     {
         Instantiate(player.wall, transform.position + transform.forward * 2, transform.rotation);
         player.audioSource.PlayOneShot(player.sounds[0]); //player[0]--->bullet sound
-        currentSkillRate = player.skillRate;
+        currentSkillRate = player.wallRate;
         soundActive = false;
     }
 
@@ -258,19 +264,19 @@ public class PlayerInput : MonoBehaviour
 
         tpPointSet = false;
 
+        currentSkillRate = player.teleportRate;
+
         soundActive = false;
     }
 
     private void SetTeleportPoint()
     {
         tpPointSet = true;
-        tpPointInstance = Instantiate(tpPointPrefab, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+        tpPointInstance = Instantiate(player.tpPoint, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
     }
 
     private void UseFlamethrower()
     {
-        //player.audioSource.PlayOneShot(player.sounds[2]); //Player.sounds[2] is the blink sound
-
         player.flametrhower.SetActive(true);
         player.movementSpeed = 6;
     }
@@ -279,7 +285,7 @@ public class PlayerInput : MonoBehaviour
     {
         player.flametrhower.SetActive(false);
         player.movementSpeed = 12;
-        currentSkillRate = player.skillRate;
+        currentSkillRate = player.flamethrowerRate;
 
         soundActive = false;
     }
