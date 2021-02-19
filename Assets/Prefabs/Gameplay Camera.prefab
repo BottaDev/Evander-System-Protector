@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1766343551712735955}
   - component: {fileID: 1766343551712735954}
   - component: {fileID: 1766343551712735958}
+  - component: {fileID: 2815563072526213704}
   m_Layer: 0
   m_Name: Gameplay Camera
   m_TagString: MainCamera
@@ -91,7 +92,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766343551712735953}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e863d8a08e474307802eaf34f998943, type: 3}
   m_Name: 
@@ -107,3 +108,22 @@ MonoBehaviour:
   PaddingUp: 10
   PaddingDown: 11
   MoveSmoothTime: 0.1
+--- !u!95 &2815563072526213704
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766343551712735953}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 72fe6854f568884479451ba0676bee0b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

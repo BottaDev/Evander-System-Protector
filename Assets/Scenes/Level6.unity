@@ -547,6 +547,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &762395341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7381521549848525509, guid: 210482de75866c9418918421cfb1126d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2402249076787320296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &996983048 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5786035520379672606, guid: 210d91e646131c04082a84ff2fad19c9,
@@ -1849,6 +1855,16 @@ PrefabInstance:
       propertyPath: playerScreen
       value: 
       objectReference: {fileID: 2402249076787320301}
+    - target: {fileID: 796853347431051489, guid: 94c521cdd191a2a4aa1c738a5ad1594f,
+        type: 3}
+      propertyPath: startScreen
+      value: 
+      objectReference: {fileID: 762395341}
+    - target: {fileID: 796853347431051490, guid: 94c521cdd191a2a4aa1c738a5ad1594f,
+        type: 3}
+      propertyPath: bossName
+      value: SASSER
+      objectReference: {fileID: 0}
     - target: {fileID: 796853347431051491, guid: 94c521cdd191a2a4aa1c738a5ad1594f,
         type: 3}
       propertyPath: m_Name
