@@ -2108,6 +2108,16 @@ PrefabInstance:
       propertyPath: playerScreen
       value: 
       objectReference: {fileID: 2402249076787320301}
+    - target: {fileID: 796853347431051489, guid: 94c521cdd191a2a4aa1c738a5ad1594f,
+        type: 3}
+      propertyPath: startScreen
+      value: 
+      objectReference: {fileID: 2402249076787320302}
+    - target: {fileID: 796853347431051490, guid: 94c521cdd191a2a4aa1c738a5ad1594f,
+        type: 3}
+      propertyPath: bossName
+      value: Melissa
+      objectReference: {fileID: 0}
     - target: {fileID: 796853347431051491, guid: 94c521cdd191a2a4aa1c738a5ad1594f,
         type: 3}
       propertyPath: m_Name
@@ -2400,6 +2410,12 @@ GameObject:
 --- !u!1 &2402249076787320301 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7325519256403843759, guid: 210482de75866c9418918421cfb1126d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2402249076787320296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2402249076787320302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7381521549848525509, guid: 210482de75866c9418918421cfb1126d,
     type: 3}
   m_PrefabInstance: {fileID: 2402249076787320296}
   m_PrefabAsset: {fileID: 0}

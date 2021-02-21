@@ -5,11 +5,40 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    UIManager manager;
+    public string bossName;
+    public float startCountDownDuration = 3f;
+
+    private AttackPattern bossPattern;
+    private PlayerInput player;
+
+    private UIManager uiManager;
 
     private void Awake()
     {
-        manager = GetComponent<UIManager>();
+        uiManager = GetComponent<UIManager>();
+    }
+
+    private void Start()
+    {
+        player = FindObjectOfType<PlayerInput>();
+        bossPattern= FindObjectOfType<AttackPattern>();
+
+        StartCoroutine(StartLevel());
+    }
+
+    private IEnumerator StartLevel()
+    {
+        player.enabled = false;
+        bossPattern.enabled = false;
+
+        uiManager.StartCountDown(bossName);
+
+        yield return new WaitForSeconds(startCountDownDuration);
+
+        uiManager.EndCountDown();
+
+        player.enabled = true;
+        bossPattern.enabled = true;
     }
 
     public void WinLoseGame(GameObject entity, bool isSasser = false)
@@ -19,13 +48,11 @@ public class LevelManager : MonoBehaviour
             if (!isSasser && (GameObject.FindGameObjectWithTag("Boss").GetComponent<AttackPattern>().enabled = false) == true)
                 Debug.LogWarning("Can't turn off Boss AttackPattern!");
 
-            manager.ShowFinalGui(true);
+            uiManager.ShowFinalGui(true);
         }
         else if (entity.layer == 8)
         {
-            manager.ShowFinalGui(false);
-        }
-            
+            uiManager.ShowFinalGui(false);
+        }            
     }
-
 }

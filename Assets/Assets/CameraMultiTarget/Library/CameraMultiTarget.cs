@@ -21,6 +21,7 @@ public class CameraMultiTarget : MonoBehaviour
 
 	private Camera _camera;
 	private DebugProjection _debugProjection;
+	private Animator animator;
 
 	enum DebugProjection { DISABLE, IDENTITY, ROTATED }
 	enum ProjectionEdgeHits { TOP_BOTTOM, LEFT_RIGHT }
@@ -33,6 +34,12 @@ public class CameraMultiTarget : MonoBehaviour
 	{
 		_camera = gameObject.GetComponent<Camera>();
 		_debugProjection = DebugProjection.ROTATED;
+		animator = GetComponent<Animator>();
+	}
+
+	private void OnEnable()
+	{
+		animator.enabled = false;
 	}
 
 	private void LateUpdate() {

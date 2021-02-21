@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public GameObject playerScreen;
     public GameObject youLoseScreen;
     public GameObject youWinScreen;
+    public GameObject startScreen;
     [Header("BULLET COUNT")]
     public GameObject countBullets;
     public TMPro.TextMeshProUGUI bulletsCountText;
@@ -42,6 +43,21 @@ public class UIManager : MonoBehaviour
             bulletsCountText.text = "NULL";
             bulletsCountText.color = Color.red;
         }
+    }
+
+    // Starts the initial count down
+    public void StartCountDown(string bossName)
+    {
+        playerScreen.SetActive(false);
+        startScreen.SetActive(true);
+
+        startScreen.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = bossName;
+    }
+
+    public void EndCountDown()
+    {
+        playerScreen.SetActive(true);
+        startScreen.SetActive(false);
     }
 
     private void Awake()
