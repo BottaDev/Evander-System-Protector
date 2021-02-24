@@ -35,7 +35,7 @@ public class ShotController : MonoBehaviour
                 break;
         }
 
-        if (other.gameObject.layer != 16)
+        if (other.gameObject.layer != 16 && other.gameObject.layer != 18)
         {
             Destroy(gameObject);
         }

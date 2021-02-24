@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1951825676813201476}
   - component: {fileID: 2570232941770731570}
   m_Layer: 9
-  m_Name: SimpleEnemy
+  m_Name: Enemy_Shooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.998705
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -68,8 +68,11 @@ MonoBehaviour:
   movementSpeed: 3.5
   sounds: []
   audioSource: {fileID: 0}
-  fireRate: 1
-  shotPrefab: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+  deathParticle: {fileID: 0}
+  fireRate: 3
+  lifeTime: 13
+  shooter: 1
+  shotPrefab: {fileID: 4459537073249658549, guid: fdf25afc725663f42b75903ca976d4ae,
     type: 3}
   shotSpawn: {fileID: 4318464050315178762}
 --- !u!195 &6401921467095084375
@@ -82,7 +85,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

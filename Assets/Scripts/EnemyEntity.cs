@@ -8,6 +8,9 @@ public class EnemyEntity : BaseEntity
 {      
     [Header("Enemy Stats")]
     public float fireRate = 0;
+    public float lifeTime;
+    public bool shooter;
+
     [Header("Objects")]
     public GameObject shotPrefab;
     public Transform shotSpawn;
@@ -20,6 +23,9 @@ public class EnemyEntity : BaseEntity
     private float damageStayCounter;
     private float damageStayReset = 0.3f;
 
+
+    private float deathTime;
+
     public override void Start()
     {
         base.Start();
@@ -28,16 +34,26 @@ public class EnemyEntity : BaseEntity
         player = GameObject.Find("Player");
         agent.speed = movementSpeed;
         currentFireRate = UnityEngine.Random.Range(0f, 1.5f);
+
+        deathTime = Time.time + lifeTime;
     }
 
     private void Update()
     {
-        if (currentFireRate <= 0)
-            Shoot();
-        else
-            currentFireRate -= Time.deltaTime;
+        if (shooter)
+        {
+            if (currentFireRate <= 0)
+                Shoot();
+            else
+                currentFireRate -= Time.deltaTime;
+        }
 
         Move();
+
+        if (Time.time > deathTime)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Move()
