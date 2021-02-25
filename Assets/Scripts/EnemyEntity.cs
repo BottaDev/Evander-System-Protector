@@ -23,8 +23,8 @@ public class EnemyEntity : BaseEntity
     private float damageStayCounter;
     private float damageStayReset = 0.3f;
 
-
     private float deathTime;
+    private bool dying = false;
 
     public override void Start()
     {
@@ -50,9 +50,13 @@ public class EnemyEntity : BaseEntity
 
         Move();
 
-        if (Time.time > deathTime)
+        if (Time.time > deathTime && !dying)
         {
-            Destroy(gameObject);
+            dying = true;
+            GetComponentInChildren<MeshRenderer>().enabled = false;
+            GetComponent<ParticleSystem>().Play();
+            GetComponent<Collider>().enabled = false;
+            Destroy(gameObject, 1);
         }
     }
 

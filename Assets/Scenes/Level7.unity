@@ -961,97 +961,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2402249076787320296}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &535687332
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 535687337}
-  - component: {fileID: 535687334}
-  - component: {fileID: 535687333}
-  - component: {fileID: 535687335}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &535687333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535687332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27b9e079af9f9b24d86e80cd59122532, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseHP: 3
-  currentHP: 0
-  movementSpeed: 3
-  sounds: []
-  audioSource: {fileID: 0}
-  deathParticle: {fileID: 0}
-  fireRate: 1
-  shotPrefab: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
-    type: 3}
-  shotSpawn: {fileID: 535687337}
---- !u!65 &535687334
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535687332}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!195 &535687335
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535687332}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!4 &535687337
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535687332}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.4, y: 4, z: 2.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 873997995}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &612359756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,84 +1682,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868312853}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &873997994
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 873997995}
-  - component: {fileID: 873997997}
-  - component: {fileID: 873997996}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &873997995
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873997994}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 535687337}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &873997996
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873997994}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &873997997
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873997994}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &902825887
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,43 +2586,7 @@ MonoBehaviour:
       changeDirection: 0
     - duration: 10
       waitTime: 20
-      projectile: {fileID: 4459537073249658549, guid: 1e75fd06482702f4b82b879048e694d0,
-        type: 3}
-      numberOfProjectiles: 5
-      fireRate: 1
-      radius: 0
-      rotationPerSecond: 0
-      changeDirection: 0
-    - duration: 10
-      waitTime: 20
       projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
-        type: 3}
-      numberOfProjectiles: 20
-      fireRate: 1
-      radius: 0
-      rotationPerSecond: 0
-      changeDirection: 0
-    - duration: 10
-      waitTime: 20
-      projectile: {fileID: 4459537073249658549, guid: 1e75fd06482702f4b82b879048e694d0,
-        type: 3}
-      numberOfProjectiles: 5
-      fireRate: 1
-      radius: 0
-      rotationPerSecond: 0
-      changeDirection: 0
-    - duration: 10
-      waitTime: 20
-      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
-        type: 3}
-      numberOfProjectiles: 20
-      fireRate: 1
-      radius: 0
-      rotationPerSecond: 0
-      changeDirection: 0
-    - duration: 10
-      waitTime: 20
-      projectile: {fileID: 4459537073249658549, guid: 1e75fd06482702f4b82b879048e694d0,
         type: 3}
       numberOfProjectiles: 5
       fireRate: 1
@@ -2840,7 +2635,263 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 3
       fireRate: 1
+      radius: 2
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 4459537073249658549, guid: 1e75fd06482702f4b82b879048e694d0,
+        type: 3}
+      numberOfProjectiles: 5
+      fireRate: 1
       radius: 0
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 20
+      fireRate: 1
+      radius: 0
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 4459537073249658549, guid: 1e75fd06482702f4b82b879048e694d0,
+        type: 3}
+      numberOfProjectiles: 5
+      fireRate: 1
+      radius: 0
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 3417778371623163580, guid: d305c560daaf615489fa43eaa96540a7,
+        type: 3}
+      numberOfProjectiles: 3
+      fireRate: 1
+      radius: 2
+      rotationPerSecond: 0
+      changeDirection: 0
+    hpToChange: 140
+    nextPhaseModel: {fileID: 0}
+    wayPoints:
+    - {fileID: 38880559}
+    - {fileID: 1108233645}
+    - {fileID: 628401121}
+    - {fileID: 410400729}
+    - {fileID: 1716979029}
+    - {fileID: 1138642087}
+    - {fileID: 74877579}
+    - {fileID: 868312854}
+    - {fileID: 843015636}
+    - {fileID: 612359757}
+    - {fileID: 1758083270}
+    - {fileID: 181610721}
+    - {fileID: 483944345}
+    - {fileID: 1679929753}
+    - {fileID: 1129863521}
+    - {fileID: 23054431}
+    - {fileID: 1982118218}
+    - {fileID: 789955043}
+    - {fileID: 1995809711}
+    - {fileID: 928589519}
+    - {fileID: 1801260719}
+    - {fileID: 710460993}
+    - {fileID: 1682654046}
+    - {fileID: 56832547}
+  - name: 
+    patterns:
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 20
+      fireRate: 1
+      radius: 0
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 5
+      fireRate: 1
+      radius: 0
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 20
+      fireRate: 1
+      radius: 0
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 4459537073249658549, guid: 1e75fd06482702f4b82b879048e694d0,
+        type: 3}
+      numberOfProjectiles: 5
+      fireRate: 1
+      radius: 0
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 20
+      fireRate: 1
+      radius: 0
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 4459537073249658549, guid: 1e75fd06482702f4b82b879048e694d0,
+        type: 3}
+      numberOfProjectiles: 5
+      fireRate: 1
+      radius: 0
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 3417778371623163580, guid: b5d15b98df1b06149ba95d62679db7e1,
+        type: 3}
+      numberOfProjectiles: 3
+      fireRate: 1
+      radius: 1
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 4459537073249658549, guid: 1e75fd06482702f4b82b879048e694d0,
+        type: 3}
+      numberOfProjectiles: 5
+      fireRate: 1
+      radius: 0
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 20
+      fireRate: 1
+      radius: 0
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 4459537073249658549, guid: 1e75fd06482702f4b82b879048e694d0,
+        type: 3}
+      numberOfProjectiles: 5
+      fireRate: 1
+      radius: 0
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 3417778371623163580, guid: b5d15b98df1b06149ba95d62679db7e1,
+        type: 3}
+      numberOfProjectiles: 3
+      fireRate: 1
+      radius: 1
+      rotationPerSecond: 0
+      changeDirection: 0
+    hpToChange: 40
+    nextPhaseModel: {fileID: 0}
+    wayPoints:
+    - {fileID: 38880559}
+    - {fileID: 1108233645}
+    - {fileID: 628401121}
+    - {fileID: 410400729}
+    - {fileID: 1716979029}
+    - {fileID: 1138642087}
+    - {fileID: 74877579}
+    - {fileID: 868312854}
+    - {fileID: 843015636}
+    - {fileID: 612359757}
+    - {fileID: 1758083270}
+    - {fileID: 181610721}
+    - {fileID: 483944345}
+    - {fileID: 1679929753}
+    - {fileID: 1129863521}
+    - {fileID: 23054431}
+    - {fileID: 1982118218}
+    - {fileID: 789955043}
+    - {fileID: 1995809711}
+    - {fileID: 928589519}
+    - {fileID: 1801260719}
+    - {fileID: 710460993}
+    - {fileID: 1682654046}
+    - {fileID: 56832547}
+  - name: 
+    patterns:
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 3417778371623163580, guid: d305c560daaf615489fa43eaa96540a7,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 1
+      radius: 1
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 3417778371623163580, guid: d305c560daaf615489fa43eaa96540a7,
+        type: 3}
+      numberOfProjectiles: 2
+      fireRate: 1
+      radius: 1
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 3417778371623163580, guid: d305c560daaf615489fa43eaa96540a7,
+        type: 3}
+      numberOfProjectiles: 3
+      fireRate: 1
+      radius: 1
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 3417778371623163580, guid: d305c560daaf615489fa43eaa96540a7,
+        type: 3}
+      numberOfProjectiles: 1
+      fireRate: 1
+      radius: 1
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 3417778371623163580, guid: d305c560daaf615489fa43eaa96540a7,
+        type: 3}
+      numberOfProjectiles: 2
+      fireRate: 1
+      radius: 1
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 3417778371623163580, guid: d305c560daaf615489fa43eaa96540a7,
+        type: 3}
+      numberOfProjectiles: 3
+      fireRate: 1
+      radius: 1
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 3417778371623163580, guid: b5d15b98df1b06149ba95d62679db7e1,
+        type: 3}
+      numberOfProjectiles: 2
+      fireRate: 1
+      radius: 1
       rotationPerSecond: 0
       changeDirection: 0
     hpToChange: 0
@@ -2915,7 +2966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db4c93f25a245048aad6a594ca73c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHP: 300
+  baseHP: 250
   currentHP: 0
   movementSpeed: 12
   sounds:
@@ -3344,7 +3395,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1661215760}
-  - component: {fileID: 1661215759}
   - component: {fileID: 1661215758}
   m_Layer: 0
   m_Name: GameManager
@@ -3352,7 +3402,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1661215758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3369,18 +3419,6 @@ MonoBehaviour:
   - {fileID: 8976497066422250419, guid: 8ec1217e1ec214e42bfda7b23eadd1b5, type: 3}
   center: {x: 0, y: 1, z: 0}
   size: {x: 42.5, y: 0, z: 42.5}
---- !u!114 &1661215759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1661215757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 807a2c5e6c206424c9e79bae5ef0b8e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1661215760
 Transform:
   m_ObjectHideFlags: 0
@@ -4627,7 +4665,7 @@ PrefabInstance:
     - target: {fileID: 1870389509789807135, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2307605330142355311, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
@@ -4762,7 +4800,7 @@ PrefabInstance:
     - target: {fileID: 3491949159113426557, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4670617032929650773, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
@@ -4887,7 +4925,7 @@ PrefabInstance:
     - target: {fileID: 3728621155346993347, guid: 656038b6bfdd50f4f95d996c228eefcb,
         type: 3}
       propertyPath: nextSkill
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3728621155346993347, guid: 656038b6bfdd50f4f95d996c228eefcb,
         type: 3}
@@ -4909,7 +4947,7 @@ PrefabInstance:
     - target: {fileID: 3728621155346993347, guid: 656038b6bfdd50f4f95d996c228eefcb,
         type: 3}
       propertyPath: currentSkill
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3728621155346993349, guid: 656038b6bfdd50f4f95d996c228eefcb,
         type: 3}
@@ -4926,6 +4964,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241387098708852764, guid: 656038b6bfdd50f4f95d996c228eefcb,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 9217920376552364988, guid: 656038b6bfdd50f4f95d996c228eefcb,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 656038b6bfdd50f4f95d996c228eefcb, type: 3}
