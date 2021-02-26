@@ -9,5 +9,8 @@ public class WallSkill : MonoBehaviour
     private void Start()
     {
         Destroy(gameObject, duration);
+
+        if (transform.position.y > 0 || transform.position.y < 0)
+            transform.position = new Vector3(transform.position.x, 0, transform.position.z);
     }
 }

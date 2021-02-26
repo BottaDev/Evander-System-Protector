@@ -247,10 +247,20 @@ public class PlayerInput : MonoBehaviour
 
     private void UseWall()
     {
-        Instantiate(player.wall, transform.position + transform.forward * 2, transform.rotation);
+        Vector3 mouseScreenPosition = Input.mousePosition;
+        Ray ray = Camera.main.ScreenPointToRay(mouseScreenPosition);
+
+        if (Physics.Raycast(ray, out RaycastHit hitInfo))
+            SpawnWall(hitInfo.point);
+
         player.audioSource.PlayOneShot(player.sounds[0]); //player[0]--->bullet sound
         currentSkillRate = player.wallRate;
         soundActive = false;
+    }
+
+    private void SpawnWall(Vector3 spawnPosition)
+    {
+        Instantiate(player.wall, spawnPosition, transform.rotation);
     }
 
     private void UseTeleport()
