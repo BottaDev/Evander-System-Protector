@@ -2635,7 +2635,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 3
       fireRate: 1
-      radius: 2
+      radius: 5
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -2671,7 +2671,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 3
       fireRate: 1
-      radius: 2
+      radius: 5
       rotationPerSecond: 0
       changeDirection: 0
     hpToChange: 140
@@ -2763,7 +2763,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 3
       fireRate: 1
-      radius: 1
+      radius: 5
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -2799,7 +2799,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 3
       fireRate: 1
-      radius: 1
+      radius: 5
       rotationPerSecond: 0
       changeDirection: 0
     hpToChange: 40
@@ -2837,7 +2837,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 1
       fireRate: 1
-      radius: 1
+      radius: 5
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -2846,7 +2846,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 2
       fireRate: 1
-      radius: 1
+      radius: 5
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -2855,7 +2855,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 3
       fireRate: 1
-      radius: 1
+      radius: 5
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -2864,7 +2864,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 1
       fireRate: 1
-      radius: 1
+      radius: 5
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -2873,7 +2873,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 2
       fireRate: 1
-      radius: 1
+      radius: 5
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -2882,7 +2882,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 3
       fireRate: 1
-      radius: 1
+      radius: 5
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -2891,7 +2891,16 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 2
       fireRate: 1
-      radius: 1
+      radius: 4
+      rotationPerSecond: 0
+      changeDirection: 0
+    - duration: 10
+      waitTime: 20
+      projectile: {fileID: 4459537073249658549, guid: dc1adfda5e96d194394e1f12ce828d2e,
+        type: 3}
+      numberOfProjectiles: 30
+      fireRate: 1
+      radius: 0
       rotationPerSecond: 0
       changeDirection: 0
     hpToChange: 0
@@ -4604,7 +4613,7 @@ NavMeshAgent:
   m_Acceleration: 60
   avoidancePriority: 50
   m_AngularSpeed: 0
-  m_StoppingDistance: 1.5
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -4964,6 +4973,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259619114338589750, guid: 656038b6bfdd50f4f95d996c228eefcb,
+        type: 3}
+      propertyPath: damage
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8241387098708852764, guid: 656038b6bfdd50f4f95d996c228eefcb,
         type: 3}
