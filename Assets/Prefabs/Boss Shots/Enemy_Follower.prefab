@@ -67,7 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHP: 3
   currentHP: 0
-  movementSpeed: 10
+  movementSpeed: 7
   sounds: []
   audioSource: {fileID: 0}
   deathParticle: {fileID: 0}
@@ -86,19 +86,19 @@ NavMeshAgent:
   m_GameObject: {fileID: 3417778371623163580}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.1
   m_Speed: 6
   m_Acceleration: 8
-  avoidancePriority: 50
+  avoidancePriority: 1
   m_AngularSpeed: 120
-  m_StoppingDistance: 5
+  m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!54 &1951825676813201476
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -2671,7 +2671,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 3
       fireRate: 1
-      radius: 5
+      radius: 2
       rotationPerSecond: 0
       changeDirection: 0
     hpToChange: 140
@@ -2837,7 +2837,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 1
       fireRate: 1
-      radius: 5
+      radius: 3
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -2846,7 +2846,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 2
       fireRate: 1
-      radius: 5
+      radius: 3
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -2855,7 +2855,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 3
       fireRate: 1
-      radius: 5
+      radius: 3
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -2864,7 +2864,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 1
       fireRate: 1
-      radius: 5
+      radius: 3
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -2873,7 +2873,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 2
       fireRate: 1
-      radius: 5
+      radius: 3
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -2882,7 +2882,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 3
       fireRate: 1
-      radius: 5
+      radius: 3
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -2891,7 +2891,7 @@ MonoBehaviour:
         type: 3}
       numberOfProjectiles: 2
       fireRate: 1
-      radius: 4
+      radius: 3
       rotationPerSecond: 0
       changeDirection: 0
     - duration: 10
@@ -4613,14 +4613,14 @@ NavMeshAgent:
   m_Acceleration: 60
   avoidancePriority: 50
   m_AngularSpeed: 0
-  m_StoppingDistance: 2
+  m_StoppingDistance: 1.2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0
 --- !u!23 &1814561009229509804
 MeshRenderer:
   m_ObjectHideFlags: 0

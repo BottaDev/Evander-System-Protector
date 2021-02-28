@@ -48,7 +48,10 @@ public class EnemyEntity : BaseEntity
                 currentFireRate -= Time.deltaTime;
         }
 
-        Move();
+        if (!CheckOutOfBounds())
+        {
+            Move();
+        }
 
         if (Time.time > deathTime && !dying)
         {
@@ -104,5 +107,15 @@ public class EnemyEntity : BaseEntity
             else
                 damageStayCounter -= Time.deltaTime;
         }
+    }
+
+    private bool CheckOutOfBounds()
+    {
+        if (transform.position.x < -22 || transform.position.x > 22 || transform.position.y < -22 || transform.position.y > 22)
+        {
+            Destroy(gameObject);
+            return true;
+        }
+        return false;
     }
 }
