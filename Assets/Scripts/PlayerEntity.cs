@@ -22,7 +22,7 @@ public class PlayerEntity : BaseEntity
     public GameObject wall;
     public GameObject flametrhower;
     public GameObject boss;
-    /*[HideInInspector]*/ public GameObject currentShotPrefab;
+    [HideInInspector] public GameObject currentShotPrefab;
 
     [HideInInspector] public bool canBeDamaged = true;
 
@@ -166,6 +166,8 @@ public class PlayerEntity : BaseEntity
     {
         currentSkill = nextSkill;
         skillChange.CheckSkill(currentSkill);
+
+        uiManager.SetSkillImage();
     }
 
     public enum Skill
