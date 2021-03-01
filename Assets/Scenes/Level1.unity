@@ -3529,6 +3529,11 @@ PrefabInstance:
       propertyPath: timeSlowSkill
       value: 
       objectReference: {fileID: 2402249076787320302}
+    - target: {fileID: 796853347431051489, guid: 94c521cdd191a2a4aa1c738a5ad1594f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 796853347431051490, guid: 94c521cdd191a2a4aa1c738a5ad1594f,
         type: 3}
       propertyPath: bossName
@@ -3772,6 +3777,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3623798442775920294, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 1159015942}
     - target: {fileID: 3896630185340294284, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
       propertyPath: m_IsActive

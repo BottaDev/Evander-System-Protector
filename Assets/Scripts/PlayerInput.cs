@@ -30,7 +30,7 @@ public class PlayerInput : MonoBehaviour
     {
         mainCamera = Camera.main;
         particles = GetComponent<ParticleSystem>();
-        uiManager = GameObject.Find("LevelManager").GetComponent<UIManager>();
+        uiManager = uiManager = GameObject.FindObjectOfType<UIManager>(); ;
     }
 
     private void Update()

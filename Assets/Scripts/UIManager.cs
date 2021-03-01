@@ -24,6 +24,9 @@ public class UIManager : MonoBehaviour
     public Image tpSkill;
     public Image reflectionSkill;
     public Image timeSlowSkill;
+    public Image wallSkill;
+    public Image freezeSkill;
+    public Image flameSkill;
 
     private float fireRate;
     private Image currentSkillIndicator;
@@ -34,7 +37,8 @@ public class UIManager : MonoBehaviour
     {
         player = GameObject.Find("Player").GetComponent<PlayerEntity>();
 
-        SetSkillImage();
+        //SetSkillImage();
+        currentSkillIndicator = flashSkill;
     }
 
     private void Update()
@@ -130,15 +134,15 @@ public class UIManager : MonoBehaviour
                 break;
 
             case PlayerEntity.Skill.Tranquilizer:
-
+                currentSkillIndicator = freezeSkill;
                 break;
 
             case PlayerEntity.Skill.Wall:
-
+                currentSkillIndicator = wallSkill;
                 break;
 
             case PlayerEntity.Skill.Flamethrower:
-
+                currentSkillIndicator = flameSkill;
                 break;
         }
     }

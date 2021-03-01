@@ -54,7 +54,7 @@ public class PlayerEntity : BaseEntity
         healthBar = GameObject.Find("HealthBar").GetComponent<HealthBar>();
         healthBar.SetMaxHealt(baseHP);
 
-        uiManager = levelManager.gameObject.GetComponent<UIManager>();
+        uiManager = GameObject.FindObjectOfType<UIManager>();
 
         baseFireRate = fireRate;
         currentShotPrefab = shotPrefab;
