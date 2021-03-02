@@ -4,6 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
@@ -23,24 +24,29 @@ public class SettingsMenu : MonoBehaviour
     {
         volumeSlider.value = PlayerPrefs.GetFloat("Volume");
 
-        savedWidth = PlayerPrefs.GetInt("ScreenWidth");
-        savedHeight = PlayerPrefs.GetInt("ScreenHeight");
-        savedFullScreen = PlayerPrefs.GetInt("FullScreen") == 1 ? true : false;
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
 
-        if (savedWidth == 0 || savedHeight == 0)
+        if (sceneIndex == 0)
         {
-            Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, Screen.fullScreen);
-            savedWidth = Screen.currentResolution.width;
-            savedHeight = Screen.currentResolution.height;
-        }
-        else
-        {
-            Screen.SetResolution(savedWidth, savedHeight, savedFullScreen);
-        }
+            savedWidth = PlayerPrefs.GetInt("ScreenWidth");
+            savedHeight = PlayerPrefs.GetInt("ScreenHeight");
+            savedFullScreen = PlayerPrefs.GetInt("FullScreen") == 1 ? true : false;
 
-        GetResolutions();
+            if (savedWidth == 0 || savedHeight == 0)
+            {
+                Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, Screen.fullScreen);
+                savedWidth = Screen.currentResolution.width;
+                savedHeight = Screen.currentResolution.height;
+            }
+            else
+            {
+                Screen.SetResolution(savedWidth, savedHeight, savedFullScreen);
+            }
 
-        GetFullScreenMode();
+            GetResolutions();
+
+            GetFullScreenMode();
+        }
 
         loadComplete = true;
     }
