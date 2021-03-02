@@ -89,6 +89,12 @@ public class EnemyEntity : BaseEntity
             Destroy(gameObject);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 8)
+            Destroy(gameObject);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 18 && flame == null)
