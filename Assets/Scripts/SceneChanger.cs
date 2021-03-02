@@ -52,10 +52,6 @@ public class SceneChanger : MonoBehaviour
                 SceneManager.LoadScene("Level7");
                 break;
 
-            case "Level7":
-                SceneManager.LoadScene("Level8");
-                break;
-
             default:
                 Debug.LogError("Next level was not found!");
                 SceneManager.LoadScene("MainMenu");

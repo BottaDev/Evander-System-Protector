@@ -923,6 +923,7 @@ GameObject:
   - component: {fileID: 263456550}
   - component: {fileID: 263456549}
   - component: {fileID: 263456553}
+  - component: {fileID: 263456554}
   m_Layer: 5
   m_Name: MainMenu_Canvas
   m_TagString: Untagged
@@ -1027,6 +1028,19 @@ MonoBehaviour:
   resolutionDropdown: {fileID: 952237158}
   volumeSlider: {fileID: 463927264}
   fullScreenToggle: {fileID: 1755850487}
+--- !u!114 &263456554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263456548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c689e8af3e6f88a4d9f735db532f41ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 6fdfcd4167ed5e7488584241bb671bb2, type: 3}
 --- !u!1 &292574851
 GameObject:
   m_ObjectHideFlags: 0
@@ -8449,7 +8463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.15347347, y: 0.26834062}
   m_AnchorMax: {x: 0.8466449, y: 0.39434054}
-  m_AnchoredPosition: {x: 0, y: 0.30000305}
+  m_AnchoredPosition: {x: 0, y: 0.30000687}
   m_SizeDelta: {x: -0.5299988, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1902003694
