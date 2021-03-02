@@ -2050,6 +2050,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4466481718849497682, guid: 94c521cdd191a2a4aa1c738a5ad1594f,
+        type: 3}
+      propertyPath: bossTheme
+      value: 
+      objectReference: {fileID: 8300000, guid: d39fba521671c654183bd8ba9851fb15, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c521cdd191a2a4aa1c738a5ad1594f, type: 3}
 --- !u!1001 &2402249076787320296
