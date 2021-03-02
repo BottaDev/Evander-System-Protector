@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bouncing BossShot
+  m_Name: Bouncing BossShot Worn
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION
   m_LightmapFlags: 0
@@ -74,5 +74,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0.78189325, g: 0, b: 1, a: 1}
-    - _EmissionColor: {r: 0.57254905, g: 0, b: 1, a: 1}
+    - _Color: {r: 0.78189325, g: 0, b: 1, a: 0.3137255}
+    - _EmissionColor: {r: 0.14313726, g: 0, b: 0.25, a: 1}

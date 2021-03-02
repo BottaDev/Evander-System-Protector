@@ -44,7 +44,7 @@ public class BouncingShot : ShotController
 
             bouncingCount++;
 
-            if(bouncingCount == maxBounces - 1)
+            if(bouncingCount == maxBounces - 1 && rend.sharedMaterial == oldMaterial)
                 rend.sharedMaterial = newMaterial;
         }
     }
