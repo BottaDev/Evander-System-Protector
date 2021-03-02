@@ -8,7 +8,18 @@ public class BouncingShot : ShotController
     public LayerMask bouncingMask;
     public int maxBounces = 1;
 
+    public Material oldMaterial;
+    public Material newMaterial; 
+    private Renderer rend;
+
     private int bouncingCount = 0;
+
+    private void Start()
+    {
+        rend = GetComponent<Renderer>();
+        rend.enabled = true;
+        rend.sharedMaterial = oldMaterial;
+    }
 
     protected override void Update()
     {
@@ -32,6 +43,9 @@ public class BouncingShot : ShotController
             transform.eulerAngles = new Vector3(0, newRotation, 0);
 
             bouncingCount++;
+
+            if(bouncingCount == maxBounces - 1)
+                rend.sharedMaterial = newMaterial;
         }
     }
 

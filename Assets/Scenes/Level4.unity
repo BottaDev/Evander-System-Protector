@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427182, b: 0.5645241, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5963,6 +5963,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 358312374131705116, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 10.5
+      objectReference: {fileID: 0}
     - target: {fileID: 648905363777419548, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -6098,10 +6103,25 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2402249077752290887, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 8.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670617032929650773, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 11.85
+      objectReference: {fileID: 0}
     - target: {fileID: 4716987778341723665, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.19329834
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504060242742023997, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.33111572
       objectReference: {fileID: 0}
     - target: {fileID: 6631136915415788437, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
@@ -6117,6 +6137,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.100097656
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206831028860974547, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: 8619061729373462455, guid: 210482de75866c9418918421cfb1126d,
         type: 3}

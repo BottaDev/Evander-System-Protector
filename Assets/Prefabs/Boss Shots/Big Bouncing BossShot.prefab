@@ -99,6 +99,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 164864
   maxBounces: 10
+  oldMaterial: {fileID: 2100000, guid: a4453a6af6cdc2a4cae17cee83b23047, type: 2}
+  newMaterial: {fileID: 2100000, guid: 87a6d0454d5562b43a085d01b9f1f2cf, type: 2}
 --- !u!135 &8257048932300341167
 SphereCollider:
   m_ObjectHideFlags: 0
