@@ -22,7 +22,7 @@ public class PlayerEntity : BaseEntity
     public GameObject wall;
     public GameObject flametrhower;
     public GameObject boss;
-    [HideInInspector] public GameObject currentShotPrefab;
+    public GameObject currentShotPrefab;
 
     [HideInInspector] public bool canBeDamaged = true;
 
