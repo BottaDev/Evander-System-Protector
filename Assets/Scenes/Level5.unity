@@ -230,6 +230,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96281943}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &127208550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6656141041213149567, guid: 670fcc6d651080c4cbb1bdf96e9955f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 6248717241754624971}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &165104708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,6 +1024,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1098945914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7113708751463012282, guid: 670fcc6d651080c4cbb1bdf96e9955f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 6248717241754624971}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1119723119
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,6 +2228,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0.465271
       objectReference: {fileID: 0}
+    - target: {fileID: 2183782021209841710, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.19995117
+      objectReference: {fileID: 0}
     - target: {fileID: 2307605330142355311, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2380,6 +2397,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866142976939114370, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.19995117
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 210482de75866c9418918421cfb1126d, type: 3}
@@ -2586,6 +2608,21 @@ PrefabInstance:
       propertyPath: bossPhases.Array.data[2].wayPoints.Array.data[3]
       value: 
       objectReference: {fileID: 556089591}
+    - target: {fileID: 6248717240653037189, guid: 670fcc6d651080c4cbb1bdf96e9955f5,
+        type: 3}
+      propertyPath: bossPhases.Array.data[0].nextPhaseModel
+      value: 
+      objectReference: {fileID: 127208550}
+    - target: {fileID: 6248717240653037189, guid: 670fcc6d651080c4cbb1bdf96e9955f5,
+        type: 3}
+      propertyPath: bossPhases.Array.data[1].nextPhaseModel
+      value: 
+      objectReference: {fileID: 1098945914}
+    - target: {fileID: 6248717240653037189, guid: 670fcc6d651080c4cbb1bdf96e9955f5,
+        type: 3}
+      propertyPath: bossPhases.Array.data[2].nextPhaseModel
+      value: 
+      objectReference: {fileID: 1098945914}
     - target: {fileID: 6248717240653037190, guid: 670fcc6d651080c4cbb1bdf96e9955f5,
         type: 3}
       propertyPath: m_Name
