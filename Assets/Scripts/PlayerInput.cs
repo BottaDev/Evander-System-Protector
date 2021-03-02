@@ -14,7 +14,7 @@ public class PlayerInput : MonoBehaviour
     private float currentFireRate = 0;
     private float currentSkillRate = 0;
     private PlayerEntity player;
-
+    private UIManager uiManager;
     private GameObject tpPointInstance;
     private bool tpPointSet = false;
 
@@ -30,6 +30,7 @@ public class PlayerInput : MonoBehaviour
     {
         mainCamera = Camera.main;
         particles = GetComponent<ParticleSystem>();
+        uiManager = uiManager = GameObject.FindObjectOfType<UIManager>(); ;
     }
 
     private void Update()
@@ -199,6 +200,8 @@ public class PlayerInput : MonoBehaviour
         emitParams.applyShapeToPosition = true;
         particles.Emit(emitParams, 50);
 
+        uiManager.StartCd(player.blinkRate);
+
         soundActive = false;
     }
 
@@ -211,6 +214,8 @@ public class PlayerInput : MonoBehaviour
         Destroy(BarrierHB, 0.6f);
         currentSkillRate = player.blankBulletRate;
 
+        uiManager.StartCd(player.blankBulletRate);
+
         soundActive = false;
     }
 
@@ -220,6 +225,8 @@ public class PlayerInput : MonoBehaviour
         GameObject TimestopHB = Instantiate(player.timestop, transform.position, Quaternion.identity);
 
         currentSkillRate = player.timeStopRate;
+
+        uiManager.StartCd(player.timeStopRate);
 
         soundActive = false;
     }
@@ -234,6 +241,8 @@ public class PlayerInput : MonoBehaviour
         Destroy(ReflectorHB, 0.5f);
         currentSkillRate = player.reflectorRate;
 
+        uiManager.StartCd(player.reflectorRate);
+
         soundActive = false;
     }
 
@@ -242,6 +251,9 @@ public class PlayerInput : MonoBehaviour
         Instantiate(player.tranquilizer, player.shotSpawn.position, player.shotSpawn.rotation);
         player.audioSource.PlayOneShot(player.sounds[0]); //player[0]--->bullet sound
         currentSkillRate = player.tranquilizerRate;
+
+        uiManager.StartCd(player.tranquilizerRate);
+
         soundActive = false;
     }
 
@@ -255,6 +267,9 @@ public class PlayerInput : MonoBehaviour
 
         player.audioSource.PlayOneShot(player.sounds[0]); //player[0]--->bullet sound
         currentSkillRate = player.wallRate;
+
+        uiManager.StartCd(player.wallRate);
+
         soundActive = false;
     }
 
@@ -276,6 +291,8 @@ public class PlayerInput : MonoBehaviour
 
         currentSkillRate = player.teleportRate;
 
+        uiManager.StartCd(player.teleportRate);
+
         soundActive = false;
     }
 
@@ -296,6 +313,8 @@ public class PlayerInput : MonoBehaviour
         player.flametrhower.SetActive(false);
         player.movementSpeed = 12;
         currentSkillRate = player.flamethrowerRate;
+
+        uiManager.StartCd(player.flamethrowerRate);
 
         soundActive = false;
     }

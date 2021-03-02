@@ -5954,6 +5954,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4466481718849497682, guid: 94c521cdd191a2a4aa1c738a5ad1594f,
+        type: 3}
+      propertyPath: bossTheme
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c387afb13babbd4c834c40b83558c10, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c521cdd191a2a4aa1c738a5ad1594f, type: 3}
 --- !u!1001 &2402249076787320296
@@ -6098,6 +6103,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3623798442775920294, guid: 210482de75866c9418918421cfb1126d,
+        type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 1928438430}
     - target: {fileID: 4716987778341723665, guid: 210482de75866c9418918421cfb1126d,
         type: 3}
       propertyPath: m_AnchoredPosition.x

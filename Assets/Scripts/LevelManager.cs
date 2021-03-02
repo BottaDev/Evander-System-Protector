@@ -15,7 +15,7 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        uiManager = GetComponent<UIManager>();
+        uiManager = GameObject.FindObjectOfType<UIManager>();
     }
 
     private void Start()
