@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 7971284394174468028}
   - component: {fileID: 7971284394174468031}
   - component: {fileID: 7971284394174468030}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CodeRed
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -428,8 +428,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.9743853, y: 7.689704, z: 5.1498265}
-  m_Center: {x: 0.17373276, y: 3.344852, z: -0.045562506}
+  m_Size: {x: 4, y: 5.9755106, z: 4}
+  m_Center: {x: 0, y: 1.9877553, z: 0}
 --- !u!54 &7971284394174468028
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -576,7 +576,7 @@ GameObject:
   - component: {fileID: 7971284394622892472}
   - component: {fileID: 7971284394622892475}
   - component: {fileID: 7971284394622892474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Phase1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -674,7 +674,7 @@ GameObject:
   - component: {fileID: 7971284394717379833}
   - component: {fileID: 7971284394717379832}
   - component: {fileID: 7971284394717379835}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Phase3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,7 +772,7 @@ GameObject:
   - component: {fileID: 7971284395182510619}
   - component: {fileID: 7971284395182510618}
   - component: {fileID: 7971284395182510621}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Phase2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
