@@ -2451,6 +2451,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2402249076787320296}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2402249076787320303 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2402249077728737751, guid: 210482de75866c9418918421cfb1126d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2402249076787320296}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6982af305bd1942aafee24e2615f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3728621156421246569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2539,6 +2551,11 @@ PrefabInstance:
       propertyPath: currentSkill
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3728621155346993347, guid: 656038b6bfdd50f4f95d996c228eefcb,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 2402249076787320303}
     - target: {fileID: 3728621155346993358, guid: 656038b6bfdd50f4f95d996c228eefcb,
         type: 3}
       propertyPath: m_Name
