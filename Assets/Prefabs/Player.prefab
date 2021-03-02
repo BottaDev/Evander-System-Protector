@@ -184,12 +184,12 @@ MonoBehaviour:
   nextSkill: 0
   blinkRate: 1
   blankBulletRate: 3
-  teleportRate: 3
+  teleportRate: 0
   reflectorRate: 2
   timeStopRate: 3
   tranquilizerRate: 5
   wallRate: 7
-  flamethrowerRate: 2
+  flamethrowerRate: 0
 --- !u!114 &3728621155346993349
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -39,7 +39,7 @@ public class PlayerInput : MonoBehaviour
 
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
 
-        if (Input.GetMouseButton(0) && currentFireRate <= 0)
+        if (Input.GetMouseButton(0) && currentFireRate <= 0 && !(Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.LeftShift)))
             Shoot();
         else
             currentFireRate -= Time.deltaTime;
