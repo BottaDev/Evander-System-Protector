@@ -23,6 +23,7 @@ public class PlayerEntity : BaseEntity
     public GameObject flametrhower;
     public GameObject boss;
     public GameObject currentShotPrefab;
+    public HealthBar healthBar;
 
     [HideInInspector] public bool canBeDamaged = true;
 
@@ -41,7 +42,6 @@ public class PlayerEntity : BaseEntity
 
     private bool hasPowerUp = false;
     private float baseFireRate;
-    private HealthBar healthBar;
     private UIManager uiManager;
     private float damageStayReset = 2f;
     private float damageStayCounter;
@@ -51,7 +51,6 @@ public class PlayerEntity : BaseEntity
     {
         base.Start();
 
-        healthBar = GameObject.Find("HealthBar").GetComponent<HealthBar>();
         healthBar.SetMaxHealt(baseHP);
 
         uiManager = GameObject.FindObjectOfType<UIManager>();
