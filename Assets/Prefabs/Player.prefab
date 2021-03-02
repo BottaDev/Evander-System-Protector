@@ -184,12 +184,12 @@ MonoBehaviour:
   nextSkill: 0
   blinkRate: 1
   blankBulletRate: 3
-  teleportRate: 3
+  teleportRate: 0
   reflectorRate: 2
   timeStopRate: 3
   tranquilizerRate: 5
   wallRate: 7
-  flamethrowerRate: 2
+  flamethrowerRate: 3
 --- !u!114 &3728621155346993349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +242,8 @@ AudioSource:
   m_GameObject: {fileID: 3728621155346993358}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 23144bbca80198f40b016edc3151d12b,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.6

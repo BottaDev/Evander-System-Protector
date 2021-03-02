@@ -8,6 +8,9 @@ public class EnemyEntity : BaseEntity
 {      
     [Header("Enemy Stats")]
     public float fireRate = 0;
+    public float lifeTime;
+    public bool shooter;
+
     [Header("Objects")]
     public GameObject shotPrefab;
     public Transform shotSpawn;
@@ -20,6 +23,9 @@ public class EnemyEntity : BaseEntity
     private float damageStayCounter;
     private float damageStayReset = 0.3f;
 
+    private float deathTime;
+    private bool dying = false;
+
     public override void Start()
     {
         base.Start();
@@ -28,16 +34,33 @@ public class EnemyEntity : BaseEntity
         player = GameObject.Find("Player");
         agent.speed = movementSpeed;
         currentFireRate = UnityEngine.Random.Range(0f, 1.5f);
+
+        deathTime = Time.time + lifeTime;
     }
 
     private void Update()
     {
-        if (currentFireRate <= 0)
-            Shoot();
-        else
-            currentFireRate -= Time.deltaTime;
+        if (shooter)
+        {
+            if (currentFireRate <= 0)
+                Shoot();
+            else
+                currentFireRate -= Time.deltaTime;
+        }
 
-        Move();
+        if (!CheckOutOfBounds())
+        {
+            Move();
+        }
+
+        if (Time.time > deathTime && !dying)
+        {
+            dying = true;
+            GetComponentInChildren<MeshRenderer>().enabled = false;
+            GetComponent<ParticleSystem>().Play();
+            GetComponent<Collider>().enabled = false;
+            Destroy(gameObject, 1);
+        }
     }
 
     private void Move()
@@ -84,5 +107,15 @@ public class EnemyEntity : BaseEntity
             else
                 damageStayCounter -= Time.deltaTime;
         }
+    }
+
+    private bool CheckOutOfBounds()
+    {
+        if (transform.position.x < -22 || transform.position.x > 22 || transform.position.y < -22 || transform.position.y > 22)
+        {
+            Destroy(gameObject);
+            return true;
+        }
+        return false;
     }
 }
