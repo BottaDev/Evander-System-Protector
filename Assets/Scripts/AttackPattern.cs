@@ -107,7 +107,7 @@ public class AttackPattern : MonoBehaviour
         agent.destination = bossPhases[currentPhase].wayPoints[currentWayPoint].position;
     }
 
-    private void SpawnProjectiles()
+    protected virtual void SpawnProjectiles()
     {
         float angle = 360f / bossPhases[currentPhase].patterns[currentPattern].numberOfProjectiles;
 
@@ -147,7 +147,7 @@ public class AttackPattern : MonoBehaviour
         }
     }
 
-    private void ChangePattern()
+    protected void ChangePattern()
     {
         if (currentPattern == bossPhases[currentPhase].patterns.Length - 1)
             currentPattern = 0;
@@ -155,6 +155,10 @@ public class AttackPattern : MonoBehaviour
             currentPattern++;
 
         currentPatternDuration = bossPhases[currentPhase].patterns[currentPattern].duration;
+
+        currentRate = bossPhases[currentPhase].patterns[currentPattern].fireRate; 
+        //Creeeo que hay un problema en el que el firerate de un patrón hincha las bolas al siguiente cuando se cambia de uno a otro
+        //esto debería solucionarlo????
 
         if (bossPhases[currentPhase].patterns[currentPattern].waitTime > 0)
             StartCoroutine(Stop());
